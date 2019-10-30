@@ -1,0 +1,55 @@
+<!--pages/cart/orderDetail/index.wxml-->
+<view class="orderDetail">
+  <view class="boxShadow mes perMes" bindtap="checkAddr">
+		<view class="fl left">
+			<view class="name">
+        收件人：
+				{{name}}
+				<text class="tel">{{mobile}}</text>
+			</view>
+			<view class="addr">
+        收货地址：
+				{{address}}
+			</view>	
+		</view>
+		<view class="fl right_arrows"></view>
+	</view>
+	<view class="boxShadow mes orderMes">
+		<!-- <view class="oNum">
+			订单编号：
+			<text class="">0052616510320650</text>	
+		</view> -->
+		<view class="goodsMes">
+			<image class="fl" src="{{imgUrl+goodsDetail.image}}"></image>	
+			<view class="fr cont">
+				<view class="title">
+					{{goodsDetail.name}}
+				</view>	
+				<view class="intro">
+					{{goodsDetail.abstract}}
+				</view>
+				<view class="price">
+					<text class="rmb">¥	</text>
+					{{goodsDetail.price}}
+				</view>
+			</view>
+		</view>
+		<view class="allPrice">
+			总价
+			<view class="fr prices">
+				<text class="rmb">¥	</text>
+				{{goodsDetail.price}}
+			</view>
+		</view>		
+	</view>
+	<view class="pay">
+		<view class="fl payPrice">
+			本次共付款：
+			<text class="rmb">¥</text>
+			<text class="pp">{{goodsDetail.price}}</text>
+		</view>
+		<view data-id="{{goodsDetail.id}}" data-price="{{goodsDetail.price}}" class="fr goPay" bindtap='toPay'>
+			立即付款
+		</view>
+	</view>
+</view>

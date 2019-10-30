@@ -1,0 +1,114 @@
+page{
+  background: #f8f8f8;
+}
+.mineTop{
+  width:100%;
+  height: 300rpx;
+  background: #0081d2;
+  overflow: hidden;
+}
+.mineTopCen{
+  width: 94%;
+  height: 180rpx;
+  margin:70rpx 0 0 3%;
+}
+.mineTopCenImg{
+  width: 180rpx;
+  height:180rpx;
+  border-radius: 90rpx;
+  overflow: hidden;
+  float: left;
+}
+.mineTopCenImg image{
+  width: 180rpx;
+  height:180rpx;
+}
+.mineTopCenName{
+  color:#fff;
+  width:60%;
+  height:180rpx;
+  margin-left: 30rpx;
+  float: left;
+  line-height: 180rpx;
+}
+.title{
+  width: 100%;
+  height: 120rpx;
+
+}
+.title text{
+  display: block;
+  width: 200rpx;
+  line-height: 130rpx;
+  color:#333333;
+  font-size: 42rpx;
+  float: left;
+  margin-left:30rpx;
+}
+.title text:nth-child(1){
+  color:#0081d2
+}
+.information{
+  width:100%;
+  height: 260rpx;
+  overflow: hidden;
+  box-shadow: 0px 0px 3px #eecccc;
+  background: #fff;
+}
+.infCen{
+  width: 94%;
+  margin:35rpx 3%;
+  height:190rpx;
+}
+.infCenLeft{
+  width: 35%;
+  height: 100%;
+  float: left;
+}
+.infCenLeft image{
+  width: 100%;
+  height: 100%;
+}
+.infCenCen{
+  float: left;
+  width: 4%;
+  height: 100%;
+  margin-left:2%;
+}
+.infCenCen image{
+  width: 30rpx;
+  height:30rpx;
+}
+.infCenRight{
+  float: left;
+  width: 57%;
+  height: 100%;
+  margin-left: 2%;
+}
+.infCenRightTop{
+  width: 100%;
+  height: 60%;
+  color: #222222;
+  font-size: 35rpx;
+  line-height: 60rpx;
+  margin-top: -10rpx;
+  display: -webkit-box;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:2;
+}
+.infCenRightBot{
+  width: 100%;
+  height: 20%;
+  margin-top: 53rpx;
+  font-size: 30rpx;
+}
+.infCenRightBot text:nth-child(1){
+  color: #0081d2;
+}
+.infCenRightBot text:nth-child(2){
+  margin-left:20rpx;
+  color: #a6a6a6;
+}

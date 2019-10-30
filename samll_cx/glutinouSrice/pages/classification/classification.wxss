@@ -1,0 +1,9 @@
+page{background: white;}
+.classif_top{width: 100%;}
+.search{width: 88%;margin: 0 auto;height: 58rpx;background: #f9f9f9;border-radius: 30rpx;padding: 0 20rpx;margin-top: 20rpx;margin-bottom: 23rpx;}
+.search text{vertical-align: middle;font-size: 28rpx;}
+.search input{display: inline-block;height: 58rpx;vertical-align: middle;margin-left: 10rpx;width: 92%;}
+.inps{font-size: 24rpx;}
+.class_title{background: #f9f9f9;padding: 20rpx 32rpx;font-size: 26rpx;color:#000000;}
+.listchild_content .content_list{width: 84%;border-bottom: 1px solid #e9e9e9;margin: 0 auto;padding:  20rpx 0;color:#666666;font-size: 24rpx;}
+.listchild_content .content_list:last-child{border: none;}

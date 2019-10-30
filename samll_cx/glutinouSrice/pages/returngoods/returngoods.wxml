@@ -1,0 +1,80 @@
+<view class="after_content">
+<view class="after_one">
+    <view class="after_box clearFlo">
+      <view class="sale_left flL">
+         <image src="https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640"></image>
+      </view>
+      <view class="sale_right flR">
+           <view class="twoLin after_title">妈妈我能行勇敢做自己全套10册儿童情绪管理与性格培养绘本 中英文双语亲</view>
+           <view class="dan_price">
+              单价：<text>￥44.45</text> 购买数量：<text>1</text>
+           </view>
+      </view>
+   </view>
+</view>
+</view>
+<view class="after_content" style="margin-top:20rpx;">
+    <view class="fen_class">
+       <view class="return_goods clearFlo" bindtap="actionSheetTap">
+          <view class="goods_left flL">
+              <text>申请原因</text>
+          </view>
+          <view class="goods_right flR">
+             <view class="clearFlo" >
+                <view class="flL">
+                   <view class="suo_greay" >{{menu}}</view>
+                </view>
+                <view class="icon iconfont icon-gengduo flR right_btn"></view>
+               
+             </view>
+          </view>
+       </view>
+    </view>
+   
+</view>
+<view class="after_content" style="margin-top:20rpx;">
+    <view class="fen_class">
+       <view class="return_goods">
+          <view class="goods_left">
+              <text>问题描述</text>
+          </view>
+           <textarea placeholder="请描述申请售后服务的具体原因，文字、语音、视频至少填一项，还可上传最多5张图片哦~" placeholder-class="text_title">
+           </textarea>
+           <view class="icon iconfont icon-camera-s camera"></view>
+       </view>
+    </view>
+   
+</view>
+<view class="after_content" style="margin-top:20rpx;margin-bottom:130rpx;">
+    <view class="fen_class">
+       <view class="return_goods">
+          <view class="goods_left">
+              <text>退款方式</text>
+          </view>
+           <view class="boxs">
+             <view class="heavy_box">
+               <text class="icon iconfont icon-zhongzhi heavy"></text>
+               <text class="icon iconfont icon-pay-order money"></text>
+             </view>
+             <view class="heavy_title">原支付返还</view>
+           </view>
+       </view>
+    </view>
+   
+</view>
+<view class="footers">提交</view>
+ <action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetbindchange">
+   <view style="padding:30rpx;text-align:center;">申请原因</view>
+  <block wx:for-items="{{actionSheetItems}}">
+    <action-sheet-item bindtap="bind{{item.bindtap}}">
+        <radio-group class="radio-group" bindchange="radioChange">
+        <text style="margin-left:40rpx;">{{item.txt}}</text>
+                <radio class="radio flR" color='red' wx:key="name" value="{{item.txt}}" checked="{{item.checked}}">
+                    
+                </radio>
+            </radio-group>
+    
+    </action-sheet-item>
+  </block>
+  <action-sheet-cancel class="cancel">取消</action-sheet-cancel>
+</action-sheet>

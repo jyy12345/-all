@@ -1,0 +1,55 @@
+<!--pages/mine/register/register.wxml-->
+<view class="register">
+	<view class="rgType">
+		<view class='grade {{menuTapCurrent=="0"?"border":""}}' data-current="0" catchtap="menuTap">
+			<block wx:if="{{menuTapCurrent==0}}">
+        <image class="" src="/image/mine/reg_common1.png"></image>
+				
+			</block>
+			<block wx:else>
+				<image class="" src="/image/mine/reg_common.png"></image>
+			</block>
+			<text class="">普通用户</text>
+		</view>
+		<view class='grade {{menuTapCurrent=="1"?"border":""}}' data-current="1" catchtap="menuTap">
+			
+			<block wx:if="{{menuTapCurrent==1}}">
+        <image class="" src="/image/mine/reg_prof1.png"></image>
+				
+			</block>
+			<block wx:else>
+				<image class="" src="/image/mine/reg_prof.png"></image>
+			</block>
+			<text class="">专业人员</text>
+		</view>
+	</view>
+	<view class="intros commonIntro">
+		<view class="title">
+			<image src="/image/mine/mes.png"></image>
+			<text class="">普通用户</text>
+		</view>
+		<view class="intro">
+			显示相应的用户说明，点击普通显示相应的用户说明，点击普通显示相应的用户说明，点击普通显示相应的用户说明，点击普通显示相应的用户
+		</view>
+	</view>
+	<view class="intros profIntro">
+		<view class="title">
+			<image src="/image/mine/mes.png"></image>
+			<text class="">专业人员</text>
+		</view>
+		<view class="intro">
+			显示相应的用户说明，点击普通显示相应的用户说明，点击普通显示相应的用户说明，点击普通显示相应的用户说明，点击普通显示相应的用户
+		</view>
+	</view>
+  <block wx:if="{{menuTapCurrent!=-1}}">
+    <view class="botBtn" bindtap="handelReg">
+      立即注册
+    </view>
+  </block>
+  <block wx:else>
+    <view class="botBtn notClick">
+      立即注册
+    </view>
+  </block>
+</view>
+

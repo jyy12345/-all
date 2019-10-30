@@ -1,0 +1,62 @@
+<import src="/pages/tabbar/tabbar.wxml"/>
+<template is="tabbar" data="{{tabbar}}"/>
+<movable-area style="top:0;bottom:0;height: 100%; width:100%; overflow:hidden;">
+  <movable-view direction="all" class='bgColor' catchtap="onScrt">
+  <image src='../../../images/indexImg/shitBtn.jpg'></image>
+ </movable-view>
+<view style='width:100%;background:url("{{bodyImgUrl}}")no-repeat;background-size:100% 100%' >
+  <view class='audoParset'>
+   <audio  src="{{src}}" id="myAudio"   class='audios'  bindtimeupdate="updata"> </audio>
+     <view class='bofimgParsent' bindtap="audioPlay"  wx:if="{{!isOpen}}"><image class="bofimg" src='../../../images/indexImg/goToup.png'></image></view>
+      <view class='bofimgParsent1' bindtap="audioPause"  wx:if="{{isOpen}}"></view>    
+      <view class='timeTextsParents'>
+      <text class='timeTexts'>{{starttime}}/</text>
+<text class='timeTexts'>{{duration}}</text>
+      </view>
+   
+<view class="progress">
+ <view class='slid'>
+ 
+<slider bindchange="sliderChange" block-size="12px" step="3" value="{{offset}}" max="{{max}}" class="slider" selected-color="#ff5e5e" width='100%' />
+ 
+</view>
+</view>
+  </view>
+  <scroll-view  scroll-y='true' style='height:700rpx;'>
+  <view class='details'>
+    <view class='ouT'>
+      <view class='title'>{{title}}</view>
+      <view class='title1'>发布：
+        <text>{{releaseDate}}</text>
+        <text class='borderS'>|</text>播放：
+        <text>{{playNums}}</text>
+      </view>
+       <view class='tabs' hidden="{{hiddenName}}">
+          <scroll-view scroll-y="true" style="height: 500rpx;width:100%;">
+            <view  class='introduce'>美术有着悠久的历史。从人类一出现就开始了美术史，原始社会时期人类就会在岩壁上描绘动物和狩猎的图案，随着文明的发展，最早的文字也是从图画中演变出来的，美术是一种精神产物，历史上一直是和宗教联系在一起的，随着技术的进步，绘画材料的发展，画家不断追求更加逼真地描绘对象，美术的水平不断发展。随着美术在社会的作用以及美术的地位和美术理论的发展美术本身也不断地变化。美术史研究美术作品的内容、其在时间和空间的位置以及观众对这些作品的看法。美术作品的风格联系以及其历史关联被看作是每部作品的产生前提，在讨论一个作品时必须将这个前提条件结合讨论。
+            </view>
+            <view class='introduce'>与艺术评论不同的是美术史的研究者一般研究历史上的作品，对当代的作品和内容至少试图使用科学的、工具化的方式来进行研究。美术史承认对一部作品的理解本身是受到分析者的历史环境的影响。的所谓的西方世界，即也包括美洲或者世界其它地方的西方美术。 。
+            </view>
+          </scroll-view>
+        </view>
+      <view class='list' hidden="{{!hiddenName}}">
+      <block wx:for='{{contentData}}'>
+        <view class='listContent clearFlo' catchtap='pustAuto' data-audos="{{item.audioUrl}}" data-cuss='{{item.bodyImgUrl}}' data-title='{{item.title}}' data-playNums='{{item.playNums}}' data-releaseDate='{{item.releaseDate}}'>
+          <view class='imgBox fL'  >
+            <image src='{{item.imgUrl}}'></image>
+          </view>
+          <view class='titleContenrt fR'>
+            <view class='bigBian'>{{item.title}}</view>
+            <view class='titleBert'>
+              <text>{{item.audioSource}}</text>
+              <text class='keyrt'> 播放  {{item.playNums}}</text>
+            </view>
+          </view>
+        </view>
+        </block>
+      </view>
+    </view>
+  </view>
+  </scroll-view>
+</view>
+ </movable-area>

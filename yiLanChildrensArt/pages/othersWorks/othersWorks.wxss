@@ -1,0 +1,7 @@
+page{background: #e9ecfb;}
+.othersParent{width: 607rpx;height: 388rpx;margin: 0 auto;margin-top:200rpx;}
+.othersTitle{padding: 40rpx;background: #A9B7FC;color: #fff;font-size: 29rpx;}
+.others{width: 607rpx;height: 388rpx;}
+.exhibition{width: 100%;height: 216rpx;background: #fff;position: absolute;bottom:0;left: 0;}
+.imgBox{margin: 60rpx 0;}
+.cpImg{width: 169rpx;height: 104rpx;margin-left: 15rpx;}

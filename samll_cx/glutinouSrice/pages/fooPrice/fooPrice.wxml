@@ -1,0 +1,2 @@
+<input placeholder="输入金额" bindinput="amount"></input>
+<button class='pay_fixed_right' formType="submit1" bindtap='pay' style="background:{{color}}">去支付</button>

@@ -1,0 +1,165 @@
+<view class="content">
+   <view>
+      <view class="seach_top">
+         <view class="seach_box">
+             <text class="icon iconfont icon-search"></text>
+             <input type="text" placeholder="商品名称/商品编号/订单号" placeholder-class="pl_size"></input>
+         </view>
+      </view>
+
+      <view class="nav_box">
+         <view class="nav_auto">
+            <text class="selected">售后申请</text>
+            <text>处理中</text>
+            <text>售后评价</text>
+            <text>申请记录</text>
+         </view>
+      </view>
+      <view class="order">
+      <!-- 售后申请 -->
+         <view class="order_list">
+            <view class="order_top clearFlo">
+              <view class="flL">
+                <text class="icon iconfont icon-dingdan code_order"></text>
+                <text class="code">订单编号：8888888</text>
+              </view>
+              <view class="flR">
+                <text class="state">待收货</text>
+                  <text class="shu_order">|</text>
+                  <text class="icon iconfont icon-shanchu del_order"></text>
+              </view>
+            </view>
+            <view class="order_content">
+               <view class="contents clearFlo">
+                  <view class="content_left flL">
+                     <image src="https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640"></image>
+                  </view>
+                  <view class="content_right flR">
+                     <view class="right_title">妈妈我能行勇敢做自己全套10册儿童情绪管理与性格培养绘本 中英文双语亲</view>
+                      <view class="clearFlo">
+                        <view class="flL">
+                           <text class="price">￥45.80</text>
+                           <text class="old_price">￥78.0</text>
+                        </view>
+                        <view class="flR sum">X 1</view>
+                      </view>
+                      
+                  </view>
+               </view>
+               <view class="bottom_order clearFlo">
+                 <view class="deial flL">共1件商品  实付金额：<text class="priveDect">￥35.00</text></view>
+                 <view class="payment_ply flR">申请售后</view>
+               </view>
+            </view>
+         </view>
+         <view class="order_list">
+            <view class="order_top clearFlo">
+              <view class="flL">
+                <text class="icon iconfont icon-dingdan code_order"></text>
+                <text class="code">订单编号：8888888</text>
+              </view>
+              <view class="flR">
+                <text class="state ">已签收</text>
+                  <text class="shu_order">|</text>
+                  <text class="icon iconfont icon-shanchu del_order"></text>
+              </view>
+            </view>
+            <view class="order_content">
+               <view class="contents clearFlo">
+                  <view class="content_left flL">
+                     <image src="https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640"></image>
+                  </view>
+                  <view class="content_right flR">
+                     <view class="right_title">妈妈我能行勇敢做自己全套10册儿童情绪管理与性格培养绘本 中英文双语亲</view>
+                      <view class="clearFlo">
+                        <view class="flL">
+                           <text class="price">￥45.80</text>
+                           <text class="old_price">￥78.0</text>
+                        </view>
+                        <view class="flR sum">X 1</view>
+                      </view>
+                      
+                  </view>
+               </view>
+               <view class="bottom_order clearFlo">
+                 <view class="deial flL">共1件商品  实付金额：<text class="priveDect">￥35.00</text></view>
+                 <view class="payment_ply flR">申请售后</view>
+               </view>
+            </view>
+         </view>
+         <!-- 售后评价 -->
+         <view class="order_list">
+            <view class="order_top clearFlo">
+              <view class="flL">
+                <text class="icon iconfont icon-dingdan code_order"></text>
+                <text class="code">订单编号：8888888</text>
+              </view>
+              <view class="flR">
+                <text class="state "><text class="icon iconfont icon-tuihuo tui_order"></text>退货</text>
+                  <!-- <text class="shu_order">|</text> -->
+                  <!-- <text class="icon iconfont icon-shanchu del_order"></text> -->
+              </view>
+            </view>
+            <view class="order_content">
+               <view class="contents clearFlo">
+                  <view class="content_left flL">
+                     <image src="https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640"></image>
+                  </view>
+                  <view class="content_right flR">
+                     <view class="right_title">妈妈我能行勇敢做自己全套10册儿童情绪管理与性格培养绘本 中英文双语亲</view>
+                      <view class="clearFlo">
+                        <view class="flL">
+                           <text class="price">￥45.80</text>
+                           <text class="old_price">￥78.0</text>
+                        </view>
+                        <view class="flR sum">X 1</view>
+                      </view>
+                      
+                  </view>
+               </view>
+               <view class="bottom_order clearFlo">
+                 <view class="deial flL"><text class="priveOvers">完成</text>退货服务已完成，感谢您的支持</view>
+                 <view class="payment_ply flR">去评价</view>
+               </view>
+            </view>
+         </view>
+         <!-- 处理中 -->
+         <view class="order_list">
+            <view class="order_top clearFlo">
+              <view class="flL">
+                <text class="icon iconfont icon-dingdan code_order"></text>
+                <text class="code">订单编号：8888888</text>
+              </view>
+              <view class="flR">
+                <text class="state "><text class="icon iconfont icon-tuihuo tui_order"></text>退货</text>
+                  <!-- <text class="shu_order">|</text> -->
+                  <!-- <text class="icon iconfont icon-shanchu del_order"></text> -->
+              </view>
+            </view>
+            <view class="order_content">
+               <view class="contents clearFlo">
+                  <view class="content_left flL">
+                     <image src="https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640"></image>
+                  </view>
+                  <view class="content_right flR">
+                     <view class="right_title">妈妈我能行勇敢做自己全套10册儿童情绪管理与性格培养绘本 中英文双语亲</view>
+                      <view class="clearFlo">
+                        <view class="flL">
+                           <text class="price">￥45.80</text>
+                           <text class="old_price">￥78.0</text>
+                        </view>
+                        <view class="flR sum">X 1</view>
+                      </view>
+                      
+                  </view>
+               </view>
+               <view class="bottom_order clearFlo">
+                 <view class="deial flL"><text class="priveOvers">处理中</text>退货申请已提交，等待审核</view>
+                 
+               </view>
+            </view>
+         </view>
+      </view>
+   </view>
+</view>
+ 

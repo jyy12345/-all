@@ -1,0 +1,17 @@
+<view>
+<view class='auTo'><image src='../../../images/indexImg/lala.jpg' class='detailsImg'></image></view>
+
+
+<view class='detailsContent'>
+ <view class='titCont'>
+  <view class='bigTitle'>课程大纲</view>
+  <view class='semllTitle'>养成科学的观察方法，学会抽象的表现放大，从整体关系以及画面的美感效果方面，锻炼绘画技巧。 </view>
+ </view>
+  
+<view class='titCont'>
+  <view class='bigTitle'>上课点评</view>
+  <view class='semllTitle'>养成科学的观察方法，学会抽象的表现放大，从整体关系以及画面的美感效果方面，锻炼绘画技巧。</view>
+ </view>
+</view>
+
+</view>

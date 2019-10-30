@@ -1,0 +1,34 @@
+.top_box{width: 100%;padding: 30rpx 0;background: white;color:#666666;font-size: 30rpx;
+border-top:1px solid #f4f4f4;}
+.address{color: #e9222b;font-size: 35rpx;}
+.right_inv{font-size: 34rpx;margin-top: 5rpx;}
+
+    .code_order{font-size: 28rpx;color:#ababab;}
+    .code{font-size: 28rpx;color:#666666;margin-left: 10rpx;}
+    .state{font-size: 26rpx;color:#666666;}
+    .state_red{color:#e9222b!important;}
+    .shu_order{font-size: 27rpx;margin-left: 10rpx;color:#e8e8e8;}
+    .order_top{width: 91%;margin: 0 auto;padding: 30rpx 0;}
+    .order_content{width: 100%;border-top: 2px solid #f0f0f0;border-bottom: 1px solid #f0f0f0;}
+    .contents{width: 90%;margin: 0 auto;padding: 22rpx 0;}
+    .content_left{width: 136rpx;height: 145rpx;}
+    .content_left image{width: 100%;height: 100%;}
+    .content_right{width: 73%;}
+    .right_title{width: 100%;display: -webkit-box;
+    -webkit-box-orient: vertical;font-size: 26rpx;color:#222222;
+    -webkit-line-clamp: 2;
+    overflow: hidden;margin-bottom: 30rpx;}
+    .price{font-size: 35rpx;color:#e9222b;}
+    .old_price{font-size: 25rpx;color:#cccccc;margin-left: 10rpx;}
+    .sum{color: #999999;font-size: 27rpx;}
+    .deial{font-size: 28rpx;color:#999999;margin-top: 10rpx;margin-left: 20rpx;}
+    .priveDect{color:#666666;}
+    .order_contetns{width: 100%;margin-top: 20rpx;background: white;}
+    .pices_fs{color:#333333;font-size: 26rpx;}
+    .wx_zf{font-size: 42rpx;color:#00ca00;vertical-align: middle;}
+radio .wx-radio-input{ 
+  /* 自定义样式.... */
+    height: 34rpx; width: 34rpx;margin-top: -4rpx; border-radius: 50%;border: 2rpx solid #999;background: transparent;}
+    .red{color:#e9222b!important;}
+    .si_paice{width: 94%;margin: 0 auto;text-align: right;margin-top: 20rpx;font-size: 28rpx;padding-bottom:150rpx;}
+    .pice_btn{font-size: 30rpx;color: white;background: #e9222b;text-align: center;padding: 30rpx 0;width: 100%;position: fixed;bottom: 0;left: 0;}

@@ -1,0 +1,21 @@
+<import src="/pages/tabbar/tabbar.wxml"/>
+<template is="tabbar" data="{{tabbar}}"/>
+<view class='integral clearFlo'>
+   <view class='editjf'>积分明细</view>
+</view>
+<view class='exchange'>兑换奖品</view>
+<view>
+   <view class='borders' wx:for="{{exchange.integralList}}">
+   <view class='autoS'>
+      <view class='clearFlo jiangP'>
+         <view class='prize fL'>
+            <view class='sketch'>{{item.name}}</view>
+            <view class='time'>{{item.data}}</view>
+         </view>
+      <view class='prizeRight fR'>
+  <view class='prizeTitle'>{{item.operateType==1?'+':'-'}}{{item.integralValue}}</view>
+      </view>
+      </view>
+   </view>
+</view>
+</view>

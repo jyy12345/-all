@@ -1,0 +1,33 @@
+<scroll-view class='extra-word' scroll-y="{{isScroll}}">
+<view class='box'>
+  <view class='img'>
+    <image src='../../images/indexImg/shiting1.png'></image>
+  </view>
+  <view class='content'>
+    <input type='text' placeholder='姓名' class='inp' placeholder-class="inps"  bindinput='names'/>
+    <input type='text' placeholder='年龄' class='inp' placeholder-class="inps" bindinput='ages'/>
+    <input type='text' placeholder='性别' class='inp' placeholder-class="inps" bindinput='sex'/>
+    <input type='text' placeholder='联系方式' class='inp' placeholder-class="inps" bindinput='phones'/>
+    <input type='text' placeholder='方便试听时间' class='inp inpa'  placeholder-class="inps"  value="{{codeTime}}{{timesName}}" catchtap='showModalBtn' style='padding-left:2rpx;z-index:1' bindfocus='selectTime'/>
+    <!-- bindtap='clickMe' -->
+     <image src='../../images/indexImg/shiting2.png' class='imgs'></image>
+
+
+    <!-- 日历选择器开始 -->
+    <view class="row"  wx:if="{{dataTap}}">
+      <date-picker bindonselectdate="handleSelecteDate" bind:myevent="onGetCode"  bind:dataTime="gettimes"/>
+    </view>
+
+    <!-- 日历选择器结束 -->
+    
+    <button class='btn' bindtap='logSuccess' wx:if='{{tiJ}}'>提交</button>
+    <view class="btnSuccess" wx:if='{{tiJsessan}}'>提交成功！</view>
+  </view>
+  <view class='footer'>
+    <image src='../../images/indexImg/shiting3.png'></image>
+  </view>
+  <view class='txt'>
+  <text>我们会有老师联系你哦</text>
+  </view>
+</view>
+    </scroll-view>

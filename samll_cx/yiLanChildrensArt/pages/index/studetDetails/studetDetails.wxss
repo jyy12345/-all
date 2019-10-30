@@ -1,0 +1,21 @@
+@import "/pages/tabbar/tabbar.wxss";
+.topImgs{width: 100%;height: 606rpx;background: rgba(216,216,216,0.51);}
+.banBox{width: 79.2%;height: 606rpx;margin: 0 auto;}
+.banBox>image{width: 100%;height: 100%;}
+.titleAuto,.comment,.recommend{width:95%;margin: 0 auto;}
+.titles,.commentTitle,.recommendTitle{font-family: PingFangSC-Medium;font-size: 32rpx;color: #000000;font-weight: 600;margin-top: 10rpx;}
+.titleParent{float: left;}
+.names,.commentContent{font-size: 24rpx;
+color: #9B9B9B;margin-top: 10rpx;}
+.star-five>text{font-size: 45rpx;}
+.star-five{float: right;margin-top: 30rpx;}
+.comment,.recommend{margin-top: 30rpx;}
+.reBottom{margin-top: 20rpx;padding-bottom:130rpx;}
+.reommendBox{width: 32.5%;height: 232rpx;position: relative;float: left;}
+.reommendBox>image{width: 100%;height: 100%;}
+.recomTitle{font-size: 19rpx;color: #000000;font-weight: 600;float: left;}
+.rexomName{font-size: 17rpx;color: #4A4A4A;float: right;}
+.reParent{width:100%;position: absolute;bottom: 0;
+background: rgba(250,222,176,0.72);}
+.reAutos{width: 96%;margin: 0 auto;height:33rpx;line-height:33rpx;}
+.reommendBox:nth-child(2),.reommendBox:nth-child(3){margin-left: 1%;}

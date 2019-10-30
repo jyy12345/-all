@@ -1,0 +1,35 @@
+<view class='con'>
+  <view class='conCen'>
+    <text class='message'>{{headlines.title}}</text>
+    <view class='message2'>
+      <text class='company'>来源：{{headlines.source}}</text>
+      <text class='time'>{{headlines.statrtime}}</text>
+    </view>
+    <view class='zhiyao'>
+      <view class='comma'>“</view>
+      <view class='desc'>{{headlines.desc}}</view>
+      <view class='word'>文章摘要</view>
+    </view>
+    <!-- <view class='zhiyaoBot'>{{headlines.content}}</view> -->
+    <view class='zhiyaoBot'>
+      <import src="../../wxParse/wxParse.wxml"/>
+      <template is="wxParse" data="{{wxParseData:databinding.nodes}}"/>
+    </view>
+    
+    <!-- <import src="../../wxParse/wxParse.wxml"/>
+    <template is="wxParse" data="{{wxParseData:databinding.nodes}}"/> -->
+  </view>
+</view>
+<view class='bottom'>
+  <view class="bottomCen">
+    <block  wx:if="{{status==2}}">
+      <text class='icon iconfont icon-shoucang'  data-id="{{headlines.id}}" data-zhanTid="{{headlines.sid}}"  bindtap='collection'></text>
+    </block>
+    <block  wx:else>  
+      <text class='icon iconfont icon-shoucang1' style='color:#ffbf00'  data-id="{{headlines.id}}" data-zhanTid="{{headlines.sid}}"  bindtap='cancel'></text>
+    </block>
+  </view>
+  <!-- <view class="bottomCen">
+    <image src="../../images/index/fenxinag.png"  mode="aspectFill" data-zixunId1="{{headlines.id}}" data-zhanTid1="{{headlines.sid}}"></image>
+  </view> -->
+</view>

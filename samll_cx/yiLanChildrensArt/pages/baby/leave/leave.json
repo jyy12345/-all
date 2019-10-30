@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "请假补课",
+  "usingComponents": {
+    "date-picker": "date-picker/index"
+  }
+  }

@@ -1,0 +1,58 @@
+.after_content{width: 100%;background: white;}
+.after_one{border-top: 2px solid #ececec;padding: 20rpx 0;border-bottom: 1px solid #ececec;}
+.after_box,.sum_box{width: 88%;margin: 0 auto;}
+.sale_left{width: 139rpx;height: 146rpx;}
+.sale_left image{width: 100%;height: 100%;}
+.sale_right{width: 73%;}
+.after_title{font-size: 26rpx;color: #444444;}
+.dan_price{font-size: 24rpx;color: #747474;margin-top: 40rpx;}
+.dan_price text{font-size: 28rpx;color:#505050;}
+.sum_box{padding: 20rpx 0;}
+.sum_title{margin-top: 11rpx;font-size: 27rpx; color:#333333;}
+.fen_class{width: 88%;margin: 0 auto;padding: 20rpx 0;}
+.goods_right{font-size: 24rpx;}
+.goods_left text{vertical-align: middle}
+.goods_left{font-size: 30rpx;margin-top: 5rpx;color:#000000; }
+.right_btn{font-size: 38rpx;color:#666666!important;margin-top: 10rpx;margin-left: 10rpx;}
+.reason{width: auto;}
+.suo_greay{color:#666666;font-size: 24rpx;margin-top: 15rpx;}
+action-sheet-item {text-align: left!important;font-size: 25rpx!important;}
+
+/*  重写 radio 样式  */
+/* 未选中的 背景样式 */
+radio .wx-radio-input{
+   border-radius: 50%;/* 圆角 */
+   width: 30rpx;
+   height: 30rpx;
+   margin-right: 20rpx;
+}
+/* 选中后的 背景样式 （红色背景 无边框 可根据UI需求自己修改） */
+radio .wx-radio-input.wx-radio-input-checked{
+   border-color: #333; 
+   background: #333;
+}
+/* 选中后的 对勾样式 （白色对勾 可根据UI需求自己修改） */
+radio .wx-radio-input.wx-radio-input-checked::before{
+   border-radius: 50%;/* 圆角 */
+   width: 40rpx; /* 选中后对勾大小，不要超过背景的尺寸 */
+   height: 40rpx; /* 选中后对勾大小，不要超过背景的尺寸 */
+   display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24rpx; /* 对勾大小 30rpx */
+   color:#fff; /* 对勾颜色 白色 */
+   background: transparent;
+   transform:translate(-50%, -50%) scale(1);
+   -webkit-transform:translate(-50%, -50%) scale(1);
+}
+textarea{width: 96%;height: 249rpx;background: #f8f8f8;padding: 20rpx;margin-top: 15rpx;font-size: 26rpx;}
+.text_title{font-size: 26rpx;color:#c5c5c5;}
+.camera{font-size: 60rpx;color:#d5d5d5;}
+.heavy_box{position: relative;left: 50%;
+    top: 40%;
+    transform: translate(-50%,-50%);text-align: center;}
+.boxs{width: 200rpx;height: 200rpx;border: 2px solid #e9222b;border-radius: 30rpx;margin-top: 20rpx;}
+.heavy{font-size: 70rpx;color:#e9222b;}
+.money{font-size: 55rpx;color:#e9222b;position: absolute;left: 75rpx;top: 7rpx;}
+.heavy_title{font-size: 28rpx;color:#e9222b;line-height: 160rpx;text-align: center;}
+.footers{width: 100%;padding: 36rpx 0;text-align: center;position: fixed;bottom: 0;left: 0;background: #e9222b;color: white;font-size: 30rpx;}

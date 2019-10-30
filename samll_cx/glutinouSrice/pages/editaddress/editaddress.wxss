@@ -1,0 +1,11 @@
+.register{width:100%;background: white;margin: 20rpx 0 0;}
+.pd_inp{padding: 28rpx 0;border-bottom: 1px solid #e2e2e2;font-size: 36rpx;}
+.jt_cs{margin-top: 5rpx;font-size: 35rpx;color:#222222;}
+.pd_inp view:nth-child(1){width: 25%;line-height: 46rpx;}
+.picker{width: 69%;display: block;}
+.code{color: red;}
+.regi_btn{width: 90%;margin: 30rpx auto;background: red;color:white;text-align: center;padding: 31rpx 0;border-radius: 20rpx;font-size: 36rpx;}
+.login_title{font-size: 32rpx;color:#666666;padding: 30rpx 0 10rpx 20rpx;}
+.pd_inp view{font-size: 24rpx;}
+.picker input{color: #e5e5e5;}
+.picker text{width: 126rpx;height: 50rpx;border: 1px solid #d2d2d2;display: inline-block;text-align: center;line-height: 50rpx;margin-right: 24rpx;border-radius: 10rpx;}

@@ -1,0 +1,113 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false,
+		"uglifyFileName": true,
+		"checkInvalidKey": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.0.4",
+	"appid": "wx403f16d834f6d26c",
+	"projectname": "%E6%9C%AA%E6%9D%A5%E5%9B%BD%E5%8C%BB",
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 9,
+			"list": [
+				{
+					"id": -1,
+					"name": "aaa",
+					"pathName": "pages/health/yuyueCoach/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "星际简介",
+					"pathName": "pages/mine/gradeIntro/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "健康商城",
+					"pathName": "pages/cart/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "线上课程详情",
+					"pathName": "pages/cart/onlineCourse/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zhuce",
+					"pathName": "pages/mine/register/common",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zc",
+					"pathName": "pages/mine/register/profession",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "ss",
+					"pathName": "pages/search/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "addr",
+					"pathName": "pages/mine/addr/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "ADDR",
+					"pathName": "pages/mine/addr/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zj",
+					"pathName": "pages/smiling/doctorDetail/index",
+					"scene": null
+				}
+			]
+		}
+	}
+}

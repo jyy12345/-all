@@ -1,0 +1,52 @@
+<view>
+   <view class="success_box">
+      <view class="icon iconfont icon-wancheng1 success_icon"></view>
+      <view class="price_text">支付金额：<text>¥20.00</text></view>
+      <text class="btns">继续购物</text>
+      <text class="btns">查看订单</text>
+   </view>
+   <view class="remind">
+      安全提醒：我们平台不会以订单异常、系统升级为由要求您点击任何网址链接进行退款操作，谨防诈骗行为。
+   </view>
+   <!-- 好书推荐 -->
+         <view class="nice_book back_color">
+            <view class="nice_auto">
+              <view class="nice_bookChil clearFlo">
+                <view class="nice_title flL">好书推荐</view>
+                <!-- <view class="nice_gd flR">查看更多<text class="icon iconfont icon-arrowRight"></text></view> -->
+            </view>
+            <view class="list_parent">
+                <view class="book_list">
+                    <view class="img_box">
+                      <image src="https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640"></image>
+                    </view>
+                    <view class="book_title">希姆博尔斯卡信札 写给文学爱好者</view>
+                    <view class="socus">
+                      <text class="book_price">￥45.80</text>
+                      <text class="book_del">￥78</text>
+                    </view>
+                </view>
+                <view class="book_list">
+                    <view class="img_box">
+                      <image src="https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640"></image>
+                    </view>
+                    <view class="book_title">希姆博尔斯卡信札 写给文学爱好者</view>
+                    <view class="socus">
+                      <text class="book_price">￥45.80</text>
+                      <text class="book_del">￥78</text>
+                    </view>
+                </view>
+                <view class="book_list">
+                    <view class="img_box">
+                      <image src="https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640"></image>
+                    </view>
+                    <view class="book_title">希姆博尔斯卡信札 写给文学爱好者</view>
+                    <view class="socus">
+                      <text class="book_price">￥45.80</text>
+                      <text class="book_del">￥78</text>
+                    </view>
+                </view>
+            </view>
+          </view>
+        </view>
+</view>

@@ -1,0 +1,97 @@
+<!--menubar-->
+<view class='zhezhaoSou' wx:if='{{isnones}}'>
+  <view>
+    <view class="zhezhaoTop" bindtap='isTue'>
+      <image src="../../images/index/close.png" mode="aspectFill"></image>
+    </view>
+    <input type='text' placeholder='请输入要搜索的关键字' placeholder-class='inpFont' bindinput='souInp' bindfocus='enen'></input>
+    <button bindtap='souGo'>搜索</button>
+  </view>
+  <view id='list' wx:for='{{souScontent}}'>
+    <view bindtap='souGosto'>{{item.title}}</view>
+  </view>
+</view>
+<scroll-view scroll-x="true" class="menubar clearfloat">
+<view class='laeb'>
+      <text class="{{dataId=='0'?'active':''}} " bindtap="check" data-id="0">推荐</text>
+    </view>
+
+  <view class="menu clearfloat" style='width:{{bigWidthnew}}px'>
+    <view wx:key='navlists' wx:for='{{myLabel}}' wx:for-key='index1' class='labelWidth clearfloat' data-navId='{{item.id}}'>
+      <text class="{{dataId==item.label_id?'active':''}} " bindtap="check1" data-id="{{item.label_id}}">{{item.title}}</text>
+    </view>
+  </view>
+</scroll-view>
+<!-- 添加话题 -->
+<view class="menu2">
+  <view class='menu2Img1' bindtap='open'>
+    <image src="../../images/index/add.png" mode="aspectFill"></image>
+  </view>
+  <view class='menu2Img1' bindtap='openS'>
+    <image src="../../images/index/search.png" mode="aspectFill"></image>
+  </view>
+</view>
+<!-- 添加话题遮罩层-->
+<view class="zhezhao" style='display:{{zhezhao}}'>
+  <view class="zhezhaoTop" bindtap='close'>
+    <image src="../../images/index/close.png" mode="aspectFill"></image>
+  </view>
+  <view class="zhezhaoCen">
+    <text>我的频道</text>
+    <text>点击删除频道</text>
+  </view>
+  <view class="zhezhaoBot">
+    <view class='lanmu'>
+      <text style='color: rgb(94, 94, 94);'>推荐</text>
+    </view>
+    <view class='lanmu' wx:key='myLabelId' wx:for='{{myLabel}}' wx:for-index='indexs' data-myLabelid='{{item.id}}' data-myIndexs='{{indexs}}'>
+      <text>{{item.title}}</text>
+      <image src="../../images/index/delete.png" data-myIndexs='{{indexs}}' mode='aspectFill' 
+      data-indeid='{{item.label_id}}' bindtap='imgDel'></image>
+    </view>
+  </view>
+  <view class="zhezhaoCen">
+    <text>其他频道</text>
+    <text>点击添加频道</text>
+  </view>
+  <view class="zhezhaoBot">
+    <view class='lanmu' wx:key='labelIndex' wx:for="{{label}}" wx:for-index='index' data-labelId='{{item.label_id}}' bindtap='labels' data-indexs='{{index}}'>
+      <text>+{{item.title}}</text>
+    </view>
+  </view>
+</view>
+<!--content list-->
+<scroll-view scroll-y="true" class="content" style="height: {{windowHeight}}px; width: {{windowWidth}}px;">
+  <view class="banner-box wrap" wx:if="{{xuYs}}">
+    <swiper class="swiper" indicator-dots="true" autoplay="true" indicator-color="rgba(255,255,255,0.4)" indicator-active-color="rgba(255,255,255,1)" circular='true' interval="3000" duration="1000">
+      <block wx:key="unique" wx:for="{{slider}}" wx:for-index="index">
+        <swiper-item>
+          <block wx:if="{{item.pic}}">
+            <image src="{{imgAddress+item.pic}}" mode="aspectFill"></image>
+          </block>
+
+          <navigator class="nav-item" hover-class="other-navigator-hover">
+            <image src="../../images/index/banerbot.png" mode="aspectFill" class='banerbot'></image>
+          </navigator>
+          <text>{{item.title}}</text>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <navigator bindtap='goXinw' hover-class="none" wx:key='journalisms' wx:for='{{journalism}}' wx:for-index='indexs1' data-ids="{{item.id}}">
+    <view class='information'>
+      <view class='infCen'>
+        <view class='infCenLeft' wx:if='{{item.img}}'>
+          <image src="{{imgAddress+item.img}}" mode="aspectFill"></image>
+        </view>
+        <view class='{{item.img==""?"infCenRight1":"infCenRight"}}'>
+          <view class='infCenRightTop'>{{item.title}}</view>
+          <view class='infCenRightBot'>
+            <text>{{item.source}}</text>
+            <text>{{item.statrtime}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </navigator>
+</scroll-view>

@@ -1,0 +1,112 @@
+.con{
+  width: 100%; 
+  overflow: hidden;
+  background: #fff;
+  margin-top:20rpx;
+  padding-bottom: 100rpx;
+}
+.conCen{
+  width: 95%;
+  margin:0 auto;
+}
+.conCen .message{
+  display: block;
+  width:100%;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  margin-top: 10rpx;
+  font-size:38rpx;
+  color:#222;
+  line-height: 65rpx;
+}
+.conCen .message2{
+  width: 100%;
+  height: 70rpx;
+}
+.conCen .message2 text:nth-child(1),.conCen text:nth-child(2){
+  display: block;
+  width:50%;
+  height: 70rpx;
+  line-height: 35rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+  margin-top: 30rpx;
+  font-size:24rpx;
+  color:#b2b2b2;
+  margin-bottom: 30rpx;
+  float: left;
+}
+.conCen .time{
+  text-align: right;
+}
+image{
+  width: 100%;
+  margin:20rpx 0;
+}
+.content{
+  display: block;
+  color: #444444;
+  font-size: 35rpx;
+  text-indent: 55rpx;
+  line-height: 60rpx;
+}
+.zhiyao{
+  margin-top: 40rpx;
+  width:94%;
+  background: #fbfbfb;
+  padding-left:3%;
+  padding-right: 3%;
+  padding-top: 40rpx;
+  color:#333333;
+  position: relative;
+}
+.comma{
+  font-size: 50rpx;
+  line-height: 50rpx;
+  color: #222222;
+  text-align: left;
+  position: absolute;
+  top: 40rpx;
+  left: 0;
+}
+.desc{
+  margin-top: 40rpx;
+  font-size: 30rpx;
+  line-height: 50rpx;
+  padding-bottom: 20rpx;
+}
+.word{
+  height: 73rpx;
+  line-height: 73rpx;
+  border-top:1rpx solid #d8d8d8;
+  font-size: 22rpx;
+  color: #d70101;
+  text-align: right;
+}
+.zhiyaoBot{
+  width: 100%;
+  margin-top:20rpx;
+  line-height: 70rpx;
+}
+.bottom{
+  width: 100%;
+  height: 100rpx;
+  border-top:1px solid #ededed;
+  background: #fff;
+  position: fixed;
+  bottom:0;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.bottomCen{
+  width:100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+}
+.bottomCen image{
+  width: 50rpx;
+  height: 50rpx;
+}
+.bottomCen text{font-size: 50rpx;color: #7b7b7b}

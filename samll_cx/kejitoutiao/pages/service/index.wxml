@@ -1,0 +1,15 @@
+<view class='information' wx:for="{{periodicals}}" data-id="{{item.id}}" bindtap='detail'>
+  <view class='infCen'>
+    <view class='infCenLeft'>
+      <image src="{{imgUrls+item.img}}"  mode="aspectFill" ></image>
+    </view>
+    <view class='infCenRight'>
+      <view class='infCenRightTop'>{{item.title}}</view>
+      <view class='infCenRightBot'>
+        <text>{{item.source}}</text>
+        <text>{{item.statrtime}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+<view style='width:100%;height:20rpx;float:left'></view>

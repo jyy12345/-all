@@ -1,0 +1,18 @@
+@import "/pages/tabbar/tabbar.wxss";
+.topBanner{width: 100%;height: 338rpx;}
+.topBanner>image{width: 100%;height: 100%;}
+.yeasOld{float: left;font-family: PingFangSC-Medium;
+font-size: 36rpx;
+color: #000000;
+text-align: center;}
+.yeasParent{padding: 15rpx 0;}
+.autos{width: 93%;margin: 0 auto;margin-bottom: 130rpx;}
+.goTo{float: right;color:  #000000;font-weight: 600;margin-top: 15rpx;}
+.studentAuto{width: 95%;margin: 0 auto;}
+.student{width: 32.5%;height: 307rpx;background:white;float: left;box-shadow: #cccc 1px 1px 1px 1px;}
+.student:nth-child(2),.student:nth-child(3){margin-left: 1%;}
+.studentAuto>image{width: 100%;height: 213rpx;margin-top: 7rpx;}
+.paintingTitle{font-family: PingFangSC-Medium;font-size: 22rpx;color: #000000;}
+.paintingName{font-family: PingFangSC-Medium;font-size: 22rpx;
+color: #9B9B9B;
+text-align: right;}

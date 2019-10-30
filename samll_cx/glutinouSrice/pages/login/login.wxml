@@ -1,0 +1,24 @@
+<view>
+<view class="login_title">请填写您个人使用的手机号</view>
+   <view class="register">
+   
+      <view class="register_child auto">
+      
+          <view class="clearFlo pd_inp">
+                <view class="flL">手机号</view>
+                <view class="picker flL">
+                  <input type="text"  placeholder="请输入手机号" bindinput="mobile"></input>
+                </view>
+          </view>
+           <view class="clearFlo pd_inp">
+                <view class="flL">验证码</view>
+                <view class="picker flL" style="width: 50%;">
+                  <input type="text"  placeholder="请输入验证码" bindinput="code"></input>
+                </view>
+                <button class="flR code" disabled='{{disabled}}' bindtap="getVerificationCode">{{time}}</button>
+          </view>
+          
+      </view>
+   </view>
+   <view class="regi_btn" bindtap="loginBtn">登录</view>
+</view>

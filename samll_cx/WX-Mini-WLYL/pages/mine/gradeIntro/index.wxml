@@ -1,0 +1,34 @@
+<!--pages/mine/gradeInto/index.wxml-->
+<view class="borderTop gradeIntro">
+	<view wx:for="{{introListData}}" class="boxShadow eachIntro">
+		<view class="title">
+			{{item.content}}
+		</view>
+    <view wx:for="{{item.startlevel}}" wx:for-item="items" wx:key="indexs" wx:for-index="indexs" class="intros">
+      <view class="fl iLeft">
+        <image wx:if="{{item.content=='爱心公益'}}" class="" src="../../../image/mine/heart1.png"></image>
+        <image wx:else class="" src="../../../image/mine/star1.png"></image>
+        <text class="">×{{indexs+1}}</text>
+      </view>
+      <view class="fr iRight">
+        <view class="fl intro {{dataId==items.id?'unhidden':'hidden'}}">{{items.content}}</view>
+        <image class="fr" bindtap='sHidden' data-id="{{items.id}}" data-ellipsis="{{items.hidden}}" data-index="{{indexs}}" src="{{dataId==items.id?'../../../image/mine/close.png':'../../../image/mine/open.png'}}"></image>
+      </view>
+    </view>
+	</view>
+	<!-- <view class="boxShadow eachIntro">
+		<view class="title">
+			爱心公益
+		</view>
+    <view wx:for="{{loveList}}" wx:for-item="item" wx:key="index" wx:for-index="index" class="intros">
+      <view class="fl iLeft">
+        <image class="" src="../../../image/mine/heart1.png"></image>
+        <text class="">×{{index+1}}</text>
+      </view>
+      <view class="fr iRight">
+        <view class="fl intro {{item.ellipsis?'ellipsis':'unellipsis'}}">{{item.intro}}</view>
+        <image class="fr" bindtap='hEllipsis' data-ellipsis="{{item.ellipsis}}" data-index="{{index}}" src="{{item.ellipsis?'../../../image/mine/open.png':'../../../image/mine/close.png'}}"></image>
+      </view>
+    </view>
+	</view>	 -->
+</view>

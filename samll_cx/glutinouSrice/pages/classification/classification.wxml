@@ -1,0 +1,19 @@
+<view class="classif_top">
+  <view class="search">
+    <text class="icon iconfont icon-search"></text>
+    <input type="text" placeholder="搜索商品" placeholder-class="inps" bindtap="search_box"></input>
+  </view>
+</view>
+<view class="class_list">
+ <block wx:for="{{category}}" wx:for-item="cell">
+    <view class="class_listchild">
+      <view class="class_title"bindtap="gtoDetail"  data-cateid="{{cell.code}}">{{cell.code}}   {{cell.mobile_name}}</view>
+      <view class="listchild_content">
+      <block wx:for="{{cell.subclass}}" >
+        <view class="content_list"  data-partId="{{cell.id}}" data-cateid="{{item.id}}" >{{item.code}}  {{item.mobile_name}}</view>
+        </block>
+      </view>
+    </view>
+  </block>
+
+</view>

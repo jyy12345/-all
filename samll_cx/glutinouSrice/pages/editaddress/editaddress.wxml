@@ -1,0 +1,41 @@
+<view>
+   <view class="register">
+      <view class="register_child auto">
+          <view class="clearFlo pd_inp">
+                <view class="flL">收货人</view>
+                <view class="picker flL">
+                  <input type="text"  placeholder="请输入收货人" value="王"></input>
+                </view>
+          </view>
+           <view class="clearFlo pd_inp">
+                <view class="flL">联系方式</view>
+                <view class="picker flL">
+                  <input type="text"  placeholder="请输入联系方式" value="15510050497"></input>
+                </view>
+          </view>
+           <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+              <view class="clearFlo pd_inp">
+                  <view class="flL">所在地区</view>
+                  <view class="picker flL">
+                    <input type="text"  placeholder="请输入所在地区" value="{{region[0]}}，{{region[1]}}，{{region[2]}}"></input>
+                  </view>
+              </view>
+          </picker>
+            <view class="clearFlo pd_inp">
+                <view class="flL">详细地址</view>
+                <view class="picker flL">
+                  <input type="text"  placeholder="请输入联系方式" value="朝阳路85号院铜牛电影产业园4号楼4层"></input>
+                </view>
+          </view>
+          <view class="clearFlo pd_inp">
+                <view class="flL">地址标签</view>
+                <view class="picker flL">
+                    <text>公司</text>
+                    <text>家</text>
+                    <text>学校</text>
+                </view>
+          </view>
+      </view>
+   </view>
+   <view class="regi_btn">保存</view>
+</view>

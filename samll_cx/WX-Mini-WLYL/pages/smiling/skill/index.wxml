@@ -1,0 +1,40 @@
+<!--pages/smiling/skill/index.wxml-->
+<view class="borderTop skill">
+	<!-- nav -->
+  <view class='boxShadow navs'>
+    <view class='nav' data-current = "0" bindtap='doctor'>
+			医师风采
+			<view class="wLine"></view>
+		</view>
+    <view class='nav navColor' data-current = "1" bindtap='skill'>
+			技术评定
+			<view class="lLine"></view>
+		</view>
+    <view class='nav' data-current = "2" bindtap='upGrade'>
+			升级必备
+			<view class="wLine"></view>
+		</view>
+	</view>
+	<!-- tabbar -->
+  <view class='topTabBar clearfix'>
+    <view wx:for="{{tabBarData}}" class='tab  {{menuTapCurrent == index ? "tabAfter" : ""}}' data-id="{{item.id}}" data-currents = "{{index}}" bindtap='menuTap'>
+      {{item.title}}
+    </view>
+	</view>
+  <!-- 专业水平 -->
+  <view wx:for="{{tabBarData}}" hidden="{{menuTapCurrent!=index}}" class="eachCont healthCont">
+    <view class="clearfix eachHealMes" wx:for="{{skillListData}}" data-title="{{item.classtitle}}" data-id="{{item.id}}" bindtap='articleDetail'>
+      <block wx:if="{{item.image}}">
+        <image class="fl" style="" src="{{imgUrl+item.image}}" />
+        <view class='fr healthMesCont'>
+          <view class="fl healthMes1">{{item.name}}</view>
+          <text class="fl time1">{{item.createtime}}</text>
+        </view>
+      </block>
+      <block wx:else>
+        <view class="fl healthMes">{{item.name}}</view>
+        <text class="fl time">{{item.createtime}}</text>
+      </block>
+    </view>
+  </view>
+</view>

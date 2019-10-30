@@ -1,0 +1,45 @@
+<!--pages/mine/course/index.wxml-->
+<view class='allCont'>
+  <block wx:if="{{curriculum!=''}}">
+    <view class="boxShadow eachCont" wx:key='curriculum' wx:for='{{curriculum}}' wx:for-index='index' bindtap='goTo' data-idss='{{item.cid}}' data-coursetype='{{item.coursetype}}'>
+      <view class="topCont">
+        <view class="fl label l_course " 
+        style='color:#20cfa0; border:1rpx solid #20cfa0' wx:if='{{item.coursetype==1}}'>
+          课程
+        </view>
+        <view class="fl label l_course " wx:else>
+          课程
+        </view>
+        <view class="fl mark">
+          订单编号：<text class="">{{item.numbers}}</text>
+        </view>
+        <text class="fr status s_finish">已购买</text>
+      </view>
+      <view class="botCont">
+        <view class="orderTop">
+          <image class="fl" src="{{imgUrl+item.image}}"></image>
+          <view class="fr orderRight">
+            <text class="title">{{item.name}}</text>
+            <text class="intro">{{item.abstract}}</text>
+          </view>
+        </view>
+        <view class="orderBot">
+          <view class="fl price">
+            <view class="fl">
+              合计：
+            </view>
+            <view class="fl rmb">
+              ￥
+            </view>
+            <text class="fl">5300.00</text>
+          </view>
+          <button class="fr" wx:if='{{item.coursetype==1}}' bindtap='goTo' data-idss='{{item.cid}}' data-coursetype='{{item.coursetype}}'>去听课</button>
+          <!-- <view wx:else></view> -->
+        </view>
+      </view>
+    </view>
+  </block>
+  <block wx:else>
+    <view class='noCont'>暂无课程</view>
+  </block>
+</view>

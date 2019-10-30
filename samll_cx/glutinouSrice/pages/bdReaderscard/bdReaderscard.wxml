@@ -1,0 +1,21 @@
+<view>
+   <view class="register">
+   
+      <view class="register_child auto">
+      
+          <view class="clearFlo pd_inp">
+                <view class="flL">读者卡号</view>
+                <view class="picker flL">
+                  <input type="text"  placeholder="请输入读者卡号" bindinput="number"></input>
+                </view>
+          </view>
+           <view class="clearFlo pd_inp">
+                <view class="flL">密码</view>
+                <view class="picker flL">
+                  <input type="text"  placeholder="请输入密码" bindinput="password"></input>
+                </view>
+          </view>
+      </view>
+   </view>
+   <view class="regi_btn" bindtap="bd_success">立即绑定</view>
+</view>

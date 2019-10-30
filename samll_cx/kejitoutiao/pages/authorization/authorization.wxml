@@ -1,0 +1,31 @@
+<!-- <view wx:if="{{isHide}}"> -->
+    <view>
+        <view class='header'>
+            <image src='/images/wx_login.png'></image>
+        </view>
+
+        <view class='content'>
+            <view>申请获取以下权限</view>
+            <text>获得你的公开信息(昵称，头像等)</text>
+        </view>
+
+        <button class='bottom' type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">
+            授权登录
+        </button>
+    </view>
+    <!-- <view wx:else>请升级微信版本</view> -->
+<!-- </view> -->
+
+<!-- <view wx:if='{{logoT}}'>
+    <view class='denglu'>
+  <text class="toutiao">科技头条</text>
+  <form>
+    <input placeholder="账号" type='text' value="{{account}}" name="no" bindinput='names'/>
+    <input placeholder="密码" type='{{type}}' style='margin-top:10rpx;' name="pwd" bindinput='passwords'/>
+    <view class='eye' bindtap='eye'>
+      <image src="../../images/index/eye.png"  mode="aspectFill"></image>
+    </view>
+    <button type='primary' bindtap='formSubmit'>登录</button>
+  </form>
+</view>
+</view> -->

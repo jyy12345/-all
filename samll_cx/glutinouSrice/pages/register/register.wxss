@@ -1,0 +1,8 @@
+.register{width:100%;background: white;margin: 20rpx 0 0;}
+.pd_inp{padding: 25rpx 0;border-bottom: 1px solid #e2e2e2;font-size: 36rpx;}
+.jt_cs{margin-top: 5rpx;font-size: 35rpx;color:#222222;}
+.pd_inp view:nth-child(1){width: 25%;}
+.picker{width: 69%;display: block;}
+.code{color: red;}
+.regi_btn{width: 90%;margin: 30rpx auto;background: red;color:white;text-align: center;padding: 31rpx 0;border-radius: 60rpx;font-size: 36rpx;}
+.pd_inp view{font-size: 24rpx;}

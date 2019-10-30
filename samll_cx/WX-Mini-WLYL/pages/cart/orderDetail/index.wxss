@@ -1,0 +1,139 @@
+/* pages/cart/orderDetail/index.wxss */
+.orderDetail{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+}
+.mes{
+	width: 100%;
+	margin-top: 15rpx;
+	background: #fff;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+.perMes{
+	padding: 31rpx 30rpx;
+}
+.left{
+	width: 670rpx;
+}
+.name{
+	width: 100%;
+	height: 63rpx;
+	line-height: 63rpx;
+	font-size: 36rpx;
+	color: #222;
+}
+.tel{
+	font-size: 30rpx;
+	margin-left: 45rpx;
+}
+.addr{
+	width: 100%;
+  height: 59rpx;
+	line-height: 59rpx;
+	font-size: 30rpx;
+	color: #666;
+	overflow: hidden;
+}
+.right_arrows{
+  border-top: 5rpx solid #060606;
+  border-right: 5rpx solid #060606;
+  transform: rotate(45deg);
+  display: inline-block;
+  margin:50rpx 0rpx 0 0;
+}
+.orderMes .oNum{
+	width: 100%;
+	height: 101rpx;
+	line-height: 100rpx;
+	padding: 30rpx;
+	font-size: 30rpx;
+	color: #050505;
+	border-bottom: 1px solid #f1f1f1;
+}
+.goodsMes{
+	width: 100%;
+	padding: 40rpx 30rpx;
+	box-sizing: border-box;
+	border-bottom: 1px solid #f1f1f1;
+  overflow: hidden;
+}
+.goodsMes image{
+	width: 345rpx;
+  height: 226rpx;
+	margin-right: 28rpx;
+}
+.cont{
+	width: 317rpx;
+}
+.title{
+	height: 63rpx;
+	line-height: 63rpx;
+	font-size: 30rpx;
+	color: #222;
+}
+.intro{
+	line-height: 41rpx;
+	font-size: 24rpx;
+	color: #999;
+}
+.price{
+	line-height: 70rpx;
+	color: #20cfa0;
+	font-size: 36rpx;
+}
+.rmb{
+	font-size: 24rpx;
+}
+.allPrice{
+	width: 100%;
+	padding: 0 30rpx;
+	height: 125rpx;
+	line-height: 125rpx;
+	font-size: 26rpx;
+	color: #222;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+.allPrice .prices{
+	font-size: 30rpx;
+	color: #20cfa0;
+}
+.pay{
+	width: 100%;
+	height: 95rpx;
+	background: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+.payPrice{
+	width: 485rpx;
+	height: 95rpx;
+	line-height: 95rpx;
+	padding-left: 189rpx;
+	box-sizing: border-box;
+	font-size: 26rpx;
+	color: #959595;
+	display: inline-block;
+}
+.payPrice .pp{
+	height: 95rpx;
+	font-size: 36rpx;
+	color: #20cfa0;
+}
+.payPrice .rmb{
+	font-size: 26rpx;
+	color: #20cfa0;
+}
+.goPay{
+	width: 265rpx;
+	height: 95rpx;
+	line-height: 95rpx;
+	display: inline-block;
+	background: #20cfa0;
+	color: #fff;
+	text-align: center;
+	font-size: 30rpx;
+}

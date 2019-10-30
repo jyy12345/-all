@@ -1,0 +1,53 @@
+<movable-area style="top:0;bottom:0;height: 100%; width:100%; overflow:hidden;">
+  <movable-view direction="all" class='bgColor' catchtap="onScrt">
+  <image src='../../images/indexImg/shitBtn.jpg'></image>
+ </movable-view>
+<view class='auTo'>
+   <view class='title'>请提交您的宝贝的作品，我们的老师会给以相应的点评，之后可以在展示区看到哦</view>
+   <view class='imgContent'>作品展示</view>
+   <view class='shangCbtn' catchtap='upload'>
+     上传作品
+   </view>
+</view>
+<view class="swiper-container">
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{duration}}" current="{{swiperCurrent}}" bindchange="swiperChange" class="swiper">
+
+    <!-- <block wx:for="{{imgUrls}}" wx:key="unique"> -->
+
+      <swiper-item>
+       <view class='exhibition'>
+<view class='imgBox'>
+   <image src='../../images/indexImg/imgcp1.jpg' class='cpImg' bindtap='xiangGo'></image>
+    <image src='../../images/indexImg/imgcp2.jpg' class='cpImg'></image>
+     <image src='../../images/indexImg/imgcp3.jpg' class='cpImg'></image>
+      <image src='../../images/indexImg/imgcp4.jpg' class='cpImg'></image>
+   </view>
+</view>
+      </swiper-item>
+<swiper-item>
+       <view class='exhibition'>
+<view class='imgBox'>
+   <image src='../../images/indexImg/imgcp1.jpg' class='cpImg'></image>
+    <image src='../../images/indexImg/imgcp2.jpg' class='cpImg'></image>
+     <image src='../../images/indexImg/imgcp3.jpg' class='cpImg'></image>
+      <image src='../../images/indexImg/imgcp4.jpg' class='cpImg'></image>
+   </view>
+</view>
+      </swiper-item>
+      <swiper-item>
+       <view class='exhibition'>
+<view class='imgBox'>
+   <image src='../../images/indexImg/imgcp1.jpg' class='cpImg'></image>
+    <image src='../../images/indexImg/imgcp2.jpg' class='cpImg'></image>
+     <image src='../../images/indexImg/imgcp3.jpg' class='cpImg'></image>
+      <image src='../../images/indexImg/imgcp4.jpg' class='cpImg'></image>
+   </view>
+</view>
+      </swiper-item>
+    <!-- </block> -->
+
+  </swiper>
+
+</view>
+
+ </movable-area>

@@ -1,0 +1,58 @@
+<import src="/pages/tabbar/tabbar.wxml" />
+<template is="tabbar" data="{{tabbar}}" />
+<view class='integral clearFlo'>
+  <view class='integralLeft fL clearFlo' bindtap='gouTo'>
+    <image src='{{integral.integral.imgUrl}}' class='mary fL'></image>
+    <view class='fL conts'>
+      <view class='contents'>{{integral.integral.desc}}</view>
+      <view class='interTitle'>{{integral.integral.integral}}</view>
+    </view>
+    <image src='../../images/indexImg/left.png' class='leftBtn'></image>
+  </view>
+  <view class='integralRight fR clearFlo' bindtap='integralRight'>
+    <image src='{{integral.activity.imgUrl}}' class='pink fL '></image>
+    <view class='conts fL'>
+      <view class='contents'>{{integral.activity.title}}</view>
+      <view class='interTitle'>{{integral.activity.desc}}</view>
+    </view>
+    <image src='../../images/indexImg/left.png' class='leftBtn fL'></image>
+  </view>
+</view>
+<view class='exchange'>兑换奖品</view>
+
+<view>
+  <view class='borders' wx:for="{{integral.prizesList}}">
+    <view class='autoS'>
+      <view class='clearFlo jiangP'>
+        <view class='prize fL'>
+          <image src='{{item.imgUrl}}' class='iconPrize'></image>
+        </view>
+        <view class='prizeRight fR' >
+          <view class='prizeTitle'>{{item.name}}</view>
+          <view class='prizeSammT'>{{item.value}}</view>
+          <view class='button fR' bindtap="powerDrawer" data-statu="open" id='{{item.id}}'>兑换</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+<!--mask-->
+<view class="drawer_screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus}}"></view>
+<view class='imgPostBox' catchtap='heigged'>
+  <image src='../../../images/indexImg/cha.png' class='imgPost' wx:if="{{showModalStatus}}"></image>
+</view>
+<!--content-->
+<!--使用animation属性指定需要执行的动画-->
+<view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}">
+  <!--drawer content-->
+  <view class="drawer_title"></view>
+  <view class="drawer_content">
+    <view class="top grid">
+      您确定要兑换么？
+    </view>
+    <view class="btn_ok" bindtap="powerDrawer1" data-statu="close">确定</view>
+    <view class='borderBottom'></view>
+  </view>
+</view>

@@ -1,0 +1,31 @@
+<view class='con'>
+  <view class='conCen'>
+    <text class='message'>{{details.title}}</text>
+    <view class='message2'>
+      <text class='company'>来源：{{details.source}}</text>
+      <text class='time'>{{details.statrtime}}</text>
+    </view>
+    <view class='zhiyao'>
+      <view class='comma'>“</view>
+      <view class='desc'>{{details.desc}}</view>
+      <view class='word'>文章摘要</view>
+    </view>
+    <view class='zhiyaoBot'>
+      <import src="../../wxParse/wxParse.wxml"/>
+      <template is="wxParse" data="{{wxParseData:databinding.nodes}}"/>
+    </view>
+    <!-- <import src="../../wxParse/wxParse.wxml"/>
+    <template is="wxParse" data="{{wxParseData:databinding.nodes}}"/> -->
+  </view>
+</view>
+<view class='bottom'>
+  <view class="bottomCen">
+  <block  wx:if="{{status==2}}">
+    <text class='icon iconfont icon-shoucang'  data-id="{{details.id}}" data-zhanTid="{{details.sid}}"  bindtap='collection'></text>
+  </block>
+  <block  wx:else>  
+    <text class='icon iconfont icon-shoucang1' style='color:#ffbf00'  data-id="{{details.id}}" data-zhanTid="{{details.sid}}"  bindtap='cancel'></text>
+  </block>
+    <!-- <image src="../../images/index/shoucang2.png"  mode="aspectFill"></image> -->
+  </view>
+</view>

@@ -1,0 +1,59 @@
+<view class='headers'>
+   <view class='headerTime'>时间：<text>周日（10:00——12:00）</text></view>
+   <view class='clearFlo'>
+   <view class='clearFlo fL'>
+   <view class='fL codeTit'>课程编号</view>
+      <view class='select_box fL'>
+        <view class='select' catchtap='selectTap'>
+          <text class='select_text'>{{selectData[index]}}</text>
+          <image class='select_img {{show&&"select_img_rotate"}}' src='../../../images/indexImg/down.jpg' style='width:30rpx;height:25rpx;'></image>
+        </view>
+        <view class='option_box' style='height:{{show?(selectData.length>5?300:selectData.length*60):0}}rpx;'>
+          <text class='option' style='{{index==selectData.length-1&&"border:0;"}}' wx:for='{{selectData}}' wx:key='this' data-index='{{index}}' catchtap='optionTap'>{{item}}</text>
+        </view>
+      </view>
+</view>
+
+<view class='clearFlo fL'>
+   <view class='fL codeTit' style='margin-left:20rpx;'>课程内容</view>
+      <view class='select_box fL'>
+        <view class='select' catchtap='selectTap1'>
+          <text class='select_text'>{{selectData1[index1]}}</text>
+          <image class='select_img {{show1&&"select_img_rotate"}}' src='../../../images/indexImg/down.jpg' style='width:30rpx;height:25rpx;'></image>
+        </view>
+        <view class='option_box' style='height:{{show1?(selectData1.length>5?300:selectData1.length*60):0}}rpx;'>
+          <text class='option' style='{{index1==selectData1.length-1&&"border:0;"}}' wx:for='{{selectData1}}' wx:key='this' data-index='{{index1}}' catchtap='optionTap1'>{{item}}</text>
+        </view>
+      </view>
+</view>
+</view>
+</view>
+<view class='contents'>
+ <block wx:for="{{catalogs}}">
+<view class='list'>
+  <view class='name'>
+   {{item.name}}
+    <view class='triangle'></view>
+  </view>
+  <view class='listContent'>
+  <view style='width:88%;margin:0 auto;'>
+  <view bindtap='sinpy'>
+  <block wx:if="{{item.select==catalogSelect }}" >
+    <view class='btn  fL' style='background:#aeb7d9;border:0'>签到</view>
+     </block>
+     <block wx:else>
+        <view class='btn  fL'>签到</view>
+         <view class='btn  fL'>请假</view>
+         <view class='btn  fL'>旷课</view>
+     </block>
+  </view>
+   
+     <!-- <view class='btn leave fL'>请假</view>
+      <view class='btn absenteeism fL'>旷课</view> -->
+     
+  </view>
+     
+  </view>
+</view>
+</block>
+</view>

@@ -1,0 +1,222 @@
+<view class="page-section page-section-spacing swiper">
+      <swiper style='height:610rpx;'
+        indicator-dots="{{indicatorDots}}" indicator-color="{{indicatorColor}}" indicator-active-color="{{indicator_active}}"  autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}" circular="true" easing-function="easeInOutCubic"
+        interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px">
+        <!-- <block wx:for="{{}}" wx:key="*this"> -->
+          <swiper-item class='banner'>
+            <image src="{{book_info.book_img}}" class="slide-image"/>
+          </swiper-item>
+        <!-- </block> -->
+        
+      </swiper>
+    </view>
+<view class="pare">
+    <view class="main">
+      <view class="main_price clearFlo">
+         <view class="price_left flL">
+            <text>{{book_info.discount_price}}</text>
+            <text class="book_del">{{book_info.price}}</text>
+         </view>
+         <view class="collection flR" bindtap="haveSave" data-id="{{book_info.id}}">
+           <view class="icon iconfont {{isClick?'icon-shoucang1':'icon-shoucang'}} {{isClick?'collection_font':'collection_fonts'}}" ></view>
+           <view class="collection_text">{{isClick?"收藏":"已收藏"}}</view>
+         </view>
+      </view>
+      <view class="title">
+        {{book_info.book_name}}
+        
+      </view>
+    </view>
+</view>
+<view class="pare m-to">
+    <view class="main">
+       <view class="list">
+          <text>书点</text><text>{{book_info.discount_price}}点</text>
+       </view>
+       <view class="list">
+          <text>出版</text><text>《{{book_info.press}}》</text>
+       </view>
+       <view class="list">        
+          <text>作者</text><text>{{book_info.author}}</text>
+       </view>
+    </view>
+</view>
+<view class="pare m-to">
+    <view class="main">
+       <view class="list clearFlo">
+          <text class="flL">数量</text>
+          <view class="stepper flL">
+             <!-- 减号 -->
+             <text class="{{minusStatus}}" bindtap="bindMinus">-</text>
+             <!-- 数值 -->
+             <input type="number" bindchange="bindManual" value="{{num}}" />
+             <!-- 加号 -->
+             <text class="normal" bindtap="bindPlus">+</text>
+          </view>
+       </view>
+    </view>
+</view>
+<view class="pare mg-to">
+    <view class="main">
+       <view class="nice_bookChil">
+          <view class="nice_title">好书推荐</view>
+       </view>
+       <!-- <swiper style='height:382rpx;'
+            circular="{{circular}}" vertical="{{vertical}}" circular="true" easing-function="easeInOutCubic"
+        interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px"> -->
+       
+          <!-- <swiper-item class='banner'> -->
+            <view class="list_parent" data-cateid="{{item.id}}" bindtap="detail">
+             <block wx:for="{{recommend}}" wx:key="*this">
+                <view class="book_list">
+                    <view class="img_box">
+                      <image src="{{item.book_img}}"></image>
+                    </view>
+                    <view class="book_title">{{item.book_name}}</view>
+                    <view class="socus">
+                      <text class="book_price">{{item.discount_price}}</text>
+                      <text class="book_del">{{item.price}}</text>
+                    </view>
+                </view>
+                  </block>
+            </view>
+          <!-- </swiper-item> -->
+      
+      <!-- </swiper> -->
+    </view>
+</view>
+<view class="pare mg-to">
+    <view class="main">
+       <view class="nice_bookChil pd_bottom">
+          <view class="nice_title">商品详情</view>
+       </view>
+       <view class="commodity_detail">
+          <view class="commodity_title">{{book_info.book_name}} 版权信息</view>
+      
+       <view class="information clearFlo">
+          <view class="information_list flL">
+             <view><text>出版社：</text><text>{{libraryBooks.Press}}</text></view>
+             <view><text>商品编码：</text><text>{{libraryBooks.OrganizationID}}</text></view>
+             <view><text>丛书名： </text><text>{{libraryBooks.title}}</text></view>
+             <view><text>出版时间：</text><text>{{libraryBooks.Published}}</text></view>
+          </view>
+          <view class="information_list flR">
+             <view><text>价格：</text><text>{{libraryBooks.Price}}</text></view>
+             <view><text>责任者：</text><text>{{libraryBooks.Author}}</text></view>
+              <view><text>版次：</text><text>{{libraryBooks.Count}}</text></view>
+             <view><text>ISBN：</text><text>{{libraryBooks.ISBN}}</text></view>
+          </view>
+       </view>
+       </view>
+       <view class="commodity_detail">
+          <view class="commodity_title">{{book_info.book_name}} 内容介绍</view>
+      
+       <view class="information clearFlo">
+          <view class="information_list flL lin_inforation">
+            {{book_info.book_content}}
+          </view>   
+       </view>
+       </view>
+       <view class="commodity_detail">
+          <view class="commodity_title">{{book_info.book_name}} 目录</view>
+      
+       <view class="information clearFlo">
+          <view class="information_list flL lin_inforation">
+               <rich-text class="conts" nodes="{{book_info.book_catalog}}" style='font-size:24rpx;'></rich-text>
+          </view>   
+       </view>
+       </view>
+       <view class="commodity_detail">
+          <view class="commodity_title">{{book_info.book_name}} 相关资料</view>
+       <view class="information clearFlo">
+          <view class="information_list flL lin_inforation">
+             <!-- <view>《解忧杂货店》是东野圭吾罕见的幻想小说。 ——《每日新闻》</view>
+              <view>《解忧杂货店》是东野圭吾罕见的幻想小说。 ——《每日新闻》</view>
+              <view>《解忧杂货店》是东野圭吾罕见的幻想小说。 ——《每日新闻》</view> -->
+          </view>   
+       </view>
+       </view>
+       <view class="commodity_detail">
+          <view class="commodity_title">{{book_info.book_name}} 作者简介</view>
+       <view class="information clearFlo">
+          <view class="information_list flL lin_inforation">
+              {{book_info.author_introduction}}
+          </view>   
+       </view>
+       </view>
+    </view>
+</view>
+<view class="footers clearFlo">
+    <view class="flL icon_box" bindtap="goIndex">
+      <view class="icon iconfont icon-shouye" style="font-size:40rpx;">
+         
+      </view>
+      <view>首页</view>
+    </view>
+     <view class="flL icon_box" bindtap="goshoppingCart"> 
+      <view class="icon iconfont icon-gouwuche">
+         
+      </view>
+      <view>购物车</view>
+    </view>
+    <view class="flL" style="position:relative" bindtap="SheetHidden">
+      <view class="bor_wid yesl">图书馆借阅
+        
+      </view>
+      <view class="sanj" hidden="{{SheetHiddensHir}}">
+        
+      </view>
+      
+    </view>
+    <view class="flL bor_wid oreons " bindtap="actionSheetTap">直接购买</view>
+    <view class="flL bor_wid reds" bindtap="shoppyC" id="{{book_info.id}}">加入购物车</view>
+    <view class="disno" hidden="{{SheetHiddensHir}}">
+         <view class="flL leftDeil">
+            <text class="icon iconfont icon-gantanhao-quan"></text>
+            <text>无藏馆信息</text>
+         </view>
+         <view class="flR btnCg" bindtap="sqTs">
+           <text class="icon iconfont icon-shenqingtianbao"></text>申请图书馆采购
+         </view>
+      </view>
+</view>
+<!-- 弹框 -->
+<modal hidden="{{hidden}}" title="" confirm-text="知道了"  bindcancel="cancel" bindconfirm="cancel" no-cancel="true">
+<view class="modal_content">
+   <view class="icon iconfont icon-gantanhao jin_icon"></view>
+   <view class="modal_title">申请失败，已有用户申请采购此书， 请耐心等待</view>
+</view>
+  
+</modal>
+
+<action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetbindchange">
+    <action-sheet-item >
+      <view class="clearFlo aus">
+        <view class="flL imgs_pr">
+          <image src="{{recommend[0].book_img}}"></image>
+        </view>
+        <view class="flL right_bts">
+           <view>￥{{recommend[0].discount_price}}</view>
+           <view>请选择数量</view>
+        </view>
+      </view>
+      <view class="clearFlo ausato">
+         <view class="flL asTil">
+           <text>数量</text>
+           <text>（每人限购9999件）</text>
+         </view>
+         <view class="stepper flR">
+                          <!-- 减号 -->
+                          <text class="{{minusStatus}}" bindtap="bindMinus1">-</text>
+                          <!-- 数值 -->
+                          <input type="number" bindchange="bindManual1" value="{{num1}}" />
+                          <!-- 加号 -->
+                          <text class="normal" bindtap="bindPlus1">+</text>
+                        </view>
+      </view>
+      <view class="qued" bindtap="cancels">
+         确定
+      </view>
+    </action-sheet-item>
+    <!-- <action-sheet-cancel class="cancel">确定</action-sheet-cancel> -->
+</action-sheet>

@@ -1,0 +1,189 @@
+<view class='techerTitle clearFlo'>
+  <view class='huanB fL'>
+    <image src='../../../images/indexImg/techerImg.jpg'></image>
+  </view>
+  <view class='fL'>
+    <view class='names'>张老师</view>
+    <view class='clearFlo'>
+      <view class='fL codes'>课程编号</view>
+      <view class='souSs fL'>
+        <image src='../../../images/indexImg/souS.jpg'></image>
+      </view>
+      <view class='select_box fL'>
+        <view class='select' catchtap='selectTap'>
+          <text class='select_text'>{{selectData[index]}}</text>
+          <image class='select_img {{show&&"select_img_rotate"}}' src='../../../images/indexImg/down.jpg' style='width:30rpx;height:25rpx;'></image>
+        </view>
+        <view class='option_box' style='height:{{show?(selectData.length>5?300:selectData.length*60):0}}rpx;'>
+          <text class='option' style='{{index==selectData.length-1&&"border:0;"}}' wx:for='{{selectData}}' wx:key='this' data-index='{{index}}' catchtap='optionTap'>{{item}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='auTo clearFlo topFl' style='display:none;'>
+  <view class='parent'>
+    <view class='fL box'>
+      <view class='borBox'></view>
+      <view class='xion one'>
+        <image src='../../../images/indexImg/gyerH.jpg'></image>
+      </view>
+      <view class='xion two'>
+        <image src='../../../images/indexImg/gyerH.jpg'></image>
+      </view>
+      <view class='xion treen'>
+        <image src='../../../images/indexImg/pinlX.jpg'></image>
+      </view>
+    </view>
+    <view class='rightBox fR clearFlo'>
+      <view class='list'>
+        <view class='lefts fL'>周一</view>
+        <view class='rights fL'>
+          <view class='topRight'>
+            <text class='time'>16:00 ——18:00</text>
+            <text class='reodis'></text>
+          </view>
+          <view class='bottomRight'>
+            <text class='time'>18:00 ——20:00</text>
+            <text class='reodis'></text>
+          </view>
+        </view>
+      </view>
+      <view class='list list1'>
+        <view class='lefts fL'>周一</view>
+        <view class='rights fL'>
+          <view class='topRight'>
+            <text class='time'>16:00 ——18:00</text>
+            <text class='reodis'></text>
+          </view>
+          <view class='bottomRight'>
+            <text class='time'>18:00 ——20:00</text>
+            <text class='reodis'></text>
+          </view>
+        </view>
+      </view>
+      <view class='list2'>
+        <view class='lefts fL' style='height:317rpx;line-height:317rpx;background:#E4A4A4;color:#fff'>周一</view>
+        <view class='rights fL'>
+          <view class='topRight '>
+            <text class='time'>10:00 ——12:00</text>
+            <text class='reodis'></text>
+          </view>
+          <view class='bottomRight' style='margin-top:5rpx;'>
+            <text class='time'>14:00 ——16:00</text>
+            <text class='reodis'></text>
+          </view>
+          <view class='topRight' style='margin-top:5rpx;'>
+            <text class='time'>16:00 ——18:00</text>
+            <text class='reodis'></text>
+          </view>
+          <view class='bottomRight' style='margin-top:5rpx;'>
+            <text class='time'>18:00 ——20:00</text>
+            <text class='reodis'></text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view>
+  <view class='overY' style='display:none'>
+    <view style='width:89%;margin:0 auto;'>
+      <view class='cat'>
+        <text class='ones'>猫与狗</text>
+        <text class='ones'>猫与狗</text>
+        <text class='ones'>猫与狗</text>
+        <text class='ones'>猫与狗</text>
+        <text class='ones'>猫与狗</text>
+      </view>
+      <view class='cat'>
+        <text class='ones'>猫与狗</text>
+        <text class='ones'>猫与狗</text>
+        <text class='ones'>猫与狗</text>
+        <text class='ones'>猫与狗</text>
+        <text class='ones'>猫与狗</text>
+      </view>
+      <view class='cat'>
+        <text class='ones'>猫与狗</text>
+        <text class='ones'>猫与狗</text>
+        <text class='ones'>猫与狗</text>
+        <text class='ones'>猫与狗</text>
+        <text class='ones'>猫与狗</text>
+      </view>
+      <view class='cat'>
+        <text class='ones'>猫与狗</text>
+        <text class='ones'>猫与狗</text>
+        <text class='ones'>猫与狗</text>
+        <text class='ones'>猫与狗</text>
+        <text class='ones'>猫与狗</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='teacherTeaching' style='display:block;'>
+  <view style='width60%;margin:0 auto;'>
+    <view class='teachTitle'>课程3—4A（猫与狗）教案</view>
+    <view class="container">
+      <view class="table">
+       <view class='tr tit'>
+        <view class='th' style='padding:15rpx;'>艺澜美术课程（2018）版</view>
+       </view>
+        <view class="tr titOne">
+          <view class="th">课程名称</view>
+          <view class="th">画种类别</view>
+          <view class="th">适合年龄阶段</view>
+          <view class="th">课程编号</view>
+        </view>
+        <view class="tr titOne">
+          <view class="th pinkColor">虫虫大变身</view>
+          <view class="th"></view>
+          <view class="th"></view>
+          <view class="th"></view>
+        </view>
+        <view class='tr'>
+         <view class='td' style='width:29%'>课程知识点</view>
+         <view class='td'></view>
+        </view>
+                <view class='tr'>
+         <view class='td' style='width:29%'>知识难点</view>
+         <view class='td'></view>
+        </view>
+                <view class='tr'>
+         <view class='td' style='width:29%;height:150rpx;line-height:150rpx;'>课程用具</view>
+         <view class='td'></view>
+        </view>
+                <view class='tr'>
+         <view class='td' style='width:29%'>导语题纲</view>
+         <view class='td'></view>
+        </view>
+             <view class='tr'>
+         <view class='td' style='width:29%;height:150rpx;line-height:150rpx;'>教学流程</view>
+         <view class='td'></view>
+        </view>
+           <view class='tr'>
+         <view class='td' style='width:29%;height:170rpx;line-height:170rpx;'>教学示例图</view>
+         <view class='td'>
+         <view class="container1">
+	<view wx:for="{{imgalist}}" wx:for-item="image" class="previewimg">
+		<image src="{{image}}" data-src="{{image}}" bindtap="previewImage"></image>
+	</view>
+</view>
+
+         </view>
+        </view>
+    <view class='tr'>
+         <view class='td' style='width:29%;height:170rpx;line-height:170rpx;'>学生作品</view>
+         <view class='td'>
+         <view class="container1">
+	<view wx:for="{{imgalist}}" wx:for-item="image" class="previewimgs">
+		<image src="{{image}}" data-src="{{image}}" bindtap="previewImages"></image>
+	</view>
+</view>
+
+         </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

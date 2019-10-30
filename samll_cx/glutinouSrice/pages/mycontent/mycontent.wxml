@@ -1,0 +1,112 @@
+<view>
+ <view class="top_box">
+    <view class="autos clearFlo">
+       <view class="flL">
+       <image bindtap="editZl" class="potos" src="{{member.member.img?member.member.img:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1570879387068&di=8da4dc5018c4d23f9c18ad3e856d776b&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2F69ad7a731f43d4b8729f1a2fbe65c43801ca0f033250-EV1vMf_fw658'}}"></image></view> 
+       <!-- <view class="flL center_title">
+          <view class="center_big">点击登录</view>
+          <view class="center_semml">登录后体验更多功能</view>
+       </view> -->
+       <view class="flL center_title">
+          <view class="center_big"><text class="icon iconfont icon-gerenxinxiicon- is_icon"></text><text style="font-size:32rpx;font-weight:600;">{{member.member.number}}</text></view>
+          <view class="center_semml"><text class="icon iconfont icon-loumian is_icon" style="font-size:40rpx"></text><text>所属图书馆：</text>{{member.library.title}}</view>
+           <view class="center_semml"><text class="icon iconfont icon-shuqian is_icon"></text><text>书点：</text>{{member.member.shudian}}</view>
+           <view class="center_semml"><text style="margin-right:10rpx;" bindtap="editZl">编辑资料</text>|<text style="margin-left:10rpx;" bindtap="address_gl">管理收货地址</text></view>
+       </view>
+       <view class="flR news" bindtap="news">
+         <text class="icon iconfont icon-icon-xiaoxi"></text>
+         <text>消息</text>
+         <text class="icon iconfont icon-arrowRight"></text>
+       </view>
+    </view>
+ </view>
+ <view class="menu autos">
+    <view class="menu_top clearFlo">
+        <view class="auto">
+          <view class="flL menus_title">
+              我的订单
+            </view>
+            <view class="flR menus_right" bindtap="allOrder">
+              <text>全部订单</text>
+              <text class="icon iconfont icon-arrowRight jts"></text>
+            </view>
+        </view>
+    </view>
+    <view class="menu_bottom">
+        <block wx:for="{{listNav}}" wx:key='index12'>
+        <view class='menu_boxas' data-ids='{{item.id}}' data-val="{{item.val}}" bindtap="goOrder">
+           <view class="icon iconfont {{item.imgs}} menu_ics"></view>
+           <view class="menum_tit">{{item.title}}</view>
+        </view>
+        <view class="liones"></view>
+        </block>
+        <!-- <view class='menu_boxas'>
+           <view class="icon iconfont icon-yifahuo menu_ics"></view>
+           <view class="menum_tit">待发货</view>
+        </view>
+        <view class="liones"></view>
+        <view class='menu_boxas'>
+           <view class="icon iconfont icon-daishouhuo menu_ics"></view>
+           <view class="menum_tit">待收货</view>
+        </view>
+        <view class="liones"></view>
+        <view class='menu_boxas'>
+           <view class="icon iconfont icon-tuikuan menu_ics"></view>
+           <view class="menum_tit">退款/售后</view>
+        </view> -->
+    </view>
+   
+ </view>
+
+  <view class="advertisement autos">
+     <image src="{{member.library.bookseaturl}}"></image>
+  </view>
+  <view class="nav_list autos">
+     <view class="clearFlo lists1Ps" bindtap="purchase">
+        <view class="lists1 flL">
+            <text class="leftImgs"></text>
+            <text>申请采购</text>
+        </view>
+        <view class="flR icon iconfont icon-arrowRight  icoRight"></view>
+     </view>
+     <view class="clearFlo lists1Ps" bindtap="myCouse">
+        <view class="lists1 flL">
+            <text class="sc"></text>
+            <text>我的收藏</text>
+        </view>
+        <view class="flR icon iconfont icon-arrowRight  icoRight"></view>
+     </view>
+     <view class="clearFlo lists1Ps" style="border:none;" bindtap="browse">
+        <view class="lists1 flL">
+            <text class="lljl"></text>
+            <text>浏览记录</text>
+        </view>
+        <view class="flR icon iconfont icon-arrowRight  icoRight"></view>
+     </view>
+  </view>
+  <view>
+     <!-- 好书推荐 -->
+         <view class="nice_book back_color">
+            <view class="nice_auto">
+              <view class="nice_bookChil clearFlo">
+                <view class="nice_title flL">好书推荐</view>
+                <!-- <view class="nice_gd flR">查看更多<text class="icon iconfont icon-arrowRight"></text></view> -->
+            </view>
+            <view class="list_parent">
+              <block wx:for="{{member.recommend}}" wx:key="*this">
+                <view class="book_list" data-cateid="{{item.id}}" bindtap="detail">
+                    <view class="img_box">
+                      <image src="{{item.book_img}}"></image>
+                    </view>
+                    <view class="book_title">{{item.book_name}}</view>
+                    <view class="socus">
+                      <text class="book_price">{{item.discount_price}}</text>
+                      <text class="book_del">{{item.price}}</text>
+                    </view>
+                </view>
+                </block>
+            </view>
+          </view>
+        </view>
+  </view>
+</view>

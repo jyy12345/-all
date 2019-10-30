@@ -1,0 +1,71 @@
+<!--pages/mine/index.wxml-->
+<view class="boxShadow head">
+  <view class='top'>
+    <image class="bg" src="/image/mine/topBg.png" />
+    <view class="headBox" catchtap="handelPerMes">
+      <image class="fl headImg" src="{{headImg}}" />
+      <view class="edit">编辑资料</view>
+    </view>
+      
+    
+    <view class="nickname" catchtap="handelPerMes">
+      {{name}}
+      <image src="/image/mine/edit.png"></image></view>
+      <text class="grade">{{grade}}</text>
+    </view>
+  <view class='nav'>
+    <view class='tabbar course' catchtap="handelCourse">
+      <view class='icon'>
+        <image src='/image/mine/mine_course.png'></image>
+      </view>
+      <view class='text'>课程</view>
+    </view>
+    <view class='tabbar yuyue' catchtap="handelYuyue">
+      <view class='icon'>
+        <image src='/image/mine/mine_pact.png'></image>
+      </view>
+      <view class='text'>预约</view>
+    </view>
+    <view class='tabbar order' catchtap="handelOrder">
+      <view class='icon'>
+        <image src='/image/mine/mine_order.png'></image>
+      </view>
+      <view class='text'>订单</view>
+    </view>
+    <view class='tabbar addr' catchtap="handelAddr">
+      <view class='icon'>
+        <image src='/image/mine/mine_addr.png'></image>
+      </view>
+      <view class='text'>地址</view>
+    </view>
+  </view>  
+</view>
+<view class="boxShadow contents">
+  <view class="eachCont">
+    <image class="" src="/image/mine/mine_service.png" />
+    <view class="fr right service">
+        联系客服
+        <view class="fr tel">
+            400-800-2222
+        </view>
+    </view>
+  </view>
+  <view class="eachCont">
+    <image class="" src="/image/mine/aboutUs.png" />
+    <view class="fr right aboutUs" catchtap="handleAboutUs">
+        关于我们
+        <view class="fr right_arrows"></view>
+    </view>
+  </view>    
+  <view class="eachCont">
+    <image class="" src="/image/mine/mine_ques.png" />
+    <view class="fr right ques" catchtap="handleQues">
+        常见问题
+        <view class="fr right_arrows"></view>
+    </view>
+  </view>
+      
+</view>
+  
+
+  

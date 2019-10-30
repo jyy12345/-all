@@ -1,0 +1,76 @@
+page{background:pink;}
+@import "/pages/tabbar/tabbar.wxss";
+video{width: 100%;height: 465rpx;position: fixed;top: 0; left: 0;z-index: 99;}
+.details{background-color:rgba(73, 72, 74,0.5); margin-top:465rpx; padding-bottom: 14rpx;}
+.ouT{width: 89%;margin: 0 auto;margin-bottom:127rpx;
+}
+.title{font-size: 24rpx;color: white;padding: 25rpx 0 ;}
+.title1{font-size: 22rpx;color: white;padding: 0 0 55rpx 0;}
+.title1>text{display: inline-block;}
+.borderS{width: 50rpx;text-align: center;}
+.imgBox{width: 26.1%;height: 146rpx;border-radius: 30rpx;}
+image{width: 100%;height: 100%;}
+.listContent{margin-top: 3.4%}
+.titleContenrt{width: 68%;margin-top: 2.5%}
+.bigBian{font-size: 24rpx;color: white;line-height: 33rpx;}
+.titleBert{color: white;font-size: 22rpx;margin-top: 2%;border-bottom:1px solid white;padding-bottom: 25rpx;}
+.keyrt{margin-left: 60rpx;}
+.introduce{width:80%;margin: 0 auto;color: #fff;font-size: 24rpx;}
+.fL{float: left;}
+.fR{float: right}
+::-webkit-scrollbar  
+{  
+    width: 5px;  
+    height: 16px;  
+} 
+.bofimgParsent{width: 80rpx;height: 91rpx;margin: 0 auto;z-index: 9999999;position: absolute;left: 351rpx;top: 166rpx;}
+.bofimgParsent1{width: 100%;height: 440rpx;margin: 0 auto;z-index: 9999999;position: absolute;left: 0;top: 0;}
+.audoParset{position: fixed;top: 0;left: 0;height:471rpx;
+width:100%;
+} 
+  .audios{width: 100%;height: 460rpx;background: rgba(255, 255, 255,0.1);position:relative;}
+  .bofimg{width: 80rpx;height: 91rpx;}
+/*定义滚动条轨道 内阴影+圆角*/  
+::-webkit-scrollbar-track  {  
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;   
+    opacity: 0;
+}   
+/*定义滑块 内阴影+圆角*/  
+::-webkit-scrollbar-thumb  {  
+    border-radius: 10px;  
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);  
+    background-color: #fff;  
+}  
+/* 浮标 */
+.bgColor{width: 124rpx;height: 130rpx;position: absolute;left: 100%;top:35%;z-index: 9999;}
+.bgColor image{width: 100%;height: 100%;}
+/* progress{position:fixed;top: 463rpx;left: 0;width: 100%;} */
+
+
+ 
+/* .image2{
+margin-left: 10%;
+} */
+ 
+/*进度条长度 */
+ 
+.slid{
+width:100%;
+/* margin-left:-24rpx; */
+}
+ 
+/*横向布局 */
+ 
+.progress{
+ width: 100%;
+/* align-items: center; */
+color: #FFFFFF;
+font-size: 26rpx;
+position: absolute;
+bottom: -36rpx;
+left: -39rpx;
+}
+slider{width: 100%;}
+.timeTexts{font-size: 24rpx;color: #fff;}
+.timeTextsParents{position: absolute;top: 400rpx;left: 20rpx;}

@@ -1,0 +1,36 @@
+<!--pages/mine/register/common.wxml-->
+<view class="common">
+  <view class="userMes">
+		<view class="mes name">
+			姓名
+			<input class='fr' placeholder="请填写昵称" auto-focus value='{{}}' bindinput='getName' />
+		</view>
+		<view class="mes sex">
+			性别
+      <picker class='fr chooseSex' bindchange="getSex" value="{{index}}" range="{{sex}}">
+        <view class="chooseSex">
+          {{sex[index]}}
+        </view>
+      </picker>
+		</view>
+		<view class="mes age">
+			年龄
+			<input type="number" class='fr' maxlength="2" placeholder="请输入年龄" value='{{}}' bindinput='getAge' />
+		</view>
+		<view class="mes tel">
+			手机号
+      <text class='phonenumber'>{{mobile}}</text>
+      <button class='fr getphoneNum' open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">获取手机号</button>
+		</view>
+		<view class="mes email">
+			邮箱
+			<input class='fr' placeholder="请输入邮箱" value='{{}}' bindinput='getEmail' />
+		</view>
+	</view>  
+	<button bindtap='goReg' class="default">
+		立即注册
+	</button>
+	<text class="tips">注册即代表你认可本用户协议</text>
+	<text class="agreement" bindtap="userAgreement">《用户注册协议 》</text>
+</view>
+  

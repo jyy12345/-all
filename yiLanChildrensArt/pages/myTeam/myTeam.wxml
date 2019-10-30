@@ -1,0 +1,31 @@
+<!-- 教师团队 -->
+<import src="/pages/tabbar/tabbar.wxml"/>
+<template is="tabbar" data="{{tabbar}}"/>
+<movable-area style="top:0;bottom:0;height: 100%; width:100%; overflow:hidden;">
+  <movable-view direction="all" class='bgColor' catchtap="onScrt">
+  <image src='../../images/indexImg/shitBtn.jpg'></image>
+ </movable-view>
+<view class="swiper-container">
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{duration}}" current="{{swiperCurrent}}" bindchange="swiperChange" class="swiper"  current="{{swiperCurrent}}">
+
+    <block wx:for="{{imgUrls}}" wx:key="unique">
+
+      <swiper-item>
+      <view class='imgBpx'>
+            <image src="{{item}}" class="img" bindtap="swipclick" />
+      </view>
+     
+          <view class='terchName'></view>
+          <view class='xiaTerch'>毕业于中央美术学院油画专业
+现任艺澜美术教育中心的美术主讲老师
+</view>
+<view class='leftBtn'><image src='../../images/indexImg/left.jpg' bindtap='swiperClickleft' ></image></view>
+<view class='rightBtn'><image src='../../images/indexImg/rights.jpg' bindtap='swiperClickright' ></image></view>
+      </swiper-item>
+
+    </block>
+
+  </swiper>
+
+</view>
+ </movable-area>

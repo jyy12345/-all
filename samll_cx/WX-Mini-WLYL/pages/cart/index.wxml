@@ -1,0 +1,118 @@
+<!--pages/cart/index.wxml-->
+<view class="borderTop cart">
+  <view class='topTabBar'>
+    <view class='tab  {{currentData == 0 ? "tabAfter" : ""}}' data-type="1" data-current = "0" bindtap='checkCurrent'>
+			在线课程
+			<block wx:if="{{currentData == 0}}">
+				<view class="lLine"></view>
+			</block>
+			<block wx:else>
+				<view class="wLine"></view>
+			</block>
+		</view>
+    <view class='tab  {{currentData == 1 ? "tabAfter" : ""}}' data-type="2" data-current = "1" bindtap='checkCurrent'>
+			线下课程
+			<block wx:if="{{currentData == 1}}">
+				<view class="lLine"></view>
+			</block>
+			<block wx:else>
+				<view class="wLine"></view>
+			</block>
+		</view>
+    <view class='tab  {{currentData == 2 ? "tabAfter" : ""}}' data-current = "2" bindtap='checkCurrent'>
+			健康产品
+			<block wx:if="{{currentData == 2}}">
+				<view class="lLine"></view>
+			</block>
+			<block wx:else>
+				<view class="wLine"></view>
+			</block>
+		</view>
+    <view class='tab  {{currentData == 3 ? "tabAfter" : ""}}' data-type="3" data-current = "3" bindtap='checkCurrent'>
+			爱心科普
+			<block wx:if="{{currentData == 3}}">
+				<view class="lLine"></view>
+			</block>
+			<block wx:else>
+				<view class="wLine"></view>
+			</block>
+		</view>
+	</view>
+		<!-- 在线课程 -->
+		<view  hidden="{{currentData!='0'}}" class='eachList'>
+			<view wx:for="{{articleListData}}" class="boxShadow eachCont" data-id="{{item.id}}" bindtap='onlineCoursedetail'>
+				<view class="fl contLeft">
+					<view class="article">
+            <view class='title'>{{item.name}}</view>
+            <view class='intros'>{{item.abstract}}</view>
+					</view>
+					<view class="perMes">
+						<image class="fl" src="{{imgUrl+item.teacherimage}}"></image>
+						<view class="fl name">{{item.teachername}}</view>
+					</view>
+				</view>
+				<view class="fr contRight">
+					<image class="coursepic" src="{{imgUrl+item.image}}"></image>
+          <image wx:if="{{item.coursestatus==1}}" class='coursetype' src='../../image/cart/video.png'></image>
+          <image wx:else class='coursetype' src='../../image/cart/book.png'></image>
+				</view>
+			</view>
+		</view> 
+		<!-- 线下课程 -->
+		<view  hidden="{{currentData!='1'}}" class='eachList'>
+      <view wx:for="{{articleListData}}" class="boxShadow eachCont" data-id="{{item.id}}" bindtap='offlineCoursedetail'>
+				<view class="fl contLeft">
+					<view class="article">
+            <view class='title'>{{item.name}}</view>
+            <view class='intros'>{{item.abstract}}</view>
+					</view>
+					<view class="perMes">
+						<image class="fl" src="{{imgUrl+item.teacherimage}}"></image>
+						<view class="fl name">{{item.teachername}}</view>
+					</view>
+				</view>
+				<view class="fr contRight">
+					<image class="coursepic" src="{{imgUrl+item.image}}"></image>
+				</view>
+			</view>
+		</view>
+		<!-- 健康产品 -->
+		<view  hidden="{{currentData!='2'}}" class='eachList'>
+			<view class="proCont">
+				<view wx:for="{{goodsListData}}" class="eachproCont" data-id="{{item.id}}" bindtap='goodsDetail'>
+					<view class="topCont">
+						<image class="" src="{{imgUrl+item.image}}"></image>
+					</view>
+					<view class="proName">{{item.name}}</view>
+					<view class="botCont">
+						<view class="fl price">
+							<text class="rmb">¥</text>
+							<text class="">{{item.price}}</text>
+						</view>
+						<button class="fr buy" data-id="{{item.id}}" catchtap='buy'>立即购买</button>
+					</view>
+				</view>
+			</view>
+				
+		</view>
+		<!-- 爱心科普 -->
+		<view  hidden="{{currentData!='3'}}" class='eachList'>
+      <view wx:for="{{articleListData}}" class="boxShadow eachCont" data-id="{{item.id}}" bindtap='loveMesdetail'>
+				<view class="fl contLeft">
+					<view class="article">
+            <view class='title'>{{item.name}}</view>
+            <view class='intros'>{{item.abstract}}</view>
+					</view>
+					<view class="perMes">
+						<image class="fl" src="{{imgUrl+item.teacherimage}}"></image>
+						<view class="fl name">{{item.teachername}}</view>
+					</view>
+				</view>
+				<view class="fr contRight">
+					<image class="coursepic" src="{{imgUrl+item.image}}"></image>
+          <image wx:if="{{item.coursestatus==1}}" class='coursetype' src='../../image/cart/video.png'></image>
+          <image wx:else class='coursetype' src='../../image/cart/book.png'></image>
+				</view>
+			</view>
+		</view>
+</view>

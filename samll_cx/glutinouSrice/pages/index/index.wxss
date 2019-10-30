@@ -1,0 +1,64 @@
+.scroll-view_H .nav-name:first-child{color:#3577f1}
+/* 轮播 */
+.page-section{width: 100%;margin: 0 auto;}
+swiper-item image{ width: 100%;height: 100%;}
+.swiper .wx-swiper-dot:first-child{
+  margin-left: 610rpx;
+}
+.swiper .wx-swiper-dot{
+    width:11rpx;
+    height: 20rpx;
+    border-radius: 4rpx; 
+    margin-left:-4rpx;
+}
+.swiper .wx-swiper-dot-active{
+    height: 36rpx;
+}
+
+.banner{ 
+  position: relative;
+}
+.search_box{width: 95%;margin: 0 auto;background: rgba(255, 255, 255, 0.9);position: absolute;top: 20rpx;height: 60rpx;z-index: 1;border-radius: 30rpx;line-height: 50rpx;}
+.search_box input{display: inline-block;vertical-align: middle;width: 90%;}
+.search_box text{margin: 0 10rpx;vertical-align: middle;font-size: 39rpx;color: rgba(107, 106, 106, 0.8)}
+/* 好书推荐 */
+.nice_book{width: 100%;border-radius: 30rpx;margin-top: 41rpx;padding-bottom: 19rpx;}
+.nice_bookChil{padding-top: 41rpx;}
+.back_color{background: #fffafb;}
+.nice_title{font-size: 32rpx;color: #353535;position: relative;padding-left: 30rpx;}
+.nice_title::after{content:'';width: 12rpx;height: 33rpx;background: red;display: block;position: absolute;left: 0;top: 8rpx;border-radius: 40rpx;}
+.book_del{text-decoration:line-through;color: #999999;}
+.img_box {text-align: center;}
+.img_box image{width: 118rpx;height: 164rpx;}
+.book_list{width: 32%;background: white;margin-top: 24rpx;padding: 25rpx 0;}
+.nice_gd{font-size: 24rpx;color:#353535;}
+.list_parent{display: flex;justify-content: space-between;}
+.book_title{ margin: 0 auto;   margin-top: 43rpx;line-height: 15px;font-size: 24rpx;color: #555555; width: 90%;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2;overflow: hidden;height: 60rpx;
+}
+.nice_auto{width: 95%;margin: 0 auto;}
+.book_price{font-size: 26rpx;color:#e9222b;margin-left: 15rpx;
+}
+.socus{margin-top: 5rpx;}
+.book_del{font-size: 20rpx;color:#999999;margin-left: 10rpx;}
+.special image{border-radius: 30rpx;}
+.special_img{width: 50%;height: 425rpx;}
+.special_img image{width: 100%;height: 425rpx;}
+.specialimg_right{width: 47%;height: 201rpx;}
+.specialimg_right image{height: 201rpx;width: 100%;}
+.specialimg_right image:nth-child(2){margin-top: 16rpx;}
+.advertising{width: 100%;height: 151rpx;border-radius: 20rpx;}
+.best_seller .book_list{margin-left: 13rpx;width: 30%;}
+.imgs_box{width: 100%;height: 174rpx;border: 1px solid #eeeeee;text-align: center;}
+.imgs_box image{width: 60%;height: 160rpx;margin-top: 6rpx;}
+.bestseller_left{width: 31%;}
+.bestseller_box{background: white;padding: 23rpx;margin: 20rpx 0 0;}
+.bestseller_right{width: 65%;}
+.bestseller_title{ width: 100%;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 1;overflow: hidden;font-size: 26rpx;color:#333333;}
+.bestseller_detail{width: 100%;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 3;overflow: hidden;font-size: 24rpx;color:#666666;margin-top: 5rpx;}
+.swipers .wx-swiper-dot{
+    width:16rpx;
+    height:16rpx;
+    margin-left:284rpx;
+    margin-bottom: 240rpx;
+  
+}

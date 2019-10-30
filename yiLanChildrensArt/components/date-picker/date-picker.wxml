@@ -1,0 +1,84 @@
+<view wx:if="{{showPicker}}" class="date-picker">
+    <view class="date-picker-mask" catchtouchstart="onTouchmask"></view>
+    <view class="date-picker-content" catchtouchstart="onTouchmask">
+        <view class='date-picker-content-top' catchtouchstart="onTouchmask">
+            <view class="date-picker-content-cancel" hover-class="hover-class" catchtouchend="onCacnelClick">
+                取消
+            </view>
+            <view class="date-picker-content-sure"  hover-class="hover-class" catchtouchend="onSureClick"  >
+
+                确认
+           
+        </view>
+       </view>
+                        <view data-statu="open" catchlongtap="powerDrawer">haah</view>  
+     <!--mask--> 
+   <view class="drawer_screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus}}"></view> 
+   <view class='imgPostBox'><image src='../../../images/indexImg/cha.png' class='imgPost' wx:if="{{showModalStatus}}" catchtap='heigged'></image>
+</view>
+<!--content-->  
+<!--使用animation属性指定需要执行的动画-->  
+<view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}">  
+  
+  <!--drawer content-->  
+  <view class="drawer_title"></view>  
+  <view class="drawer_content">  
+  <view class='grids'>
+        <view class="grid ">  
+          <text class='shiJtime'>2018年8月16日</text>
+
+          <text class='mayders'>星期四</text>
+    </view>  
+    <view class="grid clearFlo leftBox"> 
+      <view class='fL'>
+          <text class='selectTime'>16:00-17:30</text>
+      </view> 
+      <view class='fL'>
+             <image src='../../images/indexImg/lalSclect.jpg' class='selectImg'></image>
+      </view>
+     
+    </view>  
+    <view class="grid clearFlo leftBox"> 
+      <view class='fL'> 
+          <text class='selectTime grye'>16:00-17:30</text>
+      </view> 
+      <view class='fL'>
+             <image src='../../images/indexImg/nonSelect.jpg' class='selectImg'></image>
+      </view>
+     
+    </view>  
+     <view class="top" >  
+       
+    </view>  
+  </view>
+ 
+    <view class="btn_ok" bindtap="powerDrawer" data-statu="close"  bindtap="tijiO">提交</view>  
+  </view>  
+
+</view>
+    <!-- </view> -->
+  
+<!-- </view> -->
+    <!-- 选择器结束 -->
+
+
+        <view class="date-picker-content-line" catchtouchstart="onTouchmask"></view>
+        <view class="date-picker-content-center" catchtouchstart="onTouchmask">
+            <picker-view class="date-picker-content-item" indicator-style="height: 70rpx;" value="{{tempYearPos}}" bindchange="year_onChange">
+                <picker-view-column>
+                    <view wx:for="{{years}}" wx:key="*this" style="height: 70rpx; text-align:center; font-size: 36rpx; line-height:70rpx; color:#353535;">{{item}}年</view>
+                </picker-view-column>
+            </picker-view>
+            <picker-view class="date-picker-content-item" indicator-style="height: 70rpx; " value="{{tempMonthPos}}" bindchange="month_onChange">
+                <picker-view-column>
+                    <view wx:for="{{months}}" wx:key="*this" style="height: 70rpx; text-align:center;  font-size: 36rpx; line-height:70rpx; color:#353535;">{{item}}月</view>
+                </picker-view-column>
+            </picker-view>
+            <picker-view class="date-picker-content-item" indicator-style="height: 70rpx; " value="{{tempDayPos}}" bindchange="day_onChange">
+                <picker-view-column>
+                    <view wx:for="{{days}}" wx:key="*this" style="height: 70rpx; text-align:center;  font-size: 36rpx; line-height:70rpx; color:#353535;">{{item}}日</view>
+                </picker-view-column>
+            </picker-view>
+        </view>
+    </view>
+</view>

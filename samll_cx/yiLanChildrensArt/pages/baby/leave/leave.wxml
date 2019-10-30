@@ -1,0 +1,116 @@
+<import src="/pages/tabbar/tabbar.wxml"/>
+<template is="tabbar" data="{{tabbar}}"/>
+<view class='fiexBox'>
+  <image src='{{babytData.homeUrl}}' class='paade'></image>
+</view>
+<view class='autos'>
+  <view class='notes'>
+  <block wx:for="{{babytData.supplementDescList}}">
+    <view class='titCont'>
+      <view class='bigTitle'>{{item.key}}</view>
+      <view class='semllTitle'>{{item.content}}</view>
+    </view>
+    </block>
+  </view>
+</view>
+<view class='clearFlo' >
+   <view class='leaveIn fL mLe' bindtap="powerDrawer" data-statu="open" id='{{babytData.supplementTypeList[0].supplementTypeId}}'>
+     <image src='{{babytData.supplementTypeList[0].imgUrl}}' class='clesster' bindtap='buKtime'></image>
+   </view>
+   <!--mask--> 
+   <view class="drawer_screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus}}"></view> 
+<!--content--> 
+ <view class='imgPostBox' catchtap='heigged'><image src='../../../images/indexImg/cha.png' class='imgPost' wx:if="{{showModalStatus}}" ></image>
+</view>
+<!--使用animation属性指定需要执行的动画-->  
+<view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}">  
+  
+  <!--drawer content-->  
+  <view class="drawer_title"></view>  
+  <view class="drawer_content">  
+    <view class="top grid">  
+      <input class="input_base input_h30" name="rName" placeholder='{{bukTime.studentName}}' placeholder-class='redParty' bindinput="voteTitle"  value-class='ene'></input>  
+    </view>  
+    <view class="top grid">  
+      <input class="input_base input_h30" name="mobile" placeholder='{{bukTime.studentNo}}' placeholder-class='redParty' bindinput="votePhone" ></input>  
+    </view>  
+     <view class="top grid" bindtap='clickMe'>  
+        <input class="input_base input_h30" name="mobile" placeholder='请假日期' placeholder-class='redParty'  bindinput="voteDay" value='{{leaveTime}}' style='color:#f7a6a6'></input>
+    </view>
+    <!--选择器-->  
+   <view class="row"  wx:if="{{hiddenName}}">
+      <date-picker bindonselectdate="handleSelecteDate" bind:myevent="onselectdate"/>
+    </view>
+    <!-- 选择器结束 -->
+    <view class="btn_ok" bindtap="powersemit"  wx:if="{{btns}}" data-statu="close">提交</view>
+    <view class='successId' wx:if="{{btnSuccess}}">提交成功!</view>  
+    <view class='pinkColor'>需补课节数 <text class='textJie'>{{bukTime.supplementNum}}</text>节</view>
+      <view class='borderBottom'></view>
+      <view class='contact'>注：如有特殊情况，请及时联系老师</view>
+  </view>  
+
+</view>
+   <view class='makeUp fL mLe' bindtap='makeUp' data-statu="open" id='{{babytData.supplementTypeList[1].supplementTypeId}}'>
+        <image src='{{babytData.supplementTypeList[1].imgUrl}}' class='clesster' bindtap='bukIndex'></image>
+   </view>
+
+ <!--mask--> 
+   <view class="drawer_screen" bindtap="makeUp" data-statu="close" wx:if="{{showModalStatus1}}"></view> 
+   <view class='imgPostBox' catchtap='heigged1'><image src='../../../images/indexImg/cha.png' class='imgPost' wx:if="{{showModalStatus1}}" ></image>
+</view>
+<!--content-->  
+<!--使用animation属性指定需要执行的动画-->  
+<view animation="{{animationData}}" class="drawer_box1" wx:if="{{showModalStatus1}}" style='width:718rpx;padding-bottom:60rpx;'>  
+  
+  <!--drawer content-->  
+  <view class="drawer_title1">
+    <image src='{{bukData.homeUrl}}'></image>
+  </view>  
+  <view class="drawer_content1">  
+     <view style='width:75%;margin:20rpx auto;'>
+        <view class='timeTitle'>{{bukData.noteList[0].key}}{{bukData.noteList[0].note}}</view>
+        <view class='timeTitle'>{{bukData.noteList[1].key}}{{bukData.noteList[1].note}}</view>
+        <view class='timeTitle'>{{bukData.noteList[2].key}}{{bukData.noteList[2].note}}
+        {{bukData.noteList[3].key}}{{bukData.noteList[3].note}}</view>
+        <view class='times'>
+          <view class='timeList clearFlo'>
+            <view class='fL clearFlo onMydays' wx:for="{{bukeDatas}}" wx:key="{{index}}" style='width:50%'>
+                <view class='fL myday' >{{item.key}}</view>
+                  <view  class='fL'>
+                  <!-- <image  src='{{item.imgUrl}}' class='selected' id='{{item.id}}' bindtap='imgBtn'></image> -->
+                  <view class='selected ' data-index="{{index}}" id='{{item.id}}' bindtap='imgBtn' style='background:url("{{item.imgUrl}}")no-repeat;background-size:contain'></view>
+                  </view>
+                </view>
+            </view>
+          </view>    
+        </view>
+    <view class="btn_ok" bindtap="makeUp1" data-statu="close">提交</view>  
+  </view>  
+</view>
+   <view class='classAdjustment fL mLe' bindtap='classAdjustment1' data-statu="open"  id='{{babytData.supplementTypeList[2].supplementTypeId}}'>
+         <image src='{{babytData.supplementTypeList[2].imgUrl}}' class='clesster' bindtap='adjustment'></image>
+   </view>
+    <!--mask--> 
+   <view class="drawer_screen" bindtap="classAdjustment1" data-statu="close" wx:if="{{showModalStatus2}}"></view>
+   <view class='imgPostBox' catchtap='heigged2'><image src='../../../images/indexImg/cha.png' class='imgPost' wx:if="{{showModalStatus2}}" ></image>
+</view> 
+<!--content-->  
+<!--使用animation属性指定需要执行的动画-->  
+<view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus2}}" >  
+  
+  <!--drawer content-->  
+  <view class="drawer_title2">
+    <image src='{{adjustment.homeUrl}}'></image>
+  </view>  
+  <view class="drawer_content3">  
+     <view class='shuoM'>说明缘由及可调整时间</view>
+     <textarea class='contentSuccess1' bindinput='textareas'></textarea>
+     <view class="btn_oks" bindtap="classAdjustment" data-statu="close"   wx:if="{{tiaozBtn}}">提交</view>  
+     <view class='successId' wx:if="{{tiaozSuccess}}">提交成功!</view>  
+</view> 
+</view> 
+  </view>
+
+
+ 
+

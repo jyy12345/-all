@@ -1,0 +1,52 @@
+<view class='babyBg'>
+ <image src='{{contentData.homeUrl}}'></image>
+</view>
+<view class='auTo'>
+  <view>
+  
+   <image src='{{contentData.briefDetail[0].imgUrl}}' mode:widthFix class='studentFiles' catchtap='sturted' id='{{contentData.briefDetail[0].id}}'></image>
+    <image src='{{contentData.briefDetail[1].imgUrl}}' mode:widthFix class='studentFiles' catchtap='studentworks' id='{{contentData.briefDetail[1].id}}'></image>
+        <image src='{{contentData.briefDetail[2].imgUrl}}' mode:widthFix class='studentFiles' catchtap='leave' id='{{contentData.briefDetail[2].id}}'></image>
+             
+  </view>
+  <view>
+     <image src='{{contentData.briefDetail[3].imgUrl}}' mode:widthFix class='studentFiles' bindtap="powerDrawer1" data-statu="open" id='{{contentData.briefDetail[3].id}}'></image>
+
+
+ <!--mask--> 
+   <view class="drawer_screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus}}"></view>
+   <view class='imgPostBox' catchtap='heigged'><image src='../../../images/indexImg/cha.png' class='imgPost' wx:if="{{showModalStatus}}" ></image>
+</view> 
+<!--content-->  
+<!--使用animation属性指定需要执行的动画-->  
+<view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}">  
+  
+  <!--drawer content-->  
+  <view class="drawer_title" style=' background: url("{{Invitation.homeUrl}}");background-size: 100% 100%;'></view>  
+  <view class="drawer_content">  
+    <view class="top grid">  
+      <input class="input_base input_h30" name="rName" placeholder='受邀宝贝姓名' placeholder-class='redParty' bindinput='sumName' style='color: #D3B1E6;'></input>  
+    </view>  
+    <view class="top grid">  
+      <input class="input_base input_h30" name="mobile" placeholder='联系方式' placeholder-class='redParty' bindinput='sumPhone' style='color: #D3B1E6;'></input>  
+    </view>  
+     <view class="top grid" bindtap='clickMe'>  
+        <input class="input_base input_h30" name="mobile" placeholder='年龄' placeholder-class='redParty' bindinput='sumAge' style='color: #D3B1E6;'></input> 
+    </view>  
+     <view class="btn_ok" bindtap="powerDrawer2" data-statu="close" wx:if="{{yaoBtn}}">提交</view>  
+     <view class='yaoSuccess' wx:if="{{yaoSuccess}}">提交成功！</view>
+      <view class='borderBottom'></view>
+      <view class='contact'>注：会员推荐学员成功后，将会得到相应积分奖励，可用于兑换课时</view>
+   </view> 
+ </view> 
+    <!-- 选择器结束 -->
+
+
+        <image src='{{contentData.briefDetail[4].imgUrl}}' mode:widthFix class='studentFiles' catchtap='jifRuih' id='{{contentData.briefDetail[4].id}}'></image>
+        <view class='newsWork'>
+        <text class='nesw'>2</text>
+            <image src='{{contentData.briefDetail[5].imgUrl}}' mode:widthFix class='studentFiles' catchtap='newXx' id='{{contentData.briefDetail[5].id}}'></image>
+        </view>
+        
+  </view>
+</view>

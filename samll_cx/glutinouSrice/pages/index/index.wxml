@@ -1,0 +1,152 @@
+<!--index.wxml-->
+<tabbar bindtap='taphome' terminalType="{{customertype}}" checkIdx="0" telModel-data="{{telModel}}"></tabbar>
+<view class="container">
+  <view class="search_box" bindtap="search_box">
+      <text class="icon iconfont icon-search">
+      </text><input placeholder="搜索商品" placeholder-style="font-size:26rpx;"></input>
+  </view>
+<view class="page-section page-section-spacing swiper">
+      <swiper style='height:321rpx;'
+        indicator-dots="{{indicatorDots}}" indicator-color="{{indicatorColor}}" indicator-active-color="{{indicator_active}}"  autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}" circular="true" easing-function="easeInOutCubic"
+        interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px">
+        <block wx:for="{{background}}" wx:key="*this">
+          <navigator url="{{item.href}}">
+            <swiper-item class='banner' >
+              <image src="{{imgUrl+item.pic}}"  data-ids="{{item.id}}" data-tid="{{item.tid}}" class="slide-image"/>
+            </swiper-item>
+          </navigator>
+        </block>
+      </swiper>
+    </view>
+    <view class="auto">
+         <!-- 好书推荐 -->
+         <view class="nice_book back_color">
+            <view class="nice_auto">
+              <view class="nice_bookChil clearFlo">
+                <view class="nice_title flL">好书推荐</view>
+                <view class="nice_gd flR" bindtap="gd_ck" data-types="1">查看更多<text class="icon iconfont icon-arrowRight"></text></view>
+            </view>
+            <view class="list_parent">
+               <block  wx:for="{{recommend}}" wx:key="index">
+                   <view class="book_list" data-cateid="{{item.id}}" bindtap="detail">
+                    <view class="img_box">
+                      <image src="{{item.book_img}}"></image>
+                    </view>
+                    <view class="book_title">{{item.book_name}}</view>
+                    <view class="socus">
+                      <text class="book_price">{{item.discount_price}}</text>
+                      <text class="book_del">{{item.price}}</text>
+                    </view>
+                </view>
+               </block>
+               
+            </view>
+          </view>
+        </view>
+            <!-- 特价专区 -->
+         <view class="nice_book special ">
+            <view class="special_offerleft clearFlo">
+                <view class="special_img flL">
+                  <navigator url="{{daster.center1.ad_link}}">
+                    <image src="{{imgUrl+daster.center1.ad_code}}"></image>
+                  </navigator>
+                </view>
+                <view class="specialimg_right flR">
+                    <navigator url="{{daster.center2.ad_link}}">
+                       <image src="{{imgUrl+daster.center2.ad_code}}"></image>
+                       </navigator>
+                       <navigator url="{{daster.center3.ad_link}}">
+                          <image src="{{imgUrl+daster.center3.ad_code}}"></image>
+                          </navigator>
+                </view>
+            </view>
+         </view>
+         <!-- 馆藏推荐 -->
+         <view class="nice_book back_color">
+            <view class="nice_auto">
+              <view class="nice_bookChil clearFlo">
+                <view class="nice_title flL">馆藏推荐</view>
+                <view class="nice_gd flR" bindtap="gd_ck"  data-types="2">查看更多<text class="icon iconfont icon-arrowRight"></text></view>
+            </view>
+            <view class="list_parent">
+              <block wx:for="{{collection}}">
+                <view class="book_list" data-cateid="{{item.id}}" bindtap="detail">
+                    <view class="img_box">
+                      <image src="{{item.book_img}}"></image>
+                    </view>
+                    <view class="book_title">{{item.book_name}}</view>
+                    <view class="socus">
+                      <text class="book_price">{{item.discount_price}}</text>
+                      <text class="book_del">{{item.price}}</text>
+                    </view>
+                </view>
+                </block>
+               
+            </view>
+          </view>
+        </view>
+        <!-- 广告位 -->
+        <navigator url="{{daster.center2.ad_link}}">
+          <view class="nice_book" data-links="{{daster.center2.ad_link}}">
+            <image src="{{imgUrl+daster.center2.ad_code}}" class="advertising"></image>
+          </view>
+        </navigator>
+        <!-- 读者推荐 -->
+        <view class="nice_book back_color" >
+            <view class="nice_auto">
+              <view class="nice_bookChil clearFlo">
+                <view class="nice_title flL">读者推荐</view>
+                <!-- <view class="nice_gd flR">查看更多<text class="icon iconfont icon-arrowRight"></text></view> -->
+            </view>
+            <view class="page-section page-section-spacing swipers" style="position:relative;">
+      <swiper  style="height:133px;"
+        indicator-dots="{{indicatorDots}}" indicator-color="{{indicatorColor}}" indicator-active-color="{{indicator_active}}"  autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}" circular="true" easing-function="easeInOutCubic"
+        interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px">
+        <block wx:for="{{reader}}" wx:key="*this">
+          <swiper-item class='banner' data-idis="{{item.id}}" >
+             <view class="bestseller_box clearFlo" data-cateid="{{item.id}}" bindtap="detail">
+                <view class="bestseller_left flL">
+                   <view class="imgs_box">
+                      <image src="{{item.book_img}}"></image>
+                      </view>
+                </view>
+                <view class="bestseller_right flR">
+                   <view class="bestseller_title">{{item.book_name}}</view>
+                   <view>
+                    <text class="book_price">{{item.discount_price}}</text>
+                    <text class="book_del">{{item.price}}</text>
+                   </view>
+                   <view class="bestseller_detail">本书是一本与电影《复仇者联盟4：终局之战》同步的电影档案书。书中有漫威无限传奇的十年回顾、有珍贵的演员幕后访和漫威影业总</view>
+                </view>
+             </view>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+          </view>
+        </view>
+        <!-- 畅销排行榜 -->
+         <view class=" back_color" style="margin-top:40rpx;">
+            <view class="">
+              <view class="nice_bookChil clearFlo nice_auto">
+                <view class="nice_title flL">畅销排行榜</view>
+                <view class="nice_gd flR" bindtap="gd_ck"  data-types="4">查看更多<text class="icon iconfont icon-arrowRight"></text></view>
+            </view>
+            <view class="list_parent clearFlo best_seller" style="display:block">
+               <block wx:for="{{bestseller}}">
+                <view class="book_list flL" data-cateid="{{item.id}}" bindtap="detail">
+                    <view class="img_box">
+                      <image src="{{item.book_img}}"></image>
+                    </view>
+                    <view class="book_title">{{item.book_name}}</view>
+                    <view class="socus">
+                      <text class="book_price">{{item.discount_price}}</text>
+                      <text class="book_del">{{item.price}}</text>
+                    </view>
+                </view>
+                </block>
+            </view>
+          </view>
+        </view>
+    </view>
+</view>

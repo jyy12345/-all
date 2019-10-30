@@ -1,0 +1,76 @@
+<view>
+    <view class="top_box" bindtap="jsAddress">
+       <view class="clearFlo auto">
+       <view class="flL">
+          <text class="icon iconfont icon-dizhi address"></text>
+          请选择收货地址
+       </view>
+       <view class="icon iconfont icon-arrowRight flR right_inv"></view>
+    </view>
+    </view>
+   <view class="order_contetns">
+      <view class="order">
+         <view class="order_list">
+            <view class="order_top clearFlo">
+              <view class="flL">
+                <text class="icon iconfont icon-dingdan code_order"></text>
+                <text class="code">订单编号：{{order.order.order_sn}}</text>
+              </view>
+            
+            </view>
+            <block wx:for="{{orderJs}}" wx:key="index">
+            <view class="order_content" bindtap="orderDetail" id="{{item.id}}">
+               <view class="contents clearFlo">
+                  <view class="content_left flL">
+                     <image src="{{item.book_img}}"></image>
+                  </view>
+                  <view class="content_right flR">
+                     <view class="right_title">{{item.book_name}}</view>
+                      <view class="clearFlo">
+                        <view class="flL">
+                           <text class="price">￥{{item.discount_price}}</text>
+                           <text class="old_price">￥{{item.total}}</text>
+                        </view>
+                        <view class="flR sum">X {{item.goods_num}}</view>
+                      </view>
+                      
+                  </view>
+               </view>
+            </view>
+            </block>
+         </view>
+         
+      </view>
+
+   </view>
+   <view class="top_box" style="border:none;margin-top:20rpx;">
+       <view class="clearFlo auto">
+       <view class="flL">
+          <text class="pices_fs">选择支付方式</text>
+       </view>
+    </view>
+    </view>
+ <view class="top_box">
+       <view class="clearFlo auto">
+       <view class="flL">
+          <text class="icon iconfont icon-weixinzhifu  wx_zf"></text>
+          微信支付
+       </view>
+       <radio color="red" class="flR" checked="{{radios}}" bindtap="radios"></radio>
+    </view>
+    </view>
+ <view class="top_box" style="border:none;margin-top:20rpx;">
+       <view class="clearFlo auto" style="border:none;border-bottom:1px solid #f0f0f0;padding-bottom:20rpx;">
+       <view class="flL">
+          <view class="pices_fs">商品金额</view>
+          <view class="pices_fs ">运费</view>
+       </view>
+       <view class="flR">
+          <view class="pices_fs red">￥{{order.totalPrice}}</view>
+          <view class="pices_fs red">￥{{order.totalNum}}</view>
+       </view>
+    </view>
+    <view class="si_paice">实付金额： <text class="red" >￥{{order.totalPrice+order.totalNum}}</text></view>
+    </view>
+    <view class="pice_btn" bindtap="pay">立即支付</view>
+</view>

@@ -1,0 +1,58 @@
+<view class="content">
+   <view>
+      <view class="seach_top">
+         <view class="seach_box">
+             <text class="icon iconfont icon-search"></text>
+             <input type="text" placeholder="商品名称/商品编号/订单号" placeholder-class="pl_size"></input>
+         </view>
+      </view>
+
+      <view class="nav_box">
+         <view class="nav_auto">
+         <block wx:for="{{orderNav}}" wx:key='*this'>
+            <text class="{{status==item.id?'selected':''}}" id="{{item.id}}" bindtap="navBtn">{{item.name}}</text> 
+         </block>           
+         </view>
+      </view>
+      <view class="order">
+        <block wx:for="{{orderList}}" wx:key="*this">
+         <view class="order_list">
+            <view class="order_top clearFlo">
+              <!-- <view class="flL">
+                <text class="icon iconfont icon-dingdan code_order"></text>
+                <text class="code">订单编号：8888888</text>
+              </view> -->
+              <view class="flR" wx:if="{{item.status==1}}">
+                <text class="state state_red"> <text class="icon iconfont icon-shijian icos"></text>待处理</text>
+              </view>
+                <view class="flR" wx:elif="{{item.status==2}}">
+                <text class="state state_green"> <text class="icon iconfont icon-shijian icos"></text>已采纳</text>
+              </view>
+               <view class="flR" wx:elif="{{item.status==3}}">
+                <text class="state state_oraen"> <text class="icon iconfont icon-shijian icos"></text>已回绝</text>
+              </view>
+            </view>
+            <view class="order_content">
+               <view class="contents clearFlo">
+                  <view class="content_left flL">
+                     <image src="{{item.book_img}}"></image>
+                  </view>
+                  <view class="content_right flR">
+                     <view class="right_title">{{item.book_name}}</view>
+                      <view class="clearFlo">
+                        <view class="flL">
+                           <text class="price">{{item.price}}</text>
+                           <!-- <text class="old_price">￥78.0</text> -->
+                        </view>
+                        <view class="flR sum">X 1</view>
+                      </view>
+                      
+                  </view>
+               </view>
+            </view>
+         </view>
+         </block>
+      </view>
+   </view>
+</view>
+ 

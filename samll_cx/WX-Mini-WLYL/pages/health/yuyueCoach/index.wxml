@@ -1,0 +1,42 @@
+<!--pages/health/yuyueCoach/index.wxml-->
+<view class='borderTop yuyue'>
+  <view class='time'>
+    <picker
+      mode="date"
+      value="{{date}}"
+      start="2019-01-01"
+      end="2019-12-31"
+      bindchange="bindDateChange"
+    >
+      <view class="fl picker">
+        时间<text>{{date}}</text> 
+      </view>
+    </picker>
+    <image class='fr' src='../../../image/icon_clock.png'></image>
+  </view>
+  <view class='addr'>
+    <picker
+      mode="region"
+      bindchange="bindRegionChange"
+      value="{{region}}"
+    >
+      <view class="picker">
+        地址<text>{{region[0]}} {{region[1]}} {{region[2]}}</text>
+      </view>
+      <view class="fr right_arrows"></view>
+    </picker>
+  </view>
+  <view class='cont'>
+    <text class='fl'>详细地址</text>
+    <input placeholder='请填写详细地址' bindinput='address'></input>
+  </view>
+  <view class='cont'>
+    <text class="fl">预约内容</text>
+    <input class='fr' placeholder='请填写预约内容' bindinput='contents'></input>
+  </view>
+  <view class='remark'>
+    <text class="fl">备注</text>
+    <input class='fr' placeholder='请输入备注' bindinput='beiz'></input>
+  </view>
+  <button bindtap='subitm'>提交</button>
+</view>

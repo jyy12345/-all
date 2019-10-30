@@ -1,0 +1,92 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/recommend/recommend",
+    "pages/bdReaderscard/bdReaderscard",
+    "pages/successfulpaymen/successfulpaymen",
+    
+    "pages/orderdetailwc/orderdetailwc",
+    "pages/orderdetail/orderdetail",
+    "pages/shoppingCart/shoppingCart",
+    "pages/myorder/myorder",
+    "pages/login/login",
+    "pages/authorization/authorization",
+    "pages/news/news",
+    "pages/classificationdetail/classificationdetail",
+    "pages/orderdetailfk/orderdetailfk",
+    "pages/orderdetailsh/orderdetailsh",
+    
+    
+    
+    
+    "pages/mycontent/mycontent",
+    
+    "pages/purchase/purchase",
+    "pages/browse/browse",
+    
+    "pages/collection/collection",
+    "pages/personaldata/personaldata",
+    "pages/aftersale/aftersale",
+    "pages/returngoods/returngoods",
+    "pages/aftersaleType/aftersaleType",
+    
+    
+    "pages/bdapplyReading/bdapplyReading",
+    "pages/addedaddress/addedaddress",
+    "pages/jsaddAddress/jsaddAddress",
+    "pages/addressAdministration/addressAdministration",
+    
+    
+    "pages/oleyDetail/oleyDetail",
+    
+    
+    
+    "pages/orderJs/orderJs",
+    "pages/classification/classification",
+    "pages/tabbar/tabbar", 
+    "pages/searchresult/searchresult",
+    "pages/search/search",
+    "pages/logs/logs",
+    "pages/editaddress/editaddress",
+    "pages/register/register"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "糯米山图书商城",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#dd1a20",
+    "color": "#999",
+    "borderStyle": "white",
+    "backgroundColor": "#fefefe",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "pages/images/sy.png",
+        "selectedIconPath": "pages/images/syS.png",
+        "text": "首页"
+      },
+      {
+        "text": "分类",
+        "pagePath": "pages/classification/classification",
+        "iconPath": "pages/images/fl.png",
+        "selectedIconPath": "pages/images/flS.png"
+      },
+      {
+        "text": "购物车",
+        "pagePath": "pages/shoppingCart/shoppingCart",
+        "iconPath": "pages/images/gwc.png",
+        "selectedIconPath": "pages/images/gwcS.png"
+      },
+      {
+        "pagePath": "pages/mycontent/mycontent",
+        "iconPath": "pages/images/my.png",
+        "selectedIconPath": "pages/images/myS.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

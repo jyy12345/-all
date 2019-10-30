@@ -1,0 +1,116 @@
+<import src="/pages/tabbar/tabbar.wxml"/>
+<template is="tabbar" data="{{tabbar}}"/>
+<!-- 我们是这样的 -->
+<movable-area style="top:0;bottom:0;height: 100%; width:100%; overflow:hidden;">
+  <movable-view direction="all" class='bgColor' catchtap="onScrt">
+  <image src='../../../images/indexImg/shitBtn.jpg'></image>
+ </movable-view>
+<view style='width:100%'>
+  <video src="../../../images/indexImg/users.mp4" binderror="videoErrorCallback" objectFit="fill" custom-cache="{{false}}"></video>
+  <view class="container">
+    <view class="tabBox">
+      <view class="swiper-tab" style='height:180rpx;margin-top:-3rpx;position:fixed;left:0;z-index:9;'>
+        <view style='width:80%;margin:0rpx auto;' class='clearFlo'>
+          <view class="swiper-tab-list   {{currentTab==0 ? 'backIndex' : ''}}" data-current="0" bindtap="swichNav" style='height:119rpx;margin-top:40rpx;'>
+            <image src='{{currentTab==0 ? "../../../images/indexImg/contentJs.jpg" : "../../../images/indexImg/indexSouy.png"}}'></image>
+          </view>
+          <view class="swiper-tab-list  {{currentTab==1 ? 'backIndex' : ''}}" data-current="1" bindtap="swichNav" style='height:119rpx;margin-top:40rpx;'>
+            <image     src='{{currentTab==1 ? "../../../images/indexImg/kctxPink.png" : "../../../images/indexImg/kecTxWhi.jpg"}}'></image>
+          </view>
+          <view class="swiper-tab-list  {{currentTab==2 ? 'backIndex' : ''}}" data-current="2" bindtap="swichNav" style='height:119rpx;margin-top:37rpx;'>
+            <image src='{{currentTab==2 ? "../../../images/indexImg/stutyPink.jpg" : "../../../images/indexImg/stuertWhite.jpg"}}'></image>
+          </view>
+          <view class="swiper-tab-list  {{currentTab==3 ? 'backIndex' : ''}}" data-current="3" bindtap="swichNav" catchtap='onGo' style='height:119rpx;margin-top:40rpx;'>
+            <image 
+            src='{{currentTab==3 ? "" : "../../../images/indexImg/teachWhite.jpg"}}'></image>
+          </view>
+        </view>
+      </view>
+      <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:900rpx;margin-top:150rpx;" bindchange="bindChange">
+
+        <swiper-item>
+        <scroll-view scroll-y="true" style="height: 200px">
+        <view class='ouT'>
+          <view class='textC'>我们是真正致力于全面的艺术教学的专业机构，中心 传承中央美术学院的教学体系，遵循“中西合璧，兼容传统 与现代”的教学理念，打造最快乐，最全面，最高效的艺术 课程。
+          </view>
+          <view class='textC'>我们采用全科立体式教学模式，包含所有美术学科 (油画，素描，创意，设计等），您无需单独报名学某个 科目，真正做到“艺术营养”全面吸收，让学员创作起来更 加得心应手。
+          </view>
+          <view class='textC'>我们采用小班式教学，保障所有学员都能得到老师的 专业化及个性化的辅导，从而快速提升学员艺术修养与创 作能力，成为有审美有能力的小艺术家。
+          </view>
+      <view class='textC'>我们采用全科立体式教学模式，包含所有美术学科 (油画，素描，创意，设计等），您无需单独报名学某个 科目，真正做到“艺术营养”全面吸收，让学员创作起来更 加得心应手。
+          </view>
+          <view class='textC'>我们采用小班式教学，保障所有学员都能得到老师的 专业化及个性化的辅导，从而快速提升学员艺术修养与创 作能力，成为有审美有能力的小艺术家。
+          </view>
+          <view class='youShi'><view class='pink'>五大优势</view></view>
+          <view>
+            
+          </view>
+          </view>
+          </scroll-view>
+        </swiper-item>
+        <swiper-item>
+         <scroll-view scroll-y="true" style="height: 200px">
+          <view class='ouT'>
+          <view class='textC'>我们是真正致力于全面的艺术教学的专业机构，中心 传承中央美术学院的教学体系，遵循“中西合璧，兼容传统 与现代”的教学理念，打造最快乐，最全面，最高效的艺术 课程。
+          </view>
+          <view class='textC'>我们采用全科立体式教学模式，包含所有美术学科 (油画，素描，创意，设计等），您无需单独报名学某个 科目，真正做到“艺术营养”全面吸收，让学员创作起来更 加得心应手。
+          </view>
+          <view class='textC'>我们采用小班式教学，保障所有学员都能得到老师的 专业化及个性化的辅导，从而快速提升学员艺术修养与创 作能力，成为有审美有能力的小艺术家。
+          </view>
+      <view class='textC'>我们采用全科立体式教学模式，包含所有美术学科 (油画，素描，创意，设计等），您无需单独报名学某个 科目，真正做到“艺术营养”全面吸收，让学员创作起来更 加得心应手。
+          </view>
+          <view class='textC'>我们采用小班式教学，保障所有学员都能得到老师的 专业化及个性化的辅导，从而快速提升学员艺术修养与创 作能力，成为有审美有能力的小艺术家。
+          </view>
+           </view>
+           </scroll-view>
+        </swiper-item>
+        <swiper-item>
+        <view class='ouT' style='margin-top:90rpx;display:none;'>
+        <view class='imgKc'>
+        <image src='../../../images/indexImg/3-5.jpg'></image><image src='../../../images/indexImg/5-7.jpg' class='myL'></image><image src='../../../images/indexImg/7-9.jpg' class='myL'></image></view>
+        <view class='imgKc'>
+        <image src='../../../images/indexImg/9-14.jpg'></image>
+        <image src='../../../images/indexImg/cr.jpg' class='myL'></image></view>
+        </view>
+        <view class='ouT'>
+            <view class="container1">
+    <view class="tabBox">
+         <swiper 
+         vertical="true"
+         current="{{currentTab}}" 
+         class="swiper-box" 
+         duration="300"  
+         bindchange="bindChange1"
+         previous-margin="120rpx"
+         next-margin="130rpx"
+         >
+       <swiper-item class='filmItem'>
+           <view catchtap='history' class="gotO {{currentTab1==0 ? 'kuang' : ''}}">
+           <image src='../../../images/indexImg/meishi.jpg'  style='width:100%;height:100%'></image></view>
+        </swiper-item>
+       
+        <swiper-item>
+               <view catchtap='history' class="gotO {{currentTab1==1 ? 'kuang' : ''}}">
+           <image src='../../../images/indexImg/meishi.jpg' ></image></view>
+        </swiper-item>
+        <swiper-item>
+                <view catchtap='macic' class="gotO {{currentTab1==2 ? 'kuang' : ''}}">
+           <image src='../../../images/indexImg/meishi.jpg' ></image></view>
+        </swiper-item>
+        <swiper-item>
+                 <view catchtap='history' class="gotO {{currentTab1==3 ? 'kuang' : ''}}">
+           <image src='../../../images/indexImg/meishi.jpg' ></image></view>
+        </swiper-item>
+      </swiper>
+    </view>
+  </view>
+        </view>
+        </swiper-item>
+        <swiper-item>
+          <!-- hahh 2 -->
+        </swiper-item>
+      </swiper>
+    </view>
+  </view>
+</view>
+</movable-area>

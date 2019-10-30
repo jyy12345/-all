@@ -1,0 +1,81 @@
+<!--pages/smiling/index.wxml-->
+<view class="borderTop smiling">
+  <view class='topTab'>
+    <view class='tab  {{currentData == 0 ? "tabAfter" : ""}}'  data-current = "0" bindtap='checkCurrent'>
+			医师风采
+			<block wx:if="{{currentData == 0}}">
+				<view class="lLine"></view>
+			</block>
+			<block wx:else>
+				<view class="wLine"></view>
+			</block>
+		</view>
+    <view class='tab  {{currentData == 1 ? "tabAfter" : ""}}'  data-current = "1" bindtap='checkCurrent'>
+			技术评定
+			<block wx:if="{{currentData == 1}}">
+				<view class="lLine"></view>
+			</block>
+			<block wx:else>
+				<view class="wLine"></view>
+			</block>
+		</view>
+    <view class='tab  {{currentData == 2 ? "tabAfter" : ""}}'  data-current = "2" bindtap='checkCurrent'>
+			升级必备
+			<block wx:if="{{currentData == 2}}">
+				<view class="lLine"></view>
+			</block>
+			<block wx:else>
+				<view class="wLine"></view>
+			</block>
+		</view>
+	</view>
+	<view class='botConts'>
+		<!-- 医师风采列表 -->
+		<view  hidden="{{currentData!='0'}}" class='eachList'>
+			<view class="doctorList">
+				<view wx:for="{{doctorData}}" class="boxShadow eachCont eachDoctor" data-title="医师风采" data-id="{{item.id}}" bindtap='doctorDetail'>
+					<image class="" src="{{imgUrl+item.image}}"></image>
+					<view class="name">
+						{{item.name}}
+					</view>
+				</view>
+			</view>
+		</view> 
+		<!-- 技术评定 -->
+		<view  hidden="{{currentData!='1'}}" class='eachList'>
+			<view class="skillCont">
+				<view wx:for="{{skillData}}" class="boxShadow eachCont eachskillCont" data-current="{{index}}" data-id="{{item.id}}" bindtap="handelSkill">
+					<image class="" src="{{imgUrl+item.image}}"></image>
+					<view class="skillName">
+						<image class="" src="{{imgUrl+item.icon}}"></image>
+						<view class="title">{{item.title}}</view>
+					</view>
+				</view>
+			</view>
+		</view>
+		<!-- 升级必备 -->
+		<view  hidden="{{currentData!='2'}}" class='eachList'>
+      <view class='topTabBar'>
+        <view wx:for="{{tabBarData}}" class='tab  {{menuTapCurrent == index ? "tabsAfter" : ""}}' data-id="{{item.id}}" data-currents = "{{index}}" bindtap='menuTap'>
+          {{item.title}}
+        </view>
+      </view>
+      <!-- 宏源伤科 -->
+      <view wx:for="{{tabBarData}}" hidden="{{menuTapCurrent!=index}}" class="eachCont healthCont">
+        <view wx:for="{{upgradeData}}" class="clearfix eachHealMes" data-title="{{item.classtitle}}" data-id="{{item.id}}" bindtap='articleDetail'>
+          <block wx:if="{{item.image}}">
+            <image class="fl" src="{{imgUrl+item.image}}" />
+            <view class='fr healthMesCont'>
+              <view class="fl healthMes1">{{item.name}}</view>
+              <text class="fl time1">{{item.createtime}}</text>
+            </view>
+          </block>
+          <block wx:else>
+            <text class="fl healthMes">{{item.name}}</text>
+            <text class="fl time">{{item.createtime}}</text>
+          </block>
+        </view>
+      </view>
+		</view>  
+	</view>
+</view>

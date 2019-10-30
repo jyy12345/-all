@@ -1,0 +1,85 @@
+<view>
+    <view class="top_box bj_img">
+       <view class="clearFlo auto">
+       <view class="flL">
+          <text class="icon iconfont icon-yifahuo address"></text>
+          等待收货
+       </view>
+       <view class="right_inv flR">图书运输中请耐心等待</view>
+    </view>
+    </view>
+    <view class="top_box">
+       <view class=" auto">
+       <view class="nams_title">
+          <text class="icon iconfont icon-dizhi1 address1"></text>
+          <text class="names">网和大陆</text>
+          <text>133334456</text>
+       </view>
+       <view class="right_invs">北京市朝阳区铜牛电影产业园4G号楼四层</view>
+    </view>
+    </view>
+   <view class="order_contetns">
+      <view class="order">
+         <view class="order_list">
+            <view class="order_top clearFlo">
+              <view class="flL">
+                <text class="icon iconfont icon-dingdan code_order"></text>
+                <text class="code">订单编号：8888888</text>
+              </view>
+            
+            </view>
+            <view class="order_content">
+               <view class="contents clearFlo">
+                  <view class="content_left flL">
+                     <image src="https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640"></image>
+                  </view>
+                  <view class="content_right flR">
+                     <view class="right_title">妈妈我能行勇敢做自己全套10册儿童情绪管理与性格培养绘本 中英文双语亲</view>
+                      <view class="clearFlo">
+                        <view class="flL">
+                           <text class="price">￥45.80</text>
+                           <text class="old_price">￥78.0</text>
+                        </view>
+                        <view class="flR sum">X 1</view>
+                      </view>
+                      
+                  </view>
+               </view>
+            </view>
+         </view>
+         
+      </view>
+
+   </view>
+ <view class="top_box" style="border:none;margin-top:20rpx;">
+       <view class="clearFlo auto" style="border:none;border-bottom:1px solid #f0f0f0;padding-bottom:20rpx;">
+       <view class="flL">
+          <view class="pices_fs">商品金额</view>
+          <view class="pices_fs ">运费</view>
+       </view>
+       <view class="flR">
+          <view class="pices_fs red">￥45.80</view>
+          <view class="pices_fs red">￥6.00</view>
+       </view>
+    </view>
+    <view class="si_paice">实付金额： <text class="red" >￥45.80</text></view>
+    </view>
+     <view class="top_box" style="border:none;margin-top:20rpx;">
+       <view class="clearFlo auto">
+       <view class="flL">
+          <view class="pices_fs1">订单编号：888888888888</view>
+          <view class="pices_fs1 ">支付方式：微信支付</view>
+          <view class="pices_fs1 ">订单日期：2019-09-16  23:58:20</view>
+          <view class="pices_fs1 ">支付日期：2019-09-16  23:58:20</view>
+          <view class="pices_fs1 ">交易完成：2019-09-16  23:58:20</view>
+       </view>
+       <view class="flR">
+          <view class="copys">复制</view>
+       </view>
+    </view>
+    </view>
+    <view class="boito">
+     <text class="grry">删除订单</text>
+     <text class="redBj">确认收货</text>
+    </view>
+</view>

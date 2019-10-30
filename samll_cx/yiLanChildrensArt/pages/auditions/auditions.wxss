@@ -1,0 +1,174 @@
+/* pages/auditions/auditions.wxss */
+page{
+  height: 100%;
+  background: #B7DED7 ;
+}
+.btnSuccess{font-size: 38rpx;color: #B7DED7;text-align: center;}
+.box{
+  width: 563rpx;
+  /* height: 1086rpx; */
+  margin: 100rpx auto;
+  border-radius: 40rpx;
+  background: #fff;
+}
+.fL{float: left;}
+.img{
+  width: 397rpx;
+  height: 129rpx;
+  margin: 0 auto;
+  padding: 50rpx 0 50rpx 0;
+}
+.img image{
+  width: 100%;
+  height: 100%;
+}
+.content{
+  width: 463rpx;
+  margin: 0 auto;
+}
+.inp{
+  width: 463rpx;
+  height: 78rpx;
+  background: #B7DED7;
+  color: #fff;
+  border-radius: 15rpx;
+  margin-top: 20rpx;
+  font-size: 31rpx;
+}
+.inps{
+  color:#fff;
+  padding-left: 20rpx;
+  }
+  /* .inpa{
+    position: relative;
+    top: 0;
+    left: 0;
+  } */
+  .imgs{
+    width: 50rpx;
+    height: 50rpx;
+    position: relative;
+    top: -60rpx;
+    left: 400rpx;
+    z-index: 1;
+  }
+.btn{
+  width: 227rpx;
+  height: 81rpx;
+  background: #B7DED7;
+  color: #fff;
+  margin: 50rpx auto;
+  font-size: 31rpx;
+}
+.footer{
+  width: 100%;
+  height: 19rpx;
+}
+.footer image{
+  width: 100%;
+  height: 100%;
+}
+.txt{
+  width: 364rpx;
+  height: 72rpx;
+  font-size: 24rpx;
+  text-align: center;
+  color: #B7DED7;
+  margin: 80rpx auto;
+}
+
+
+/* 日历选择器开始*/
+.modalBox{
+  width: 100%;
+  font-size: 32rpx;
+}
+.box{
+  margin: 0 auto;
+  width: 630rpx;
+}
+.calendarTitle{
+  /* margin: 0 auto;
+  width: 630rpx; */
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  border-bottom: 1rpx solid #ddd;
+}
+.calendarBox{
+  /* width: 630rpx; */
+  width:100%;
+  margin: 0 auto;
+  border:1rpx solid #ddd;
+}
+.week{
+  display: inline-block;
+  width:90rpx;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  border-bottom: 1rpx solid #ddd;
+}
+.dateBtn{
+  width:100%;
+  height: 80rpx;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20rpx;
+  
+}
+ .dateBtn>button{
+  width: 45%;
+  height: 100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  font-size: 36rpx;
+} 
+/* 模态框 */  
+  
+.modal-mask {  
+  width: 100%;  
+  height: 100%;  
+  position: fixed;  
+  top: 0;  
+  left: 0;  
+  background: #000;  
+  opacity: 0.5;  
+  overflow: hidden;  
+  z-index: 9000;  
+}  
+  
+.modal-dialog {  
+  width: 85%;  
+  padding: 100rpx 30rpx 30rpx 30rpx;  
+  overflow: hidden;  
+  position: fixed;  
+  top: 20%;  
+  left: 0;  
+  right: 0;  
+  margin: 0 auto;  
+  z-index: 9999;  
+  background: rgba(255, 255, 255, 1);  
+  border-radius: 5rpx;  
+}  
+/* 日历选择器结束*/
+
+.row {
+  width:463rpx;
+  background-color:#fff;
+  margin-bottom: 20rpx;
+  margin-top:-70rpx;
+  z-index:9999999999999999999999999999;
+  position: absolute;
+  left:144rpx;
+  top:790rpx;
+}
+
+.label {
+    border-bottom: 1rpx solid #e5e5e5;
+    font-size: 28rpx;
+    padding: 12rpx 24rpx;
+}

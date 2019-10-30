@@ -1,0 +1,90 @@
+<view class='mineTop'>
+  <view class='mineTopCen'>
+    <view class='mineTopCenImg'>
+      <image src="{{headImg}}"  mode="aspectFill" ></image>
+    </view>
+    <view class='mineTopCenName'>
+      {{nickname}}
+    </view>
+  </view>
+</view>
+<view class='title'>
+  <text>我的收藏</text>
+  <!-- <text>我的下载</text> -->
+</view>
+<view class='information' wx:for="{{myCollection}}" data-lang="{{item.lang}}" data-id="{{item.id}}" bindtap='detail'>
+  <view class='infCen'>
+    <view class='infCenLeft' wx:if="{{item.img}}">
+      <image src="{{imgUrls+item.img}}"  mode="aspectFill" ></image>
+    </view>
+    <block wx:if="{{item.img}}">
+      <view class='infCenCen'>
+        <image src="../../../images/index/shoucang.png"  mode="aspectFill" ></image>
+      </view>
+      <view class='infCenRight'>
+        <view class='infCenRightTop'>{{item.title}}</view>
+        <view class='infCenRightBot'>
+          <text>{{item.source}}</text>
+          <text>{{item.statrtime}}</text>
+        </view>
+      </view>
+    </block>
+    <block wx:else>
+      <view class='infCenCen' style='margin-left:0;'>
+        <image src="../../../images/index/shoucang.png"  mode="aspectFill" ></image>
+      </view>
+      <view class='infCenRight' style='width:94%'>
+        <view class='infCenRightTop'>{{item.title}}</view>
+        <view class='infCenRightBot'>
+          <text>{{item.source}}</text>
+          <text>{{item.statrtime}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
+<!-- <view class='information'>
+  <view class='infCen'>
+    <view class='infCenCen' style='margin-left:0;'>
+      <image src="../../../images/index/shoucang.png"  mode="aspectFill" ></image>
+    </view>
+    <view class='infCenRight' style='width:94%'>
+      <view class='infCenRightTop'>【药乾坤】多个未过评药品已被“逐市”；鸿茅再回视野，多家电视频道现广告</view>
+      <view class='infCenRightBot'>
+        <text>科技创新</text>
+        <text>6分钟之前</text>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='information'>
+  <view class='infCen'>
+    <view class='infCenLeft'>
+      <image src="../../../images/index/infor.jpg"  mode="aspectFill" ></image>
+    </view>
+    <view class='infCenCen'>
+      <image src="../../../images/index/shoucang.png"  mode="aspectFill" ></image>
+    </view>
+    <view class='infCenRight'>
+      <view class='infCenRightTop'>巧妙的数据收集支持AI的创造性研究</view>
+      <view class='infCenRightBot'>
+        <text>科技创新</text>
+        <text>6分钟之前</text>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='information'>
+  <view class='infCen'>
+    <view class='infCenCen' style='margin-left:0;'>
+      <image src="../../../images/index/shoucang.png"  mode="aspectFill" ></image>
+    </view>
+    <view class='infCenRight' style='width:94%'>
+      <view class='infCenRightTop'>【药乾坤】多个未过评药品已被“逐市”；鸿茅再回视野，多家电视频道现广告</view>
+      <view class='infCenRightBot'>
+        <text>科技创新</text>
+        <text>6分钟之前</text>
+      </view>
+    </view>
+  </view>
+</view> -->

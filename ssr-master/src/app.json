@@ -1,0 +1,82 @@
+{
+  "pages": [
+    "pages/index/main",
+    "pages/my/main",
+    "pages/login/main"
+  ],
+  "subPackages": [
+    {
+      "root": "pages/moduleMeeting/",
+      "pages": [
+        "meetingContent/main",
+        "signin/main",
+        "dehighlights/main",
+        "brand/main",
+        "confirm/main",
+        "pay/main",
+        "guide/main",
+        "arrange/main"
+      ]
+    },
+    {
+      "root": "pages/moduleMy/",
+      "pages": [
+        "enterprisesEnter/main",
+        "personalData/main",
+        "mybrand/main",
+        "myTicket/main",
+        "myTicketDetails/main",
+        "paysState/main",
+        "refund/main"
+      ]
+    },
+    {
+      "root": "pages/administrators",
+      "pages": [
+        "inspectTicket/main",
+        "ticketDetail/main"
+      ]
+    }
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#999",
+    "backgroundColor": "#fafafa",
+    "selectedColor": "#333",
+    "borderStyle": "white",
+    "list": [
+      {
+        "text": "会议",
+        "pagePath": "pages/index/main",
+        "iconPath": "static/tabs/meeting.png",
+        "selectedIconPath": "static/tabs/meeting-active.png"
+      },
+      {
+        "text": "我的",
+        "pagePath": "pages/my/main",
+        "iconPath": "static/tabs/my.png",
+        "selectedIconPath": "static/tabs/my-active.png"
+      }
+    ],
+    "items": [
+      {
+        "text": "会议",
+        "pagePath": "pages/index/main",
+        "icon": "static/tabs/meeting.png",
+        "activeIcon": "static/tabs/meeting-active.png"
+      },
+      {
+        "text": "我的",
+        "pagePath": "pages/my/main",
+        "icon": "static/tabs/my.png",
+        "activeIcon": "static/tabs/my-active.png"
+      }
+    ],
+    "position": "bottom"
+  }
+}

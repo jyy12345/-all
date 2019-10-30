@@ -1,0 +1,57 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logos/logos",
+    "pages/authorization/authorization",
+    "pages/journalism/journalism",
+    "pages/detail/index",
+    "pages/mine/index",
+    "pages/service/index",
+    "pages/service/periodicalDetail/index",
+    "pages/message/subject/index",
+    "pages/message/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#0081d2",
+    "navigationBarTitleText": "科技头条",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#aaaaaa",
+    "borderStyle": "black",
+    "selectedColor": "#0f88d5",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "最新",
+        "iconPath": "images/tabBar/tabBar_essence_click_icon.png",
+        "selectedIconPath": "images/tabBar/tabBar_essence_icon.png"
+      },
+      {
+        "pagePath": "pages/message/index",
+        "text": "专题",
+        "iconPath": "images/tabBar/tabBar_friendTrends_click_icon.png",
+        "selectedIconPath": "images/tabBar/tabBar_friendTrends_icon.png"
+      },
+      {
+        "pagePath": "pages/service/index",
+        "text": "期刊",
+        "iconPath": "images/tabBar/tabBar_new_click_icon.png",
+        "selectedIconPath": "images/tabBar/tabBar_new_icon.png"
+      },
+      {
+        "pagePath": "pages/mine/index",
+        "text": "我的",
+        "iconPath": "images/tabBar/tabBar_me_click_icon.png",
+        "selectedIconPath": "images/tabBar/tabBar_me_icon.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000
+  },
+  "debug": true,
+  "sitemapLocation": "sitemap.json"
+}

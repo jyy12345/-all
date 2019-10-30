@@ -1,0 +1,75 @@
+<!--pages/health/coachDetail/index.wxml-->
+<view class="coachDetail">
+	<view class="boxShadow coachMes">
+		<image class="fl" src="{{healthListsDetail.coach.image}}"></image>
+		<view class="fr permes">
+			<view class="mes name">
+				{{healthListsDetail.coach.name}}
+			</view>
+			<view class="mes goods">
+				擅长：
+        <text>美型塑体 减脂增肌</text>
+			</view>
+			<view class="mes intros">
+				个人简介：
+        <text>{{healthListsDetail.coach.content}}</text>
+			</view>
+		</view>
+	</view>
+
+	<view class="boxShadow mesCont coachGrade">
+		<view class="myGrade">
+			<view class="fl titLeft">
+				我的评级
+				<text class="doubt" bindtap='checkGrade'>?</text>
+			</view>
+		</view>
+		<view class="gType ">
+			<text class="fl">专业水平</text>
+			<block wx:for="{{professionalNum}}">
+			   <image class="fl" src="../../../image/mine/star1.png"></image>
+			</block>
+			<block wx:for="{{professional_2}}">
+			   <image class="fl" src="../../../image/mine/star.png"></image>
+			</block>
+		</view>
+    <view class="gType ">
+			<text class="fl">PT康复</text>
+			<block wx:for="{{ptNum}}">
+			   <image class="fl" src="../../../image/mine/star1.png"></image>
+			</block>
+			<block wx:for="{{pt_2}}">
+			   <image class="fl" src="../../../image/mine/star.png"></image>
+			</block>
+		</view>
+		<view class="gType ">
+			<text class="fl">TMT医学</text>
+			<block wx:for="{{tmtNum}}">
+			   <image class="fl" src="../../../image/mine/star1.png"></image>
+			</block>
+			<block wx:for="{{tmt_2}}">
+			   <image class="fl" src="../../../image/mine/star.png"></image>
+			</block>
+		</view>
+		<view class="gType ">
+			<text class="fl">爱心公益</text>
+				<block wx:for="{{loveNum}}">
+			   <image class="fl" src="../../../image/mine/heart1.png"></image>
+			</block>
+			<block wx:for="{{love_2}}">
+			   <image class="fl" src="../../../image/mine/heart.png"></image>
+			</block>
+		</view>
+	</view>
+
+  
+	<view class="boxShadow mesCont coachPic">
+		<view class="title picTit">
+			教练图片
+		</view>
+		<view class="pics">
+			<image class="" wx:key='imgs' wx:for='{{healthListsDetail.coach.images}}' wx:for-index='index' src="{{imgUrl+item}}"></image>
+		</view>
+	</view>
+  <button bindtap='checkYuyue'>立即预约</button>
+</view>

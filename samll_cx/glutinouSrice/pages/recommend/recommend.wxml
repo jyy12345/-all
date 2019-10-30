@@ -1,0 +1,43 @@
+<view class="content">
+   <view>
+      <view class="seach_top">
+         <view class="seach_box">
+             <text class="icon iconfont icon-search"></text>
+             <input type="text"  placeholder-class="pl_size"></input>
+         </view>
+      </view>
+
+      <view class="nav_box">
+         <view class="nav_auto">
+            <text class="lets">出版社<text class="icon iconfont icon-xiajiantou"></text></text>
+            <text class="lets">作者<text class="icon iconfont icon-xiajiantou"></text></text>
+            <text class="lets">价格<text class="icon iconfont icon-xiajiantou"></text></text>
+            <text class="lets">读者<text class="icon iconfont icon-xiajiantou"></text></text>
+         </view>
+      </view>
+      <view class="recommend">
+      <block wx:for="{{list}}" wx:key="*this">
+        <view class="recommend_list clearFlo" bindtap="gd_ck" data-id="{{item.id}}">
+           <view class="list_left flL">
+              <image src="{{item.book_img}}"></image>
+           </view>
+           <view class="list_right flR">
+              <view class="twoLin title">{{item.book_name}}</view>
+              <view class="oneLin semmo">{{item.author}}</view>
+              <view class="clearFlo box_bottom">
+                 <view class="list_bottoms flL">
+                     <text>{{item.discount_price}}</text>
+                     <text>{{item.price}}</text>
+                 </view>
+                 <view class="rig_bottom flR">
+                   <text class="icon iconfont icon-gouwuche"></text>
+                 </view>
+              </view>
+           </view>
+        </view>
+        </block>
+        
+      </view>
+   </view>
+</view>
+ 

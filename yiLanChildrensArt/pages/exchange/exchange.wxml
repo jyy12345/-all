@@ -1,0 +1,36 @@
+<import src="/pages/tabbar/tabbar.wxml"/>
+<template is="tabbar" data="{{tabbar}}"/>
+<view class='box'>
+  <view class='name'>
+  <text class='left'>活动</text>
+  <text class='right'>奖励积分</text>
+</view>
+<view class='name'>
+  <text class='left'>推荐</text>
+  <text class='center'>推荐朋友到本中心上课</text>
+  <text class='rights'>1</text>
+</view>
+<view class='name'>
+  <text class='left'>满勤</text>
+  <text class='center'>每次课程都出席</text>
+  <text class='righta'>3</text>
+</view>
+<view class='name'>
+  <text class='left'>满勤</text>
+  <text class='center'>每次课程都出席</text>
+  <text class='righta'>3</text>
+</view>
+<view class='name'>
+  <text class='integral'>总积分900</text>
+</view>
+<view>
+  <button class='btn' catchtap='gouTo'>兑换</button>
+</view>
+<!-- <input type='button' value='兑换' class='inp'/> -->
+<view class='content'>
+  <text>兑换记录</text>
+  <text>2018年8月19日兑换课外写生卷一张</text>
+  <text>2018年8月19日兑换参加展览卷一张</text>
+</view>
+</view>
+

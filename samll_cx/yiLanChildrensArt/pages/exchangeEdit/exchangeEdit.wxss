@@ -1,0 +1,14 @@
+@import "/pages/tabbar/tabbar.wxss";
+.integral{width: 100%;background: #F1FDF1;padding: 43rpx 44rpx;}
+.editjf{font-size: 48rpx;color: #81A77D;}
+.exchange{height: 105rpx;width: 100%;background: #B7E390;font-size: 36rpx;color: #FFFFFF;
+text-align: center;line-height: 105rpx;}
+.autoS{width: 80%;margin: 0 auto;}
+.sketch{font-size: 32rpx;color: #81A77D;}
+.time{font-size: 24rpx;color: #9B9B9B;margin-top: 10rpx;}
+.prizeTitle{font-size: 48rpx;color: #81A77D;font-weight: bold;margin-top: 10rpx;}
+/* .prizeTitle{font-size: 32rpx;} */
+.jiangP{padding: 30rpx 0;}
+.borders{border-bottom: 1px solid #979797;}
+.fL{float: left;}
+.fR{float: right;}

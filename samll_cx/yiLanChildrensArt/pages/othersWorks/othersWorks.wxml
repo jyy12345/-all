@@ -1,0 +1,21 @@
+<view class='othersParent'>
+   <image src='{{worksDetails.imgUrl}}' class='others'></image>
+</view>
+<view style='width:81%;margin:30rpx auto;'>
+ <view class='othersTitle'>{{worksDetails.desc}}</view>
+</view>
+<view class="swiper-container">
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{duration}}" current="{{swiperCurrent}}" bindchange="swiperChange" class="swiper">
+    <swiper-item wx:for="{{worksDetails.worksList}}">
+<view class='exhibition'>
+<view class='imgBox'>
+   <image src='{{item.imgUrl}}' class='cpImg' catchtap='imgGo' wx:for='{{item}}' id='{{item.id}}'></image>
+   </view>
+</view>
+  </swiper-item>
+ </swiper>
+</view>
+
+
+
+   

@@ -1,0 +1,28 @@
+<import src="/pages/tabbar/tabbar.wxml"/>
+<template is="tabbar" data="{{tabbar}}"/>
+<!--index.wxml-->
+<view class="container">
+  <view class="tabBox">
+      <!-- 我是呵呵 -->
+        <view class='auTo' style='margin-top:70rpx;'>
+        <view class='posParend' >
+             <icon class='iconfont icon-shouji phone'></icon>
+             <input class="input"  type='text'  placeholder="手机号" placeholder-class="phcolor" bindinput="phoneInput"/>
+        </view>
+           <view class='posParend mTo clearFlo'>
+            <icon class='iconfont icon-suo phone'></icon>
+              <input class="input1" type='text' placeholder="验证码" placeholder-class="phcolor" bindinput='verification'/>
+                <button class='buttoms' bindtap="bindButtonTap" disabled='{{disabled}}' style="background-color:{{color}}">{{text}}</button>
+           </view>
+           <button class='logo' catchtap='signIn'>登录</button>
+           <view style='text-align: center;margin:-26rpx 0 26rpx 0;color:#888888;'>
+              <!-- <icon class="iconfont icon-weixin1 wx" style='color:#888888;font-size:35rpx;'/> -->
+              <image src='../../images/indexImg/wxlogo.png' class='wxImgLogo'></image>
+              <button wx:if="{{canIUse}}" open-type="getUserInfo"  bindgetuserinfo="bindGetUserInfo" class='login-button'>授权登录</button>
+<view wx:else>请升级微信版本</view>
+              <!-- <button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo"  class='login-button'>微信登录</button> -->
+
+           </view>
+        </view>
+  </view>
+</view>

@@ -1,0 +1,73 @@
+/* pages/mine/register/register.wxss */
+page{
+	background: #fff;
+}
+.register{
+	width: 100%;
+	padding: 180rpx 69rpx 0 69rpx;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+.rgType{
+	width: 100%;
+	display:flex;
+	justify-content: space-between;
+	flex-wrap: nowrap;
+	margin-bottom: 75rpx;
+}
+.grade{
+	width: 282rpx;
+	height: 282rpx;
+	border-radius: 20rpx;
+	/* display: flex;
+  justify-content: center;
+  flex-wrap: wrap; */
+	box-sizing: border-box;
+	font-size: 36rpx;
+	color: #594544;
+	background: #fff;
+	border: 2rpx solid #594544;
+}
+.grade text{
+  width:100%;
+  height: auto;
+  text-align: center;
+  display: block;
+}
+.border{
+	border: 2rpx solid #24cb85;
+	color: #fff;
+	background: #24cb85;
+}
+.grade image{
+	width: 99rpx;
+	height: 99rpx;
+  margin: 66rpx auto 20rpx auto;
+  display: block;
+}
+.intros{
+	width: 100%;
+	overflow: hidden;
+  margin-bottom:29rpx;
+}
+.title{
+	font-size: 36rpx;
+	color: #594544;
+	/* margin-bottom: 29rpx; */
+  display: flex;
+  align-items: center;
+}
+.title image{
+	width: 38rpx;
+	height: 38rpx;
+	margin-right: 14rpx;
+}
+.intro{
+	line-height: 50rpx;
+	font-size: 24rpx;
+	color: #444;
+}
+.notClick{
+  color: #666;
+  background: #f4f4f4;
+}

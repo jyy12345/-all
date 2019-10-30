@@ -1,0 +1,79 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="top-news">
+      <view class="nav-scroll">
+        <scroll-view class="scroll-view_H" scroll-x="true" style="width: 100%">
+            <text wx:for="{{section}}" wx:key="id" id="{{item.id}}" catchtap="handleTap" class="nav-name {{item.id == currentId ? 'nav-hover' : ''}}">{{item.name}}</text>
+        </scroll-view>
+      </view>
+</view>
+<view style='height:40px;'></view>
+<view class="page-section page-section-spacing swiper">
+      <swiper style='height:387rpx;'
+        indicator-dots="{{indicatorDots}}" indicator-color="{{indicatorColor}}" indicator-active-color="{{indicator_active}}"  autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}" circular="true" easing-function="easeInOutCubic"
+        interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px">
+        <block wx:for="{{background}}" wx:key="*this">
+          <swiper-item class='banner'>
+            <image src="{{item}}" class="slide-image"/>
+            <text>绽放美丽，“吃”出健康</text>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <view class='auato list_parst' style="width: 91%;margin-top:30rpx;">
+       <view class='listBox'>
+          <view class="knowledge"></view>
+          <text>知识</text>
+       </view>
+       <view class='listBox'>
+          <view class="test"></view>
+          <text>测试</text>
+       </view>
+       <view class='listBox'>
+          <view class="knowledge"></view>
+          <text>圈子</text>
+       </view>
+       <view class='listBox'>
+          <view class="knowledge"></view>
+          <text>常见疾病</text>
+       </view>
+    </view>
+    <!-- 列表 -->
+    <view class="list_content">
+       <view class="lis_biao">
+          <view class="auato list_seall clearFlo">
+              <image src="https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640" class="imgs fL"></image>
+              <view class="fR right_box">
+                 <view class="title">突破瓶颈！我国科学家成功建立乙肝病毒感染模型我国科学家成功建立乙肝病毒感染模型</view>
+                 <view class="soces">
+                    <text>中国健康网</text>
+                    <text>2天前</text>
+                 </view>
+              </view>
+          </view>
+       </view>
+       <view class="lis_biao">
+          <view class="auato list_seall clearFlo">
+              <view class="right_box" style="width:100%;">
+                 <view class="title">突破瓶颈！我国科学家成功建立乙肝病毒感染模型我国科学家成功建立乙肝病毒感染模型</view>
+                 <view class="soces">
+                    <text>中国健康网</text>
+                    <text>2天前</text>
+                 </view>
+              </view>
+          </view>
+       </view>
+       <view class="lis_biao">
+          <view class="auato list_seall clearFlo">
+              <view class="right_box" style="width:100%;">
+                 <view class="title">突破瓶颈！我国科学家成功建立乙肝病毒感染模型我国科学家成功建立乙肝病毒感染模型</view>
+                 <image src="https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640" class="big_imgs"></image>
+                 <view class="soces">
+                    <text>中国健康网</text>
+                    <text>2天前</text>
+                 </view>
+              </view>
+          </view>
+       </view>
+    </view>
+</view>

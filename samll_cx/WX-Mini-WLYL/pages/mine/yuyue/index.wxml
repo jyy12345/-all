@@ -1,0 +1,87 @@
+<!--pages/mine/yuyue/index.wxml-->
+<view class="borderTop yuyue">
+  <view class='topTabBar'>
+    <view class='tab  {{currentData == 0 ? "tabAfter" : ""}}'  data-current = "0" bindtap='checkCurrent'>
+			全部
+			<block wx:if="{{currentData == 0}}">
+				<view class="lLine"></view>
+			</block>
+			<block wx:else>
+				<view class="wLine"></view>
+			</block>
+		</view>
+    <view class='tab  {{currentData == 1 ? "tabAfter" : ""}}'  data-current = "1" bindtap='checkCurrent'>
+			预约中
+			<block wx:if="{{currentData == 1}}">
+				<view class="lLine"></view>
+			</block>
+			<block wx:else>
+				<view class="wLine"></view>
+			</block>
+		</view>
+    <view class='tab  {{currentData == 2 ? "tabAfter" : ""}}'  data-current = "2" bindtap='checkCurrent'>
+			待上课
+			<block wx:if="{{currentData == 2}}">
+				<view class="lLine"></view>
+			</block>
+			<block wx:else>
+				<view class="wLine"></view>
+			</block>
+		</view>
+    <view class='tab  {{currentData == 3 ? "tabAfter" : ""}}'  data-current = "3" bindtap='checkCurrent'>
+			已完成
+			<block wx:if="{{currentData == 3}}">
+				<view class="lLine"></view>
+			</block>
+			<block wx:else>
+				<view class="wLine"></view>
+			</block>
+		</view>
+	</view>
+  <view style='height:99rpx;'></view>
+  <block wx:if="{{appointment!=''}}">
+		<!-- 全部 -->
+    <view class="boxShadow eachCont" wx:key='yuyue' wx:for='{{appointment}}' wx:for-index='index'>
+      <view class="topCont">
+        <view class="fl mark">
+          预约号：<text class="">{{item.number}}</text>
+        </view>
+        <text class="fr status" wx:if='{{item.status==1}}'>预约中</text>
+        <text class="fr status" wx:elif='{{item.status==2}}'>待上课</text>
+        <text class="fr status" wx:elif='{{item.status==3}}'>已完成</text>
+        <text class="fr status" wx:elif='{{item.status==4}}'>待取消</text>
+        <text class="fr status" wx:else='{{item.status==5}}'>已取消</text>
+      </view>
+      <view class="botCont">
+        <view class="fl teachLeft">
+          <image class="" mode='' src="{{item.image}}"></image>
+          <text class="">{{item.name}}</text>
+        </view>
+        <view class="fr teachRight">
+          <text class="time" >时间：{{item.time}}</text>
+          <text class="adr" >地点：{{item.address}}</text>
+          <text class="conts" >预约内容：{{item.content}}</text>
+          <text class="remark">备注：{{item.remarks}}</text>
+          <view class="buts fr" wx:if='{{item.status==1}}'>
+          <button class="fl cancel" bindtap='cancel' data-yuyId='{{item.id}}'>取消预约</button>
+          </view>	
+          <view class="buts fr"  wx:elif='{{item.status==2}}'>
+          <button class="fl cancel" data-yuyid='{{item.id}}' bindtap='cancel'>取消预约</button>
+            <button class="fl finish" data-zhunt='{{item.id}}' bindtap='completed'>已完成</button>
+          </view>	
+          <view class="buts fr" wx:elif='{{item.status==3}}'>
+          <button class="fl cancel" data-yuyuId='{{item.id}}' data-codesId='{{item.coachid}}' bindtap='ontinue'>继续预约</button>
+          </view>
+          <view class="buts fr" wx:else='{{item.status==4||item.status==5}}'>
+          <!-- <button class="fl cancel" data-yuyuId='{{item.id}}' data-codesId='{{item.coachid}}'></button> -->
+          </view>
+          
+        </view>
+      </view>
+    </view>
+  </block>
+  <block wx:else>
+    <view class='noCont'>暂无预约</view>
+  </block>  
+</view>
+  

@@ -1,0 +1,38 @@
+.content{width: 100%;background: white;}
+.seach_box{width: 86%;margin: 0 auto;background: #fff3f0;padding: 10rpx 30rpx;border-radius: 40rpx;}
+.seach_top{width: 100%;border-top: 1px solid #f4f4f4;border-bottom: 1px solid #f4f4f4;padding: 15rpx 0;}
+.seach_box input{display: inline-block;vertical-align: middle;width: 93%;font-size: 24rpx;}
+.seach_box  text{font-size: 35rpx;display: inline-block;vertical-align: middle;color:#999999;margin-right: 5rpx;}
+.pl_size{font-size:24rpx;color:#999999; }
+.nav_box{width: 100%;padding: 30rpx 0;border-bottom: 1px solid #e3e3e3;}
+.nav_auto{width: 80%; margin: 0 auto;display: flex;
+    justify-content: space-between;font-size: 29rpx;}
+    .nav_auto text{position: relative;color:#222222;}
+    .selected{color:#e9222b!important;}
+    .selected::after{content:'';width:100%;height: 2px;background: #e9222b;position: absolute;bottom: -30rpx;left: 0;}
+    .code_order{font-size: 28rpx;color:#ababab;}
+    .code{font-size: 28rpx;color:#666666;margin-left: 10rpx;}
+    .state{font-size: 26rpx;color:#666666;}
+    .state_red{color:#e9222b!important;}
+    .shu_order{font-size: 27rpx;margin-left: 10rpx;color:#e8e8e8;}
+    .del_order{font-size: 30rpx;color:#ababab;margin-left: 10rpx;}
+    .order_top{width: 91%;margin: 0 auto;padding: 30rpx 0;}
+    .order_content{width: 100%;border-top: 2px solid #f0f0f0;border-bottom: 1px solid #f0f0f0;}
+    .contents{width: 90%;margin: 0 auto;padding: 22rpx 0;}
+    .content_left{width: 136rpx;height: 145rpx;}
+    .content_left image{width: 100%;height: 100%;}
+    .content_right{width: 73%;}
+    .right_title{width: 100%;display: -webkit-box;
+    -webkit-box-orient: vertical;font-size: 26rpx;color:#222222;
+    -webkit-line-clamp: 2;
+    overflow: hidden;margin-bottom: 30rpx;}
+    .price{font-size: 35rpx;color:#e9222b;}
+    .old_price{font-size: 25rpx;color:#cccccc;margin-left: 10rpx;}
+    .sum{color: #999999;font-size: 27rpx;}
+    .deial{font-size: 28rpx;color:#999999;margin-top: 10rpx;margin-left: 20rpx;}
+    .priveDect{color:#666666;}
+    .bottom_order{padding: 20rpx;border-top: 1px solid #f0f0f0;}
+    .payment_btn{width: 167rpx;height: 57rpx;background: #e9222b;text-align: center;line-height: 57rpx;border-radius: 30rpx;color:white;font-size: 30rpx;}
+    .payment_ply{width: 167rpx;height: 57rpx;background: white;text-align: center;line-height: 57rpx;border-radius: 30rpx;color:#e9222b;font-size: 30rpx;border: 1px solid #e9222b;}
+    .tui_order{font-size: 35rpx;color: red;margin-right: 5rpx;}
+    .priveOvers{color:#000000;font-size: 26rpx;margin-right: 10rpx;font-weight: 600;}

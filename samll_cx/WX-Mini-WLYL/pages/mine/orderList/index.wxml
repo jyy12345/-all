@@ -1,0 +1,81 @@
+<!--pages/mine/order/index.wxml-->
+<view class="borderTop order">
+  <view class='topTabOrder'>
+    <view class='tab  {{currentData == 0 ? "tabAfter" : ""}}'  data-current = "0" bindtap='checkCurrent'>
+			全部
+			<block wx:if="{{currentData == 0}}">
+				<view class="lLine"></view>
+			</block>
+			<block wx:else>
+				<view class="wLine"></view>
+			</block>
+		</view>
+    <view class='tab  {{currentData == 2 ? "tabAfter" : ""}}'  data-current = "2" bindtap='checkCurrent'>
+			已付款
+			<block wx:if="{{currentData == 2}}">
+				<view class="lLine"></view>
+			</block>
+			<block wx:else>
+				<view class="wLine"></view>
+			</block>
+		</view>
+    <view class='tab  {{currentData == 3 ? "tabAfter" : ""}}'  data-current = "3" bindtap='checkCurrent'>
+			已完成
+			<block wx:if="{{currentData == 3}}">
+				<view class="lLine"></view>
+			</block>
+			<block wx:else>
+				<view class="wLine"></view>
+			</block>
+		</view>
+	</view>
+  <view style='height:99rpx;'></view>
+  <block wx:if="{{orderList!=''}}">
+    <!-- 全部 -->
+    <view class="boxShadow eachCont" wx:key='boxOrder' wx:for='{{orderList}}' wx:for-index='inedx'>
+      <view class="topCont">
+      <view class="fl label l_course"  wx:if='{{item.coursetype<4}}'>
+          课程
+        </view>
+        <view class="fl label l_product" wx:else>
+          产品
+        </view>
+        <view class="fl mark">
+          订单编号：<text class="">{{item.numbers}}</text>
+        </view>
+        <text class="fr status s_finish" wx:if='{{item.status==1}}'>待支付</text>
+        <text class="fr status" wx:elif='{{item.status==2}}'>已付款</text>
+        <text class="fr status s_finish" wx:else>已完成</text>
+      </view>
+      <view class="botCont">
+        <view class="orderTop">
+          <image class="fl" src="/image/health_07.png"></image>
+          <view class="fr orderRight">
+            <text class="title">{{item.name}}</text>
+            <text class="intro">{{item.abstract}}</text>
+          </view>
+        </view>
+        <view class="orderBot">
+          <view class="fl price">
+            <view class="fl">
+              合计：
+            </view>
+            <view class="fl rmb">
+              ￥
+            </view>
+            <text class="fl">{{item.price}}</text>
+          </view>
+          <button class="fr" bindtap='payment' data-goodsid='{{item.cid}}' wx:if='{{item.status==1}}'>去支付</button>
+          <button class="fr" bindtap='quite' data-quite='{{item.id}}' wx:elif='{{item.status==2}}'>确认收货</button>
+          <button class="fr" bindtap='jiZf' data-idss='{{item.cid}}' wx:else>继续购买</button>
+          
+        </view>
+      </view>
+    </view>
+
+  
+  </block>
+  <block wx:else>
+    <view class='noCont'>暂无订单</view>
+  </block>  
+</view>

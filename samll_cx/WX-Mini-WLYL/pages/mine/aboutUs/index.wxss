@@ -1,0 +1,25 @@
+/* pages/mine/aboutUs/index.wxss */
+.aboutUs{
+    background: #fff;
+    padding: 50rpx 30rpx 64rpx 30rpx;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin-bottom: 40rpx;
+    border-top: 1px solid #f1f1f1;
+}
+.aboutUs image{
+	width: 319rpx;
+	height: 430rpx;
+	margin-right: 
+}
+.title{
+	font-size: 30rpx;
+	color: #222;
+	line-height: 56rpx;
+}
+.content{
+	font-size: 24rpx;
+	color: #666;
+	line-height: 49rpx;
+  word-break: break-all;
+}

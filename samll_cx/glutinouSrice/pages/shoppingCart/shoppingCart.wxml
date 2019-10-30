@@ -1,0 +1,85 @@
+<view class="box">
+  <view class="edit_top" bindtap="edit">{{!showa?'编辑商品':'完成'}}</view>
+  <view class="content">
+  <view class="nuss_box" hidden="{{!call_null}}">
+    <view class="nus_non"></view>
+    <view>购物车空空如也，快去逛逛吧</view>
+  </view>
+     <view class="content_auto" hidden="{{call_null}}">
+       <checkbox-group bindchange="checkboxChange">
+          <view wx:for="{{soppingList}}" class="clearFlo" style="padding: 40rpx;" wx:key="key" >
+               <label class="checkbox flL">
+                  <checkbox value="{{item.id}}" checked="{{item.checked}}" hidden='hidden' />
+                  <icon type="circle" size="23" wx:if="{{!item.checked}}" ></icon>
+                  <icon type="success" size="23" wx:if="{{item.checked}}" color="red"></icon>
+               </label>
+                 <image src="{{item.book_img}}" class="commodity_img flL"></image>
+                <view class="flR" style="width:58%;"> 
+                       <view class="twoLin title_cart">{{item.book_name}}</view>
+                       <view class="clearFlo bottom_c">
+                         <view class="cart_bottom flL">
+                            <text>￥{{item.discount_price}}</text>
+                            <!-- <text>￥{{item.price}}</text> -->
+                         </view>
+                        <view class="stepper flR">
+                          <!-- 减号 -->
+                          <text class="{{minusStatus}}" catchtap='subtracttap' data-index="{{index}}">-</text>
+                          <!-- 数值 -->
+                          <input type="number" bindchange="bindManual"  value="{{item.goods_num}}" />
+                          <!-- 加号 -->
+                          <text class="normal" catchtap='addtap' data-index="{{index}}">+</text>
+                        </view>
+                       </view>
+                    </view>
+               </view> 
+            </checkbox-group>
+     </view>
+  </view>
+  <view>
+     <!-- 好书推荐 -->
+         <view class="nice_book back_color" style='margin-bottom:150rpx;'>
+            <view class="nice_auto">
+              <view class="nice_bookChil clearFlo">
+                <view class="nice_title flL">好书推荐</view>
+                <!-- <view class="nice_gd flR">查看更多<text class="icon iconfont icon-arrowRight"></text></view> -->
+            </view>
+            <view class="list_parent clearFlo" style="display:block">
+            <block wx:for="{{recommend}}" wx:key="index">
+                <view class="book_list flL" data-cateid="{{item.id}}" bindtap="detail">
+                    <view class="img_box">
+                      <image src="{{item.book_img}}"></image>
+                    </view>
+                    <view class="book_title">{{item.book_name}}</view>
+                    <view class="socus">
+                      <text class="book_price">￥{{item.discount_price}}</text>
+                      <text class="book_del">￥{{item.price}}</text>
+                    </view>
+                </view>
+                </block>
+                
+            </view>
+          </view>
+        </view>
+  </view>
+  <view class="clearFlo settlement">
+     <view class="flL">
+       <checkbox-group bindchange="selectalltap">
+      <label class='checkbox-allcheck'>
+        <checkbox value="{{!checkAll}}" checked="{{checkAll}}" hidden='hidden' />
+        <icon type="circle" size="23" wx:if="{{!checkAll}}"  style="vertical-align: middle;margin-right:10rpx;"></icon>
+        <icon type="success" size="23" wx:if="{{checkAll}}" color="red" style="vertical-align: middle;margin-right:10rpx;"></icon>
+        <text class='check-all-text'>全选</text>
+         <text class="tits1 tit" hidden="{{showa}}">合计：</text>
+       <text class="tits2" hidden="{{showa}}">￥{{totalPrice}}</text>
+      </label>
+    </checkbox-group>
+     </view>
+     <view class="flR settlement_btn {{totalCount > 0 ? 'btn-primary' : 'btn-default'}}" hidden="{{showa}}" bindtap="pay" >
+       结算（{{totalCount}}）
+     </view>
+     <view class="flR" hidden="{{!showa}}">
+      <text class="cher_sc">移入收藏</text>
+      <text class="cher_del" bindtap="del_cer">删除</text>
+     </view>
+  </view>
+</view>

@@ -1,0 +1,168 @@
+<!--pages/search/index.wxml-->
+<view class='search'>
+  <view class='top'>
+    <view class="fl searchFrame" bindtap='handelSearch'>
+      <image class="fl" src="../../image/icon_search.png"></image>
+      <input class="fl search-input" confirm-type="search" value="{{inputVal}}"  placeholder="请输入关键字" bindconfirm="handleSearch" bindblur="inps" />
+    </view>
+    <!-- <text class='fr' bindtap='cancel'>取消</text> -->
+    <text class='fr' bindtap='handleSearch1' confirm-type="search" value="{{inputVal}}">搜索</text>
+  </view>
+  
+  <!-- 搜索内容 -->
+  <view class=' {{searchCont?"hidden":"unhidden"}}'>
+    <view class='topTabBar'>
+      <view class='tab  {{currentData == 0 ? "tabAfter" : ""}}' data-status="1" data-current = "0" bindtap='checkCurrent'>
+        文章
+        <block wx:if="{{currentData == 0}}">
+          <view class="lLine"></view>
+        </block>
+        <block wx:else>
+          <view class="wLine"></view>
+        </block>
+      </view>
+      <view class='tab  {{currentData == 1 ? "tabAfter" : ""}}' data-status="2" data-current = "1" bindtap='checkCurrent'>
+        课程
+        <block wx:if="{{currentData == 1}}">
+          <view class="lLine"></view>
+        </block>
+        <block wx:else>
+          <view class="wLine"></view>
+        </block>
+      </view>
+      <view class='tab  {{currentData == 2 ? "tabAfter" : ""}}' data-status="3" data-current = "2" bindtap='checkCurrent'>
+        医师
+        <block wx:if="{{currentData == 2}}">
+          <view class="lLine"></view>
+        </block>
+        <block wx:else>
+          <view class="wLine"></view>
+        </block>
+      </view>
+      <view class='tab  {{currentData == 3 ? "tabAfter" : ""}}' data-status="4" data-current = "3" bindtap='checkCurrent'>
+        教练
+        <block wx:if="{{currentData == 3}}">
+          <view class="lLine"></view>
+        </block>
+        <block wx:else>
+          <view class="wLine"></view>
+        </block>
+      </view>
+    </view>
+    <view class='botConts'>
+      <!-- 文章 -->
+      <view  hidden="{{currentData!='0'}}" class='eachList'>
+        <block wx:if="{{technicalgrade&&upgrade&&health!=''}}">
+          <!-- 技术评定 -->
+          <view wx:for="{{technicalgrade}}" class="borderTop healthCont" data-id="{{item.id}}" bindtap='articleDetail2'>
+            <view class="clearfix eachHealMes">
+              <block wx:if="{{item.image}}">
+                <image class="fl" src="{{imgUrl+item.image}}" />
+                <view class='fr healthMesCont'>
+                  <view class="fl healthMes1">{{item.name}}</view>
+                  <text class="fl time1">{{item.createtime}}</text>
+                </view>
+              </block>
+              <block wx:else>
+                <text class="fl healthMes">{{item.name}}</text>
+                <text class="fl time">{{item.createtime}}</text>
+              </block>
+            </view>
+          </view>
+          <!-- 升级必备 -->
+          <view wx:for="{{upgrade}}" class="borderTop healthCont" data-id="{{item.id}}" bindtap='articleDetail1'>
+            <view class="clearfix eachHealMes">
+              <block wx:if="{{item.image}}">
+                <image class="fl" src="{{imgUrl+item.image}}" />
+                <view class='fr healthMesCont'>
+                  <view class="fl healthMes1">{{item.name}}</view>
+                  <text class="fl time1">{{item.createtime}}</text>
+                </view>
+              </block>
+              <block wx:else>
+                <text class="fl healthMes">{{item.name}}</text>
+                <text class="fl time">{{item.createtime}}</text>
+              </block>
+            </view>
+          </view>
+          <!-- 健康头条 -->
+          <view wx:for="{{health}}" class="borderTop healthCont" data-id="{{item.id}}" bindtap='articleDetail'>
+            <view class="clearfix eachHealMes">
+              <block wx:if="{{item.image}}">
+                <image class="fl" src="{{imgUrl+item.image}}" />
+                <view class='fr healthMesCont'>
+                  <view class="fl healthMes1">{{item.name}}</view>
+                  <text class="fl time1">{{item.createtime}}</text>
+                </view>
+              </block>
+              <block wx:else>
+                <text class="fl healthMes">{{item.name}}</text>
+                <text class="fl time">{{item.createtime}}</text>
+              </block>
+            </view>
+          </view>
+        </block>
+        <block wx:else>
+          <view class='noCont'>暂无搜到相关内容</view>
+        </block>
+      </view> 
+      <!-- 课程 -->
+      <view  hidden="{{currentData!='1'}}" class='eachList'>
+        <block wx:if="{{courseListData.info!=''}}">
+          <view wx:for="{{courseListData.info}}" data-id="{{item.id}}" data-coursetype="{{item.coursetype}}"  class="borderTop eachCont" bindtap='onlineCoursedetail'>
+            <view class="fl contLeft">
+              <view class="article">
+                <view class='title'>{{item.name}}</view>
+                <view class='intros'>{{item.abstract}}</view>
+              </view>
+              <view class="perMes">
+                <image class="fl" src="{{imgUrl+item.teacherimage}}"></image>
+                <view class="fl name">{{item.teachername}}</view>
+              </view>
+            </view>
+            <view class="fr contRight">
+              <image class="coursepic" src="{{imgUrl+item.image}}"></image>
+              <image wx:if="{{item.coursestatus==1}}" class='coursetype' src='../../image/cart/video.png'></image>
+              <image wx:else class='coursetype' src='../../image/cart/book.png'></image>
+            </view>
+          </view>
+        </block>
+        <block wx:else>
+          <view class='noCont'>暂无搜到相关内容</view>
+        </block>
+      </view>
+      <!-- 医师 -->
+      <view  hidden="{{currentData!='2'}}" class='eachList'>
+        <view class="doctorList">
+          <block wx:if="{{doctorListData.info!=''}}">
+            <view wx:for="{{doctorListData.info}}" data-id='{{item.id}}' class="boxShadow eachDoctor" bindtap='doctor_ter'>
+              <image class="" src="{{imgUrl+item.image}}"></image>
+              <view class="name">
+                {{item.name}}
+              </view>
+            </view>
+          </block>
+          <block wx:else>
+            <view class='noCont'>暂无搜到相关内容</view>
+          </block>
+        </view>
+      </view>
+      <!-- 教练 -->
+      <view  hidden="{{currentData!='3'}}" class='eachList'>
+        <view class="doctorList">
+          <block wx:if="{{coachListData.info!=''}}">
+            <view wx:for="{{coachListData.info}}" data-id='{{item.id}}' class="boxShadow eachDoctor" bindtap='coach_ter'>
+              <image class="" src="{{item.image}}"></image>
+              <view class="name">
+                {{item.name}}
+              </view>
+            </view>
+          </block>
+          <block wx:else>
+            <view class='noCont'>暂无搜到相关内容</view>
+          </block>
+        </view>
+      </view>  
+    </view>
+  </view>
+</view>

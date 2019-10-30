@@ -1,0 +1,24 @@
+<!--pages/mine/addr/index.wxml-->
+<view class='borderTop address'>
+	<view class="eachAddr" wx:key='dess' wx:for='{{addressList}}' wx:for-index='index'>
+    <view data-id="{{item.id}}" data-name="{{item.name}}" data-mobile="{{item.mobile}}" data-addr="{{item.address}} {{item.addressdetail}}" bindtap='chooseAddr'>
+      <view class="perMes">
+        <text class="name">{{item.name}}</text>
+        <text class="tel">{{item.mobile}}</text>
+        <image class="" src="/image/mine/addrEdit.png" data-addressId='{{item.id}}' bindtap='edit'/>
+      </view>
+      <view class="myAddr">
+        {{item.address}} {{item.addressdetail}}
+      </view>
+    </view>    
+		<view class="myAddr">
+      <text wx:if="{{item.defaultaddress==2}}" class='default'>[默认]</text>
+      <text class='fr deleteAddr' data-id="{{item.id}}" bindtap='deleteAddr'>删除</text>
+    </view>		
+
+	</view>
+  <view class="addAddr" catchtap="handelAddAddress">
+		<image class="" src="/image/mine/add.png" />
+		新增地址	
+	</view>
+</view>

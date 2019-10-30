@@ -1,0 +1,38 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="top-news">
+      <view class="nav-scroll">
+        <scroll-view class="scroll-view_H" scroll-x="true" style="width: 100%">
+            <text wx:for="{{section}}" wx:key="id" id="{{item.id}}" catchtap="handleTap" class="nav-name {{item.id == currentId ? 'nav-hover' : ''}}">{{item.name}}</text>
+        </scroll-view>
+      </view>
+</view>
+<view style='height:40px;'></view>
+    <!-- 列表 -->
+    <view class="list_content">
+       <view class="lis_biao">
+          <view class="auato list_seall clearFlo">
+              <image src="https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640" class="imgs fL"></image>
+              <view class="fR right_box">
+                 <view class="title">突破瓶颈！我国科学家成功建立乙肝病毒感染模型我国科学家成功建立乙肝病毒感染模型</view>
+                 <view class="soces">
+                    <text>中国健康网</text>
+                    <text>2天前</text>
+                 </view>
+              </view>
+          </view>
+       </view>
+       <view class="lis_biao">
+          <view class="auato list_seall clearFlo">
+              <view class="right_box" style="width:100%;">
+                 <view class="title">突破瓶颈！我国科学家成功建立乙肝病毒感染模型我国科学家成功建立乙肝病毒感染模型</view>
+                 <view class="soces">
+                    <text>中国健康网</text>
+                    <text>2天前</text>
+                 </view>
+              </view>
+          </view>
+       </view>
+      
+    </view>
+</view>

@@ -1,0 +1,16 @@
+<import src="/pages/tabbar/tabbar.wxml"/>
+<template is="tabbar" data="{{tabbar}}"/>
+<view class='headerTop'>
+ <image src='{{babyData.homeUrl}}'></image>
+ <view class='names'>{{babyData.name}}</view>
+</view>
+<view class='content'>
+  <view class='dataTit'>生日：<text>{{babyData.birthday}}</text></view>
+  <view class='dataTit'>入学时间：<text>{{babyData.enrolmentTime}}</text></view>
+  <view class='dataTit'>授课老师：<text>{{babyData.teacherList}}</text></view>
+   <view class='dataTit'>上课时间：<text>{{babyData.classTime}}</text></view>
+    <view class='dataTit'>课时：<text>{{babyData.classHour}}</text></view>
+    <view class='dataTit'>课卡有效期：<text>{{babyData.effectiveTime}}</text></view>
+    <view class='dataTit'>剩余课时：<text class='sumBox'>{{babyData.spareTime}}</text> 节</view>
+    <view class='dataTit'>需补课时：<text class='sumBox'>{{babyData.supplementTime}}</text> 节</view>
+</view>

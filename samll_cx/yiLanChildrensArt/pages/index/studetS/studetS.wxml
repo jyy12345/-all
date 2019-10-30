@@ -1,0 +1,23 @@
+<import src="/pages/tabbar/tabbar.wxml"/>
+<template is="tabbar" data="{{tabbar}}"/>
+<view> 
+  <view class='topBanner'><image src='{{contentData.homeUrl}}' class='banners'></image></view>
+  <view>
+    <view class='autos'>
+    <block wx:for="{{contentData.bodyContent}}" wx:key="index">
+        <view class='clearFlo yeasParent' ><text class='yeasOld'>{{item.title}}</text><text class='goTo icon iconfont icon-youjiantou' catchtap='threenOld' id='{{item.contentId}}' data-current='{{item.contentId}}' ></text></view>
+        <view class='clearFlo'>
+        <block wx:for="{{item.contentList}}">
+          <view class='student' id='{{item.id}}' catchtap='workDetail'>
+             <view class='studentAuto'>
+                <image src='{{item.imgUrl}}'></image>
+                <view class='paintingTitle'>{{item.imgName}}</view>
+                <view class='paintingName'>{{item.author}}</view>
+             </view>
+          </view>
+          </block>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

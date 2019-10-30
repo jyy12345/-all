@@ -1,0 +1,26 @@
+<import src="/pages/tabbar/tabbar.wxml"/>
+<template is="tabbar" data="{{tabbar}}"/>
+<view class='fiexBox'>
+  <image src='{{latestNotice.homeUrl}}' class='paade'></image>
+</view>
+<view class='autos'>
+  <view class='notes'>
+    <view class='titCont'>
+      <view class='bigTitle'>{{latestNotice.noticeDetail.title}}</view>
+      <view class='semllTitle'>{{latestNotice.noticeDetail.desc}}
+
+</view>
+ <view class='semllTitle text-top'>
+{{latestNotice.noticeDetail.note}}</view>
+    </view>
+  </view> 
+</view>
+<view class='clearFlo' >
+   <view class='leaveIn  mLe' >
+     <image src='{{latestNotice.buttonUrl}}' class='clesster' id='{{latestNotice.noticeDetail.noticeId}}' bindtap='read'></image>
+   </view> 
+</view> 
+
+
+ 
+

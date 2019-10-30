@@ -1,0 +1,61 @@
+<!--pages/mine/edit/index.wxml-->
+<view class="myPerMes">
+  <view class="headImg">
+		<image class="" src="{{headImg}}" bindtap='changeHeadImg'/>
+	</view>
+	<view class="mes name">
+		姓名
+		<input class='fr' placeholder="请填写昵称" auto-focus value='{{name}}' bindinput='getName' />
+	</view>
+	<view class="mes sex">
+		性别
+		<picker class='fr chooseSex' bindchange="getSex" value="{{index}}" range="{{sex}}">
+        <view class="chooseSex">
+          {{sex[index]}}
+        </view>
+      </picker>
+	</view>
+	<view class="mes age">
+		年龄
+		<input type="idcard" class='fr' placeholder="请输入年龄" value='{{age}}' bindinput='getAge' />
+	</view>
+  <view wx:if="{{occupationage}}" class="mes tAge">
+    职业教龄
+    <input type="number" class='fr' placeholder="请输入职业教龄" value='{{occupationage}}' bindinput='getTeachage' />
+  </view>
+  <view wx:if="{{email}}" class="mes email">
+    邮箱
+    <input class='fr' placeholder="请输入邮箱" value='{{email}}' bindinput='getEmail' />
+  </view>
+	<view class="mes tel">
+		绑定手机号
+		<text class="" selectable="false" space="false" decode="false">{{mobile}}</text>
+	</view>
+  <view wx:if="{{role==1}}" class="mes goods">
+    擅长
+    <!-- <input class='fr' placeholder="如形体塑造、减脂增肌" value='{{goodAt}}' data-goodat="{{goodAt}}" bindtap='getGood' range="{{goodArray}}" /> -->
+    <block wx:if="{{goodAt!=''}}">
+      <view class='fr input' data-goodat="{{goodAt}}" bindtap='getGood'>{{goodAt}}</view>
+    </block>
+    <block wx:else>
+      <view class='fr input' data-goodat="{{goodAt}}" bindtap='getGood'>如形体塑造、减脂增肌</view>
+    </block>
+  </view>
+  <view wx:if="{{intro}}" class="mes explain">
+    个人说明
+    <input class='fr intros' placeholder="请介绍下自己" value='{{intro}}' bindinput='getIntro' />
+  </view>
+	<button bindtap='save'>保存</button>					  
+</view>
+<!-- 擅长内容 -->
+<view class='goodCont {{goodHide?"hidden":"unhidden"}}' catchtap='hide'>
+  <view class='good'>
+    <checkbox-group class="" catchtap="unhide" bindchange="checkboxChange">
+      <label class="eachGood" wx:for="{{goodArray}}">
+        {{item.title}}
+        <checkbox class='fr' value="{{item.id}}" checked="{{item.checked}}"/>
+      </label>
+    </checkbox-group>
+    <button class='confirme' bindtap='confirme'>确定</button>
+  </view>
+</view>

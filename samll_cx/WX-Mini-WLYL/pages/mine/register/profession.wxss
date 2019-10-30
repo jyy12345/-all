@@ -1,0 +1,130 @@
+/* pages/mine/register/profession.wxss */
+page{
+	background: #FFF;
+}
+.userMes{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	padding: 0 30rpx;
+	box-sizing: border-box;
+}
+.mes{
+	width: 100%;
+	height:91rpx;
+	line-height:90rpx;
+	font-size: 30rpx;
+	border-bottom: 1px solid #e1e1e1;
+	text-align: left;
+}
+.mes input,.chooseSex,.input{
+	width: 82.9%;
+	height: 90rpx;
+	line-height: 90rpx;
+	text-align: left;
+	font-size: 30rpx;
+	color: #666;
+}
+.mes input.intros{
+	width: 74.6%;
+	min-height: 90rpx;
+	line-height: 90rpx;
+	text-align: left;
+	font-size: 30rpx;
+	color: #666;
+}
+.textarea-placeholder{
+  height: 90rpx;
+	line-height: 90rpx;
+}
+.tAge input{
+	width: 74.6%;
+}
+.tel .phonenumber{
+  height: 100%;
+}
+.tel .getphoneNum{
+  padding: 0 20rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  color: #fff;
+  text-align: center;
+  margin: 15rpx 0;
+  background: #24cb85;
+  overflow: hidden;
+}
+.default{
+  width: 511rpx;
+  height: 83rpx;
+  line-height: 83rpx;
+  font-size: 30rpx;
+  color: #fff;
+  text-align: center;
+  margin-top: 70rpx;
+  background: #24cb85;
+  border: none;
+}
+.tips{
+	width: 100%;
+	display: block;
+	text-align: center;
+	margin-top: 24rpx;
+	font-size: 24rpx;
+	color: #888;
+}
+.agreement{
+	width: 100%;
+	display: block;
+	text-align: center;
+	margin-top: 12rpx;
+	font-size: 24rpx;
+	color: #24cb85;
+}
+/* 擅长 */
+.goodCont{
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, .5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+.unhidden{
+  display: block;
+}
+.hidden{
+  display: none;
+}
+.goodCont .good{
+  width: 80%;
+  height: auto;
+  padding: 31rpx;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 100;
+  background: #fff;
+  border-radius: 15rpx;
+}
+.eachGood{
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  margin-bottom: 10rpx;
+  font-size: 30rpx;
+}
+.confirme{
+  width: 100%;
+  height: 83rpx;
+  line-height: 83rpx;
+  font-size: 30rpx;
+  color: #fff;
+  text-align: center;
+  margin-top: 70rpx;
+  background: #24cb85;
+  border: none;
+}

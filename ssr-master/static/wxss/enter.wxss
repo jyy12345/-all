@@ -1,0 +1,81 @@
+.enter {
+  width: 100%;
+  height: 100vh;
+  background: #f4f4f4;
+  padding: 20rpx 0 30rpx 0;
+  box-sizing: border-box;
+  position: relative;
+}
+.main {
+  padding: 0 20rpx;
+  background: white;
+  box-sizing: border-box;
+}
+.main > li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #f1f1f1;
+}
+.mian > li:first-child {
+  border: none;
+}
+.text {
+  font-size: 30rpx;
+  font-weight: 500;
+}
+.logo {
+  width: 118rpx;
+  height: 118rpx;
+  background: #ccc;
+  border-radius: 50%;
+  margin-right: 25rpx;
+}
+.logo img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.mainavatar {
+  padding-top: 15rpx;
+  padding-bottom: 20rpx;
+  box-sizing: border-box;
+}
+.mainLis {
+  padding: 35rpx 0;
+  box-sizing: border-box;
+}
+.company {
+  display: flex;
+  align-items: center;
+}
+.subText {
+  font-size: 30rpx;
+
+  color: #555555;
+}
+.el-down {
+  width: 25rpx;
+  height: 15rpx;
+  margin-left: 15rpx;
+}
+.el-down img {
+  width: 100%;
+  height: 100%;
+}
+.footer {
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+.submit {
+  width: calc(100% - 40rpx);
+  display: block;
+  border-radius: 50rpx;
+  background: #0070cc;
+  color: white;
+  font-size: 28rpx;
+  text-align: center;
+  line-height: 100rpx;
+  position: absolute;
+  bottom: 20rpx;
+}

@@ -1,0 +1,529 @@
+/**index.wxss**/
+/*公共样式 */
+.margin_bottom{
+  -moz-box-shadow:0 0 1rpx #a2a2a2;
+  -webkit-box-shadow:0 0 1rpx #a2a2a2;
+  box-shadow:0 0 1rpx #a2a2a2;
+  margin-bottom:18rpx;
+  background: #fff;
+}
+.content{
+  width: 100%;
+  height:auto;
+  overflow: hidden;
+}
+image{
+  border-radius: 10rpx;
+}
+text{
+  display: block;
+}
+/* banner */
+.banner{
+  width: 100%;
+  /* height: 367rpx; */
+  display: block;
+}
+.banner image{
+  width: 100%;
+  height: 367rpx;
+  display:inline;
+}
+.navCont{
+  width: 100%;
+  height: auto;
+  padding: 20rpx 30rpx 0rpx;
+  box-sizing: border-box;
+  background: #fff;
+  overflow: hidden;
+  -moz-box-shadow: 0 0 1rpx #a2a2a2;
+  -webkit-box-shadow: 0 0 1rpx #a2a2a2;
+  box-shadow:0 0 1rpx #a2a2a2;
+  margin-bottom: 18rpx;
+}
+.nav_top{
+  width: 100%;
+  height: 63rpx;
+}
+.search{
+  width: 541rpx;
+  height: 63rpx;
+  float: left;
+  border: 1px solid #f0f0f0;
+  border-radius: 10rpx;
+}
+.search image{
+  width: 32rpx;
+  height: 32rpx;
+  margin: 15rpx 15rpx auto 26rpx;
+}
+.search .search_input{
+ height: 61rpx;
+ line-height: 61rpx;
+ font-size: 24rpx;
+ color: #9b9b9b;
+}
+.register{
+  width: 139rpx;
+  height: 63rpx;
+  /* line-height: 63rpx; */
+  display: inline-block;
+  font-size: 22rpx;
+  color: #fff;
+  text-align: center;
+  background: -webkit-linear-gradient(left,#58b0fe,#2ce5b5);
+  border-radius: 10rpx;
+}
+.register image{
+  width: 24rpx;
+  height: 25rpx;
+  margin: 19rpx 10rpx auto 31rpx;
+  display: inline-block;
+}
+.register .rg{
+  height: 100%;
+  display: inline-block;
+  line-height: 60rpx;
+}
+.tabBar{
+  width: 100%;
+  margin: 40rpx 0;
+  display: -webkit-flex;
+  justify-content: center;
+}
+.nav{
+  width: 25%;
+  text-align: center;
+}
+.nav image{
+  width: 90rpx;
+  height: 90rpx;
+}
+.nav .word{
+  margin-top: 25rpx;
+  font-size: 24rpx;
+  color: #222;
+}
+/* 权威专家 */
+.expert,.upgrade{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  background: #fff;
+  padding-bottom: 40rpx;
+  box-sizing: border-box;
+}
+.contTop{
+  width: 100%;
+  height: 115rpx;
+  line-height: 115rpx;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+.titleLeft{
+  display: inline;
+}
+.titleLeft image{
+  width: 40rpx;
+  height: 35rpx;
+  display: inline-block;
+  margin: 40rpx 4rpx 0 0;
+}
+.titleLeft .tit{
+  font-size: 36rpx;
+  color: #000;
+  float: left;
+  font-weight: bold;
+}
+.more{
+  font-size: 22rpx;
+}
+.more .text{
+  color: #533b3a;
+}
+.right_arrows{
+  width: 15rpx;
+  height: 15rpx;
+  border-top: 5rpx solid #000;
+  border-right: 5rpx solid #000;
+  transform: rotate(45deg);
+  display: inline-block;
+  margin:50rpx 0rpx 0 0;
+}
+.expertCont{
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.expertCont .scroll_view{
+  width: auto;
+  height: 233rpx;
+}
+.expertCont .scroll_view_item{
+  width: 87%;
+  margin-left: 30rpx;
+  float: left;
+}
+/* 左右轮播 */
+.scroll-view_H{
+  width: 100%;
+  white-space: nowrap;
+}
+.scroll_item_expert {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  /* transform: scale(0.9); */
+  background-color: #fff;
+}
+/* .scroll_item_expert:first-child{
+  margin-left: 30rpx;
+  left: 0;
+}*/
+.scroll_item_expert:last-child{
+  margin-right: 30rpx;
+} 
+/* .scroll_item_expert.selected{
+   transform: scale(1);
+} */
+.scroll_item_expert image{
+  width: 246rpx;
+  height: 250rpx;
+  margin-left: 30rpx;
+  margin-right: 22rpx;
+}
+.scroll_right{
+  width: 384rpx;
+  height: 250rpx;
+}
+.scroll_right .name{
+  margin-top: 60rpx;
+  font-size: 36rpx;
+  color: #333;
+  display: block;
+  text-align: left;
+}
+.intro{
+  width: 384rpx;
+  height: 80rpx;
+  margin-top: 16rpx;
+  font-size: 24rpx;
+  color: #777;
+  line-height: 40rpx;
+  text-align: left;
+  display: flex;
+  text-overflow:ellipsis;
+  white-space: pre-wrap;
+  display:-webkit-box; 
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2; 
+  overflow: hidden;
+}
+/* 升级必备 */
+.upgradeCont{
+  width: 100%;
+  padding-left: 17rpx;
+  box-sizing: border-box;
+  height: auto;
+}
+.scroll_item_upgrade{
+  position: relative;
+  width: 328rpx;
+  height: 267rpx;
+  display: inline-block;
+  overflow: hidden;
+  /* transform: scale(0.9); */
+  background-color: #fff;
+  margin-left: 13px;
+}
+.scroll_item_upgrade:last-child{
+  margin-right: 30rpx;
+}
+.scroll_item_upgrade image{
+  width: 100%;
+  height: 212rpx;
+}
+.scroll_item_upgrade .tit{
+  width: 100%;
+  height: 55rpx;
+  line-height: 55rpx;
+  text-align: left;
+  color: #000;
+  font-size: 24rpx;
+  overflow: hidden;
+}
+.upgradeCont button{
+  width: 322rpx;
+  height: 67rpx;
+  line-height: 67rpx;
+  font-size: 24rpx;
+  color: #fff;
+  text-align: center;
+  background: #20cfa0;
+  margin: 8rpx auto 0rpx auto;
+}
+/* 爱心科普 */
+.loveMesCont{
+  width: 100%;
+  padding: 0 30rpx 38rpx 30rpx;
+  box-sizing: border-box;
+  position: relative;
+}
+.loveMesCont swiper{
+  height: 312rpx;
+  overflow: hidden;
+}
+.loveMesCont image{
+  width: 100%;
+  height: 100%;
+  border-radius: 10rpx;
+}
+.loveMesCont view{
+  color: #fff;
+  left: 42rpx;
+}
+.loveMesCont .mesTit{
+  position: absolute;
+  top: 85rpx;
+  font-size: 38rpx;
+  font-weight: bold;
+}
+.loveMesCont .name{
+  position: absolute;
+  top: 142rpx;
+  font-size: 30rpx;
+}
+.loveMesCont .time{
+  width: 161rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  text-align: center;
+  border-radius: 20rpx;
+  background: #20cfa0;
+  position: absolute;
+  top: 186rpx;
+  font-size: 24rpx;
+}
+/* 专业指导 */
+.guideCont{
+  padding-left: 18rpx;
+  padding-bottom: 40rpx;
+  box-sizing: border-box;
+}
+.scroll_item_guide{
+  width: 215rpx;
+  height: 255rpx;
+  display:inline-block;
+  overflow:hidden;
+  position: relative;
+  margin-left: 12rpx;
+}
+.scroll_item_guide:last-child{
+  margin-right: 12rpx;
+}
+.scroll_item_guide image{
+  width: 100%;
+  height: 100%;
+  border-radius: 10rpx;
+}
+.scroll_item_guide .teachName{
+  width: 140rpx;
+  height: 45rpx;
+  line-height: 45rpx;
+  text-align: center;
+  font-size: 24rpx;
+  color: #fff;
+  position: absolute;
+  bottom: 10rpx;
+  left: 50%;
+  margin-left: -70rpx;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius:6rpx;
+  overflow: hidden;
+}
+/* 必学课程 */
+.courseCont{
+  padding-bottom: 40rpx;
+  padding-left: 17rpx;
+  box-sizing: border-box;
+}
+ .courseCont .scroll_item_course:nth-child(odd){
+  background:#24cb85;
+}
+.courseCont .scroll_item_course:nth-child(even){
+  background:#594544;
+}
+.scroll_item_course:last-child{
+  margin-right: 30rpx;
+}
+.scroll_item_course{
+  width: 329rpx;
+  /* height: 249rpx; */
+  padding-bottom: 10rpx;
+  box-sizing: border-box;
+  margin-left: 13rpx;
+  display:inline-block;
+  overflow:hidden;
+  border-radius: 10rpx;
+}
+.courseCont .scroll_item_course:nth-child(odd) .teachName{
+  width: 168rpx;
+  height: 45rpx;
+  line-height: 45rpx;
+  font-size: 24rpx;
+  color: #fff;
+  text-align: center;
+  background: linear-gradient(#2cd18b,#52eead);
+  border-radius: 0 22.5rpx 22.5rpx 0;
+  margin-top: 33rpx;
+  overflow: hidden;
+}
+.courseCont .scroll_item_course:nth-child(even) .teachName{
+  width: 168rpx;
+  height: 45rpx;
+  line-height: 45rpx;
+  font-size: 24rpx;
+  color: #fff;
+  text-align: center;
+  background: linear-gradient(#5f4c4c,#7c7070);
+  border-radius: 0 22.5rpx 22.5rpx 0;
+  margin-top: 33rpx;
+}
+.scroll_item_course .teachName image{
+  width: 23rpx;
+  height: 23rpx;
+  font-size: 24rpx;
+  margin-right: 10rpx;
+}
+.scroll_item_course .headImg{
+  width: 51rpx;
+  height: 51rpx;
+  border-radius: 50%;
+  margin-top: 30rpx;
+  margin-right: 26rpx;
+}
+.scroll_item_course .courseName{
+  width: 100%;
+  height: 58rpx;
+  line-height: 57rpx;
+  font-size: 30rpx;
+  text-align: left;
+  color: #fff;
+  padding-left: 32rpx;
+  box-sizing: border-box;
+  margin-top: 23rpx;
+}
+.courseCont .scroll_item_course:nth-child(odd) .line{
+  width: 52rpx;
+  height: 1px;
+  background: #70f3bc
+}
+.courseCont .scroll_item_course:nth-child(even) .line{
+  width: 52rpx;
+  height: 1px;
+  background:#9d8584;
+}
+.scroll_item_course .courseTime{
+  width: 100%;
+  line-height:19rpx;
+  margin-top: 24rpx;
+  padding-left: 32rpx;
+  box-sizing: border-box;
+}
+.courseTime image{
+  width: 19rpx;
+  height: 19rpx;
+  margin-right: 10rpx;
+  margin-top: auto;
+}
+.courseTime .time{
+  font-size: 22rpx;
+  color: #fff;
+}
+.scroll_item_course .tipImg{
+  width: 33rpx;
+  height: 33rpx;
+  margin-top: 3rpx;
+  margin-right: 13rpx;
+}
+/* 健康头条 */
+.healthCont{
+  padding: 0 30rpx 30rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.eachHealMes{
+  margin-bottom: 10rpx;
+}
+.healthMesCont{
+  width: 376rpx;
+  margin: 8rpx 0 0rpx 23rpx;
+}
+.eachHealMes image{
+  width:290rpx;
+  height:173rpx;
+  border-radius:10rpx;
+}
+.eachHealMes .healthMes1{
+  line-height: 48rpx;
+  font-size: 30rpx;
+  color: #222;
+}
+.eachHealMes .healthMes{
+  display: block;
+  line-height: 48rpx;
+  font-size: 30rpx;
+  color: #222;
+  margin: 8rpx 0 28rpx 0rpx;
+}
+.eachHealMes .time1{
+  width: 100%;
+  display: block;
+  font-size: 24rpx;
+  color: #9b9b9b;
+  margin-top: 28rpx;
+}
+.eachHealMes .time{
+  width: 100%;
+  display: block;
+  font-size: 24rpx;
+  color: #9b9b9b;
+}
+/* 美容养生 */
+.beautyCont{
+  padding: 0 30rpx 20rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.eachBeautyMes{
+  width: 337rpx;
+}
+.eachBeautyMes:nth-child(even){
+  margin-left: 16rpx;
+}
+.eachBeautyMes image{
+  width: 100%;
+  height: 200rpx;
+}
+.beautyMesBot{
+  width: 100%;
+  height: 58rpx;
+  line-height: 58rpx;
+}
+.beautyMesBot .tit{
+  font-size: 24rpx;
+  color: #222;
+}
+.price{
+  font-size: 30rpx;
+  color: #20cfa0;
+  font-weight: bold;
+  display: inline;
+}
+.price .rmb{
+  font-size: 20rpx;
+  color: #20cfa0;
+}

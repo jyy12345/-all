@@ -1,0 +1,75 @@
+{
+  "pages": [
+    "pages/techer/curriculumConfirmation/curriculumConfirmation",
+    "pages/masterWorks/masterWorks",
+    "pages/techer/techerIndex/techerIndex",
+    "pages/index/index",
+    
+    
+    "pages/player/player",
+    "pages/logos/logos",
+    "pages/techer/techerImg/techerImg",
+    "pages/exchange/exchange",
+    "pages/exchangeContent/exchangeContent",
+    "pages/exchangeEdit/exchangeEdit",
+    
+    "pages/techer/teachingPlan/teachingPlan",
+    "pages/techer/curriculumCode/curriculumCode",
+    "pages/techer/classCadets/classCadets",
+    "pages/auditions/auditions",
+    "pages/baby/latestNews/latestNews",
+    "pages/baby/comingSoon/comingSoon",
+    "pages/index/studetDetails/studetDetails",
+    "pages/index/studetS/studetS",
+    "pages/index/weArelike/weArelike",
+    "pages/tabbar/tabbar",
+    "pages/integral/integral",
+    "pages/activityArrangement/activityArrangement",
+    "pages/artCircles/artCircles",
+    "pages/myTeam/myTeam",
+    "pages/baby/myBaby/myBaby",
+    "pages/photoEvaluation/photoEvaluation",
+    "pages/othersWorks/othersWorks",
+    "pages/uploadResults/uploadResults",
+    "pages/upload/upload",
+    "pages/artAppreciation/artAppreciation",
+    "pages/baby/leave/leave",
+    "pages/baby/detailsWork/detailsWork",
+    "pages/baby/studentWorks/studentWorks",
+    "pages/baby/studentFiles/studentFiles",
+    "pages/activityArrangement/activityAp/activityAp",
+    "pages/index/works/works",
+    "pages/artAppreciation/unitedStates/unitedStates"
+  ],
+  "requiredBackgroundModes": [
+    "audio"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#101013",
+    "navigationBarTitleText": "艺澜美术",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#b4b4b4",
+    "borderStyle": "black",
+    "backgroundColor": "white",
+    "position": "bottom",
+    "selectedColor": "#B9c6e4",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/tab/home_normal.png",
+        "selectedIconPath": "images/tab/home_pressed.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/baby/myBaby/myBaby",
+        "iconPath": "images/tab/user_normal.png",
+        "selectedIconPath": "images/tab/user_pressded.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

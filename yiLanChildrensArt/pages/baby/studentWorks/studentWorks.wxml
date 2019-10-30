@@ -1,0 +1,104 @@
+<import src="/pages/tabbar/tabbar.wxml"/>
+<template is="tabbar" data="{{tabbar}}"/>
+<view class='topContent'>
+
+<view class="swiper-container">
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{duration}}" current="{{swiperCurrent}}" bindchange="swiperChange" class="swiper">
+
+    <!-- <block wx:for="{{imgUrls}}" wx:key="unique"> -->
+
+      <swiper-item>
+    <view class='content clearFlo'>
+    <view class='fL  contClind' catchtap='workStavi'>
+    <image src='../../../images/indexImg/work1.jpg' class='workImg'></image>
+    <view class='contTitle'>作品名称</view>
+  </view>
+   <view class='contClind' >
+    <image src='../../../images/indexImg/work2.jpg' class='workImg'></image>
+    <view class='contTitle'>作品名称</view>
+  </view>
+  </view>
+   <view class='content clearFlo'>
+    <view class='fL  contClind'>
+    <image src='../../../images/indexImg/work3.jpg' class='workImg'></image>
+    <view class='contTitle'>作品名称</view>
+  </view>
+   <view class='contClind'>
+    <image src='../../../images/indexImg/work4.jpg' class='workImg'></image>
+    <view class='contTitle'>作品名称</view>
+  </view>
+  </view>
+      </swiper-item>
+<swiper-item>
+    <view class='content clearFlo'>
+    <view class='fL  contClind' catchtap='workStavi'>
+    <image src='../../../images/indexImg/work1.jpg' class='workImg'></image>
+    <view class='contTitle'>作品名称</view>
+  </view>
+   <view class='contClind' >
+    <image src='../../../images/indexImg/work2.jpg' class='workImg'></image>
+    <view class='contTitle'>作品名称</view>
+  </view>
+  </view>
+   <view class='content clearFlo'>
+    <view class='fL  contClind'>
+    <image src='../../../images/indexImg/work3.jpg' class='workImg'></image>
+    <view class='contTitle'>作品名称</view>
+  </view>
+   <view class='contClind'>
+    <image src='../../../images/indexImg/work4.jpg' class='workImg'></image>
+    <view class='contTitle'>作品名称</view>
+  </view>
+  </view>
+      </swiper-item>
+    
+    <!-- </block> -->
+
+  </swiper>
+
+</view>
+
+
+  <view class='leftBtn'><image src='../../../images/indexImg/go.jpg'></image></view>
+    <view class='rightBtn'><image src='../../../images/indexImg/out1.jpg'></image></view>
+</view>
+
+<view class='bottomContent'>
+  <view class='make'>
+    <image src='../../../images/indexImg/works.jpg' class='makeImg'></image>
+  </view>
+   <view class='autos'>
+    <view class='clearFlo box'>
+      <view class='fL piaoBox'>
+      <view class='clearFlo'>
+          <image src='../../../images/indexImg/work5.jpg' class='jinImg fL' ></image>   
+         <view  class='jinTitle fL'>精美台历</view>
+      </view>
+         
+      </view>
+       <view class='piaoBox'>
+      <view class='clearFlo'>
+          <image src='../../../images/indexImg/work6.jpg' class='jinImg fL' ></image>   
+         <view  class='jinTitle fL'>精装相册</view>
+      </view>
+         
+      </view>
+    </view>
+     <view class='clearFlo box'>
+      <view class='fL piaoBox'>
+      <view class='clearFlo'>
+          <image src='../../../images/indexImg/work7.jpg' class='jinImg fL' ></image>   
+         <view  class='jinTitle fL'>服饰制作</view>
+      </view>
+         
+      </view>
+       <view class='piaoBox'>
+      <view class='clearFlo'>
+          <image src='../../../images/indexImg/work8.jpg' class='jinImg fL' ></image>   
+         <view  class='jinTitle fL'>画作装裱</view>
+      </view>
+         
+      </view>
+    </view>
+   </view>
+</view>

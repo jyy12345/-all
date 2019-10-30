@@ -1,0 +1,45 @@
+<view class='babyBg'>
+ <image src='../../../images/indexImg/baby.jpg'></image>
+</view>
+<view class='auTo'>
+  <view>
+   <image src='../../../images/indexImg/babyImg5.jpg' mode:widthFix class='studentFiles' catchtap='sturted'></image>
+    <image src='../../../images/indexImg/babyImg2.jpg' mode:widthFix class='studentFiles' catchtap='studentworks'></image>
+        <image src='../../../images/indexImg/babyImg4.jpg' mode:widthFix class='studentFiles' catchtap='leave'></image>
+             
+  </view>
+  <view>
+     <image src='../../../images/indexImg/babyImg1.jpg' mode:widthFix class='studentFiles' bindtap="powerDrawer" data-statu="open"></image>
+
+
+ <!--mask--> 
+   <view class="drawer_screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus}}"></view>
+   <view class='imgPostBox' catchtap='heigged'><image src='../../../images/indexImg/cha.png' class='imgPost' wx:if="{{showModalStatus}}" ></image>
+</view> 
+<!--content-->  
+<!--使用animation属性指定需要执行的动画-->  
+<view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}">  
+  
+  <!--drawer content-->  
+  <view class="drawer_title"></view>  
+  <view class="drawer_content">  
+    <view class="top grid">  
+      <input class="input_base input_h30" name="rName" placeholder='受邀宝贝姓名' placeholder-class='redParty'></input>  
+    </view>  
+    <view class="top grid">  
+      <input class="input_base input_h30" name="mobile" placeholder='联系方式' placeholder-class='redParty'></input>  
+    </view>  
+     <view class="top grid" bindtap='clickMe'>  
+        <input class="input_base input_h30" name="mobile" placeholder='年龄' placeholder-class='redParty'></input> 
+    </view>  
+     <view class="btn_ok" bindtap="powerDrawer" data-statu="close">提交</view>  
+      <view class='borderBottom'></view>
+      <view class='contact'>注：会员推荐学员成功后，将会得到相应积分奖励，可用于兑换课时</view>
+   </view> 
+ </view> 
+    <!-- 选择器结束 -->
+
+
+        <image src='../../../images/indexImg/babyImg3.jpg' mode:widthFix class='studentFiles' catchtap='jifRuih'></image>
+  </view>
+</view>

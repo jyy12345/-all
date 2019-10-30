@@ -1,0 +1,62 @@
+<view class="after_content">
+<view class="after_one">
+    <view class="after_box clearFlo">
+      <view class="sale_left flL">
+         <image src="https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640"></image>
+      </view>
+      <view class="sale_right flR">
+           <view class="twoLin after_title">妈妈我能行勇敢做自己全套10册儿童情绪管理与性格培养绘本 中英文双语亲</view>
+           <view class="dan_price">
+              单价：<text>￥44.45</text> 购买数量：<text>1</text>
+           </view>
+      </view>
+   </view>
+</view>
+   <view class="clearFlo sum_box">
+      <view class="flL sum_title">申请数量</view>
+      <view class="stepper flR">
+        <!-- 减号 -->
+        <text class="{{minusStatus}}" bindtap="bindMinus">-</text>
+        <!-- 数值 -->
+        <input type="number" bindchange="bindManual" value="{{num}}" />
+        <!-- 加号 -->
+        <text class="normal" bindtap="bindPlus">+</text>
+      </view>
+   </view>
+</view>
+<view class="after_content" style="margin-top:20rpx;">
+    <view class="fen_class">
+       <view class="return_goods clearFlo">
+          <view class="goods_left flL">
+              <text class="icon iconfont icon-tuihuo ic_box"></text>
+              <text>退货</text>
+          </view>
+          <view class="goods_right flR">
+             <view class="clearFlo">
+                <view class="flL">
+                   <view class="suo_greay">退回收到的商品</view>
+                   <view class="suo_red">支持7天无理由退货</view>
+                </view>
+                <view class="icon iconfont icon-arrowRight flR right_btn"></view>
+             </view>
+          </view>
+       </view>
+    </view>
+    <view class="fen_class" style="border-top:1px solid #eeeeee;">
+       <view class="return_goods clearFlo">
+          <view class="goods_left flL">
+              <text class="icon iconfont icon-huanhuo ic_box" style="color:#e9a522;"></text>
+              <text>换货</text>
+          </view>
+          <view class="goods_right flR">
+             <view class="clearFlo">
+                <view class="flL">
+                   <view class="suo_greay" style="margin-top:15rpx;">更换收到的商品</view>
+                </view>
+                <view class="icon iconfont icon-arrowRight flR right_btn"></view>
+             </view>
+          </view>
+       </view>
+    </view>
+</view>
+

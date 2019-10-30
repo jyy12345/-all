@@ -1,0 +1,270 @@
+<import src="/pages/tabbar/tabbar.wxml"/>
+<template is="tabbar" data="{{tabbar}}"/>
+<view class='fiexBox'>
+  <image src='../../../images/indexImg/paade.jpg' class='paade'></image>
+</view>
+<view class='autos'>
+  <view class='notes'>
+    <view class='titCont'>
+      <view class='bigTitle'>请假</view>
+      <view class='semllTitle'>请于开课前两小时提交，如未提交请假系统将自动划扣课时 </view>
+    </view>
+    <view class='titCont'>
+      <view class='bigTitle'>补课</view>
+      <view class='semllTitle'>请根据补课时间段挑选您合适的时间，一经提交系统将自动划扣课时，如有特殊情况请提前四小时练习中心 </view>
+    </view>
+    <view class='titCont'>
+      <view class='bigTitle'>班级调整</view>
+      <view class='semllTitle'>如有班级调整，请说明原因和您合适的时间，提交后老师会尽快与您取得联系 </view>
+    </view>
+  </view>
+  
+</view>
+<view class='clearFlo' >
+
+   <view class='leaveIn fL mLe' bindtap="powerDrawer" data-statu="open">
+     <image src='../../../images/indexImg/tage.jpg' class='clesster'></image>
+   </view>
+   <!--mask--> 
+   <view class="drawer_screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus}}"></view> 
+<!--content--> 
+ <view class='imgPostBox' catchtap='heigged'><image src='../../../images/indexImg/cha.png' class='imgPost' wx:if="{{showModalStatus}}" ></image>
+</view>
+<!--使用animation属性指定需要执行的动画-->  
+<view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}">  
+  
+  <!--drawer content-->  
+  <view class="drawer_title"></view>  
+  <view class="drawer_content">  
+    <view class="top grid">  
+      <input class="input_base input_h30" name="rName" placeholder='宝贝姓名' placeholder-class='redParty'></input>  
+    </view>  
+    <view class="top grid">  
+      <input class="input_base input_h30" name="mobile" placeholder='联系方式' placeholder-class='redParty'></input>  
+    </view>  
+     <view class="top grid" bindtap='clickMe'>  
+        <input class="input_base input_h30" name="mobile" placeholder='{{dateobj.yes}}年{{dateobj.yue}}月{{dateobj.rie}}' placeholder-class='redParty'></input> 
+    </view>  
+    <!--选择器-->
+    <view class="birthBox" hidden="{{hiddenName}}" style='z-index:222;'>
+    <picker-view wx:if="{{years.length>0 && months.length>0 && days.length>0}}" style="width: 82.3%; height: 180rpx;margin:-10rpx auto;font-size:24rpx;margin-left:56rpx;background:#fff;text-align: center;" value="{{value}}" bindchange="bindChange">
+        <picker-view-column>
+            <view wx:for="{{years}}" wx:key="{{index}}" style='line-height:34px;border-bottom:1px solid #F7A6A6'>{{item}}年</view>
+        </picker-view-column>
+        <picker-view-column>
+            <view wx:for="{{months}}" wx:key="{{index}}" style='line-height:34px;'>{{item}}月</view>
+        </picker-view-column>
+        <picker-view-column style='background:none;'>
+            <view wx:for="{{days}}" wx:key="{{index}}" style='line-height:34px;'>{{item}}日</view>
+        </picker-view-column>
+    </picker-view>
+    <view class='clearFlo' style='background:#fff;width:82.5%;margin:12rpx auto;margin-left:56rpx;border-top:1px solid #F7A6A6;font-size:24rpx;color:#F7A6A6;height:54rpx;line-height:54rpx;border-bottom-right-radius: 10rpx;border-bottom-left-radius: 10rpx;'>
+       <view class='fL' style='width:49%;text-align: center;border-right:2rpx solid #F7A6A6 ' catchtap='quits'>取消</view>
+      <view class='fL'style='width:49%;text-align: center;' catchtap='yesY'>确定</view>
+     
+    </view>
+  
+</view>
+    <!-- 选择器结束 -->
+    <view class="btn_ok" bindtap="powerDrawer" data-statu="close">提交</view>  
+    <view class='pinkColor'>需补课节数 <text class='textJie'>7</text>节</view>
+      <view class='borderBottom'></view>
+      <view class='contact'>注：如有特殊情况，请及时联系老师</view>
+  </view>  
+
+</view>
+
+   <view class='makeUp fL mLe' bindtap='makeUp' data-statu="open">
+        <image src='../../../images/indexImg/bk.jpg' class='clesster'></image>
+   </view>
+
+ <!--mask--> 
+   <view class="drawer_screen" bindtap="makeUp" data-statu="close" wx:if="{{showModalStatus1}}"></view> 
+   <view class='imgPostBox' catchtap='heigged1'><image src='../../../images/indexImg/cha.png' class='imgPost' wx:if="{{showModalStatus1}}" ></image>
+</view>
+<!--content-->  
+<!--使用animation属性指定需要执行的动画-->  
+<view animation="{{animationData}}" class="drawer_box1" wx:if="{{showModalStatus1}}" style='width:718rpx;padding-bottom:60rpx;'>  
+  
+  <!--drawer content-->  
+  <view class="drawer_title1">
+    <image src='../../../images/indexImg/buKe.jpg'></image>
+  </view>  
+  <view class="drawer_content1">  
+     <view style='width:90%;margin:20rpx auto;'>
+        <view class='timeTitle'>可选时间</view>
+        <view class='times'>
+          <view class='timeList clearFlo'>
+            <view class='fL myday'>星期一</view>
+            <view class='fL mLeftBox'>
+              <view class='timeXw'>16:00-17:30</view>
+              <view >
+                 <image  src='../../../images/indexImg/secl.jpg' class='selected'></image>
+              </view>
+            </view>
+                  <view class='fL mLeftBox'>
+              <view class='timeXw'>16:00-17:30</view>
+              <view >
+                 <image  src='../../../images/indexImg/non.jpg' class='selected'></image>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class='times'>
+          <view class='timeList clearFlo'>
+            <view class='fL myday'>星期二</view>
+            <view class='fL mLeftBox'>
+              <view class='timeXw'>16:00-17:30</view>
+              <view >
+                 <image  src='../../../images/indexImg/non.jpg' class='selected'></image>
+              </view>
+            </view>
+                  <view class='fL mLeftBox'>
+              <view class='timeXw'>16:00-17:30</view>
+              <view >
+                 <image  src='../../../images/indexImg/non.jpg' class='selected'></image>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class='times'>
+          <view class='timeList clearFlo'>
+            <view class='fL myday'>星期三</view>
+            <view class='fL mLeftBox'>
+              <view class='timeXw'>16:00-17:30</view>
+              <view >
+                 <image  src='../../../images/indexImg/non.jpg' class='selected'></image>
+              </view>
+            </view>
+                  <view class='fL mLeftBox'>
+              <view class='timeXw'>16:00-17:30</view>
+              <view >
+                 <image  src='../../../images/indexImg/non.jpg' class='selected'></image>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class='times'>
+          <view class='timeList clearFlo'>
+            <view class='fL myday'>星期四</view>
+            <view class='fL mLeftBox'>
+              <view class='timeXw'>16:00-17:30</view>
+              <view >
+                 <image  src='../../../images/indexImg/non.jpg' class='selected'></image>
+              </view>
+            </view>
+                  <view class='fL mLeftBox'>
+              <view class='timeXw'>16:00-17:30</view>
+              <view >
+                 <image  src='../../../images/indexImg/non.jpg' class='selected'></image>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class='times'>
+          <view class='timeList clearFlo'>
+            <view class='fL myday'>星期五</view>
+            <view class='fL mLeftBox'>
+              <view class='timeXw'>16:00-17:30</view>
+              <view >
+                 <image  src='../../../images/indexImg/non.jpg' class='selected'></image>
+              </view>
+            </view>
+                  <view class='fL mLeftBox'>
+              <view class='timeXw'>16:00-17:30</view>
+              <view >
+                 <image  src='../../../images/indexImg/non.jpg' class='selected'></image>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class='times'>
+          <view class='timeList clearFlo'>
+            <view class='fL myday'>星期六</view>
+            <view class='fL mLeftBox'>
+              <view class='timeXw'>10:00-11:30</view>
+              <view >
+                 <image  src='../../../images/indexImg/non.jpg' class='selected'></image>
+              </view>
+            </view>
+            <view class='fL mLeftBox'>
+              <view class='timeXw'>14:00-15:30</view>
+              <view >
+                 <image  src='../../../images/indexImg/non.jpg' class='selected'></image>
+              </view>
+            </view>
+            <view class='fL mLeftBox'>
+              <view class='timeXw'>16:00-17:30</view>
+              <view >
+                 <image  src='../../../images/indexImg/non.jpg' class='selected'></image>
+              </view>
+            </view>
+                  <view class='fL mLeftBox'>
+              <view class='timeXw'>18:00-19:30</view>
+              <view >
+                 <image  src='../../../images/indexImg/non.jpg' class='selected'></image>
+              </view>
+            </view>
+          </view>
+        </view>
+         <view class='times'>
+          <view class='timeList clearFlo'>
+            <view class='fL myday'>星期日</view>
+            <view class='fL mLeftBox'>
+              <view class='timeXw'>10:00-11:30</view>
+              <view >
+                 <image  src='../../../images/indexImg/non.jpg' class='selected'></image>
+              </view>
+            </view>
+            <view class='fL mLeftBox'>
+              <view class='timeXw'>14:00-15:30</view>
+              <view >
+                 <image  src='../../../images/indexImg/non.jpg' class='selected'></image>
+              </view>
+            </view>
+            <view class='fL mLeftBox'>
+              <view class='timeXw'>16:00-17:30</view>
+              <view >
+                 <image  src='../../../images/indexImg/non.jpg' class='selected'></image>
+              </view>
+            </view>
+                  <view class='fL mLeftBox'>
+              <view class='timeXw'>18:00-19:30</view>
+              <view >
+                 <image  src='../../../images/indexImg/non.jpg' class='selected'></image>
+              </view>
+            </view>
+          </view>
+        </view>
+     </view>
+    <view class="btn_ok" bindtap="makeUp" data-statu="close">提交</view>  
+  </view>  
+</view>
+
+   <view class='classAdjustment fL mLe' bindtap='classAdjustment' data-statu="open">
+         <image src='../../../images/indexImg/classTz.jpg' class='clesster'></image>
+   </view>
+    <!--mask--> 
+   <view class="drawer_screen" bindtap="classAdjustment" data-statu="close" wx:if="{{showModalStatus2}}"></view>
+   <view class='imgPostBox' catchtap='heigged2'><image src='../../../images/indexImg/cha.png' class='imgPost' wx:if="{{showModalStatus2}}" ></image>
+</view> 
+<!--content-->  
+<!--使用animation属性指定需要执行的动画-->  
+<view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus2}}" >  
+  
+  <!--drawer content-->  
+  <view class="drawer_title2">
+    <image src='../../../images/indexImg/classBn.jpg'></image>
+  </view>  
+  <view class="drawer_content3">  
+     <view class='shuoM'>说明缘由及可调整时间</view>
+     <textarea class='contentSuccess1'></textarea>
+     <view class="btn_oks" bindtap="classAdjustment" data-statu="close">提交</view>  
+ 
+</view> 
+</view> 
+  </view>
+
+
+ 
+

@@ -1,0 +1,22 @@
+@import "/pages/tabbar/tabbar.wxss";
+.reidlo{width: 45rpx;height: 45rpx;background: #efbb38;border-radius: 50%;position: relative;}
+.reidlo1{width: 45rpx;height: 45rpx;margin-left:60rpx;background: #efbb38;border-radius: 50%;position: relative;}
+.reidlo::before{content: '';width: 210rpx;height: 5rpx;background: #efbb38;display: inline-block;position: absolute;top: 20rpx;left: 0;}
+.tabBox{width: 100%;}
+.swiper-tab{width: 100%;}
+.mL{margin-left:80rpx;}
+.swiper-tab-list{float: left;width: 25%;}
+.selected::after{content: '';width: 15rpx;height: 15rpx;background: #fff;display: inline-block;position: absolute;top: 34%;left: 36%;border-radius:50%; }
+.title{font-size: 24rpx;text-align: center;margin-top: 10rpx;margin-right: 0rpx;}
+.overText{color: #EFBB38;font-size: 29rpx;padding: 40rpx 0 }
+.swiper-box{height: 957rpx;text-align: center;}
+.filmItem{width: 70%;height: 717rpx;}
+swiper-item>.gotO>image{width: 467rpx;height: 100%!important;}
+.gotO{width: 485rpx;box-sizing: border-box;height: 700rpx;}
+/* .gotO image{width: 100%;height: 100%;} */
+.kuang{border: 10rpx solid #efbb38;margin-top: -20rpx;height:740rpx;
+}
+.reidloSelect{background: #efbb38;}
+/* 试听浮标 */
+.bgColor{width: 124rpx;height: 130rpx;position: absolute;left: 100%;top:35%;z-index: 9999;}
+.bgColor image{width: 100%;height: 100%;}

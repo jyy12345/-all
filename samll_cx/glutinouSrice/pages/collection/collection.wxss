@@ -1,0 +1,18 @@
+
+.nice_book{width: 100%;border-radius: 30rpx;margin-top: 41rpx;padding-bottom: 19rpx;}
+.nice_bookChil{padding-top: 41rpx;}
+.nice_title{font-size: 32rpx;color: #353535;position: relative;padding-left: 30rpx;}
+.nice_title::after{content:'';width: 12rpx;height: 33rpx;background: red;display: block;position: absolute;left: 0;top: 8rpx;border-radius: 40rpx;}
+.book_del{text-decoration:line-through;color: #999999;}
+.img_box {text-align: center;}
+.img_box image{width: 118rpx;height: 164rpx;}
+.book_list{width: 30%;background: white;padding: 25rpx 10rpx;}
+.nice_gd{font-size: 24rpx;color:#353535;}
+.list_parent{display: flex;justify-content: space-between;}
+.book_title{ margin: 0 auto;   margin-top: 43rpx;line-height: 15px;font-size: 24rpx;color: #555555; width: 90%;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2;overflow: hidden;}
+.nice_auto{width: 95%;margin: 0 auto;}
+.book_price{font-size: 26rpx;color:#e9222b;}
+.book_del{font-size: 20rpx;color:#999999;margin-left: 10rpx;}
+.special image{border-radius: 30rpx;}
+.special_img{width: 50%;height: 425rpx;}
+.collection{text-align: center;line-height: 100rpx;}

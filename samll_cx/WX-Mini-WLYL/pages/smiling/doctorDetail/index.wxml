@@ -1,0 +1,43 @@
+<!--pages/smiling/doctorDetail/index.wxml-->
+<view class="coachDetail">
+	<view class="boxShadow coachMes">
+		<image class="fl" src="{{imgUrl+doctorDetailData.image}}"></image>
+		<view class="fr permes">
+			<view class="name">
+				{{doctorDetailData.name}}
+			</view>
+			<view class='jobs'>
+        <view wx:for="{{doctorDetailData.jobdescription}}" class='oneJob'>
+          <view class='fl circle'></view>
+          <view class='fl intro'>{{item}}</view>
+        </view>
+      </view>
+		</view>
+	</view>
+  <view class="boxShadow mesCont intros">
+    <view class='title'>专家介绍</view>
+    <rich-text class="conts" nodes="{{doctorDetailData.content}}" style='font-size:24rpx;'></rich-text>
+  </view>
+  <view class="boxShadow mesCont goods">
+    <view class='title'>擅长</view>
+    <text class='conts'>{{doctorDetailData.begoodat}}</text>
+  </view>
+  <view class="boxShadow course">
+		<view class="contTop">
+			<view class="fl titleLeft">
+				<text class="tit">优选课程</text>
+			</view>
+			<view class="fr more" bindtap='course'>
+				<view class="fl text">更多课程</view>
+				<view class="fl right_arrows"></view>
+			</view>
+		</view>
+		<view class="contBot">
+			<view wx:for="{{courseListData}}" data-id="{{item.id}}" data-coursetype="{{item.coursetype}}" class="eachCourse" bindtap='courseDetail'>
+				<image src="/image/smilling/icon_course.png"></image>
+				<text class="courseName">{{item.name}}</text>
+			</view>
+		</view>
+	</view>
+</view>
+

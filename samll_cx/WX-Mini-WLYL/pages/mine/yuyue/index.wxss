@@ -1,0 +1,151 @@
+/* pages/mine/yuyue/index.wxss */
+page{
+	background: #fcf0f0;
+}
+.yuyue{
+	width: 100%;
+	overflow: hidden;
+}
+.topTabBar{
+	width: 100%;
+	height:99rpx;
+	background: #fff;
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: nowrap;
+	padding: 0 30rpx 0 10rpx;
+	box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.tab{
+	line-height:96rpx;
+	text-align: center;
+	font-size: 30rpx;
+	color: #222;
+	padding: 0 20rpx;
+}
+.tabAfter{
+	color: #20cfa0;
+}
+.lLine{
+	width: 28rpx;
+	height: 3px;
+	background: #20cfa0;
+	margin: auto;
+}
+.WLine{
+	width: 28rpx;
+	height: 3px;
+	background: #fff;
+	margin: auto;
+}
+.swiper{
+	width: 100%;
+	height: 400rpx;
+	overflow: hidden;
+  position: relative;
+  top: 99rpx;
+  left: 0;
+}
+swiper-item{
+	width: 100%;
+	overflow: hidden;
+}
+/* 全部 */
+.eachCont{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	padding: 38rpx 30rpx;
+	background: #fff;
+	box-sizing: border-box;
+  margin-top: 15rpx;
+}
+
+.topCont{
+	width: 100%;
+	margin-bottom: 31rpx;
+	overflow:hidden;
+}
+.topCont .mark{
+	font-size: 28rpx;
+	color: #050505;
+}
+.topCont .status{
+	font-size: 28rpx;
+	color: #20cfa0;
+}
+.topCont .status_finish{
+	color: #888;
+}
+.botCont{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+}
+.botCont .teachLeft{
+	width: 227rpx;
+	margin-right: 22rpx;
+}
+.teachLeft image{
+	width: 204rpx;
+	height: 255rpx;
+  border-radius:10rpx;
+  display: block;
+  margin: auto;
+}
+.teachLeft text{
+	width: 100%;
+	display: block;
+	line-height: 63rpx;
+	font-size: 28rpx;
+	color: #222;
+	text-align: center;
+}
+.botCont .teachRight{
+	width: 439rpx;
+}
+.teachRight text{
+	width: 100%;
+	line-height: 45rpx;
+	display: block;
+	font-size: 24rpx;
+	color: #666;
+	overflow: hidden;
+}
+.teachRight .buts{
+	/* width: 100%; */
+	margin-top: 15rpx;
+}
+.buts button{
+	width: 146rpx;
+	height: 53rpx;
+	margin-left: 10rpx;
+	font-size: 24rpx;
+  padding: 0;
+  border-radius: 26.5rpx;
+}
+.buts .cancel{
+	line-height: 51rpx;
+	border: 1px solid #20cfa0;
+	box-sizing: border-box;
+	color: #20cfa0;
+	background: #fff;
+}
+.buts .finish,.buts .continue{
+	line-height: 53rpx;
+	background: #20cfa0;
+	color: #fff;
+}
+
+.noCont{
+  width: 100%;
+  height: 100vh;
+  line-height: 100vh;
+  font-size: 30rpx;
+  color: #999;
+  text-align: center;
+}

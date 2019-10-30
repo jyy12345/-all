@@ -1,0 +1,34 @@
+<!-- 音频播放开关 -->
+ 
+<view class='audiosBox'>
+ 
+<audio src="{{src}}" id="myAudio" bindtimeupdate="updata"></audio>
+ <view class="audioOpen" bindtap="audioPlay" wx:if="{{!isOpen}}">
+ 
+<image class='image2' src="../../images/bofang.png" />
+ 
+</view>
+ 
+<view class="audioOpen" bindtap="audioPause" wx:if="{{isOpen}}">
+ 
+<image src="../../images/zanting.png" />
+ 
+</view>
+<text>{{starttime}}</text>
+<text>{{duration}}</text>
+<view class="progress">
+
+ 
+
+ 
+<view class='slid'>
+ 
+<slider bindchange="sliderChange" block-size="12px" step="2" value="{{offset}}" max="{{max}}" class="slider" selected-color="#ff5e5e" />
+ 
+</view>
+ 
+
+ 
+</view>
+ 
+</view>

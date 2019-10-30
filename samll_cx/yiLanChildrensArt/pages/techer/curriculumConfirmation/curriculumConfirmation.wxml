@@ -1,0 +1,64 @@
+<view class='headers'>
+   <view class='headerTime'>时间：<text>周日（10:00——12:00）</text></view>
+   <view class='clearFlo'>
+   <view class='clearFlo fL'>
+   <view class='fL codeTit'>课程编号</view>
+      <view class='select_box fL'>
+        <view class='select' catchtap='selectTap'>
+          <text class='select_text'>{{selectData}}</text>
+          <image class='select_img {{show&&"select_img_rotate"}}' src='../../../images/indexImg/down.jpg' style='width:30rpx;height:25rpx;'></image>
+        </view>
+        <!-- <view class='option_box'>
+          <text class='option'   catchtap='optionTap'>{{item}}</text>
+        </view> -->
+      </view>
+</view>
+
+<view class='clearFlo fL'>
+   <view class='fL codeTit' style='margin-left:20rpx;'>课程内容</view>
+      <view class='select_box fL'>
+        <view class='select' catchtap='selectTap1'>
+          <text class='select_text'>{{selectData1}}</text>
+          <image class='select_img {{show1&&"select_img_rotate"}}' src='../../../images/indexImg/down.jpg' style='width:30rpx;height:25rpx;'></image>
+        </view>
+        <!-- <view class='option_box' style='height:{{show1?(selectData1.length>5?300:selectData1.length*60):0}}rpx;'>
+          <text class='option' style='{{index1==selectData1.length-1&&"border:0;"}}' wx:for='{{selectData1}}' wx:key='this' data-index='{{index1}}' catchtap='optionTap1'>{{item}}</text>
+        </view> -->
+      </view>
+    <view class='sumtion fL'  bindtap="powerDrawer1" data-statu="open">确认</view>
+      <!--mask-->  
+<view class="drawer_screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus}}"></view>  
+<!--content-->  
+<!--使用animation属性指定需要执行的动画-->  
+<view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}">  
+  
+  <!--drawer content-->  
+  <view class="drawer_title"></view>  
+  <view class="drawer_content">  
+    <view class='contDrwer' wx:for="{{classBegins.contentList}}" wx:key="{{index}}">{{item}}</view> 
+    <view class='tips' >{{classBegins.isSelect==1?"请重新选择课程内容！":'没有学生上过该课哦！'}}</view>
+    <view class="btn_ok" bindtap="powerDrawer" data-statu="close">OK</view>  
+  </view>  
+    </view> 
+</view>
+</view>
+</view>
+<view class='contents'>
+ <block>
+<view class='list' wx:for="{{studentList}}"  wx:key="{{index}}" wx:for-item="parentsId"  wx:for-index="idx" data-index="{{idx}}" >
+  <view class='name'>
+   {{parentsId.name}}
+    <view class='triangle'></view>
+  </view>
+  <view class='listContent'>
+  <view style='width:88%;margin:0 auto;' class='clearFlo' data-parentId='{{item.id}}'  >
+        <view class="btn  fL  {{item.select=='1'?'pinks':''}}" wx:for="{{parentsId.attendance}}" wx:key="{{index}}"  data-uniqueId='{{item.uniqueId}}'    id='{{item.id}}' data-index="{{index}}" bindtap='btns' data-indexs="{{idx}}" data-parentIds="{{parentsId.id}}">{{item.name}}</view>
+  </view>
+  <image src='../../../images/indexImg/goT.jpg' class='imgGo' bindtap='imgGoto'></image>
+  </view>
+</view>
+</block>
+</view>
+ <view class='footers' >提交</view>
+
+

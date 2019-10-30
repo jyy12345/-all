@@ -1,0 +1,95 @@
+<view class="content">
+   <view>
+      <view class="seach_top">
+         <view class="seach_box">
+             <text class="icon iconfont icon-search"></text>
+             <input type="text" value="{{search}}"  placeholder-class="pl_size" bindinput='getSearch_txt' bindconfirm="searchSubmit"></input>
+         </view>
+      </view>
+
+      <view class="nav_box">
+         <view class="nav_auto">
+            <text class="lets {{select?'seleBox':''}}" bindtap="selectbtn">出版社<text class="icon iconfont icon-xiajiantou"></text></text>
+            <text class="lets {{select1?'seleBox':''}}" bindtap="selectbtn1">作者<text class="icon iconfont icon-xiajiantou"></text></text>
+            <text class="lets {{select2?'seleBox':''}}" bindtap="selectbtn2">价格<text class="icon iconfont icon-xiajiantou"></text></text>
+            <text class="lets {{select3?'seleBox':''}}" bindtap="selectbtn3">读者<text class="icon iconfont icon-xiajiantou"></text></text>
+         </view>
+      </view>
+    <view class='elastic' hidden="{{!select}}">
+         <view class="elastic_box">
+           <view class="elastic_auto clearFlo">
+            <block wx:for="{{laber_press}}" wx:key='index'>
+              <text class="oneLin flL {{item.id==label_pressIds?'selectFont':''}}}" id="{{item.id}}" bindtap="label_pressId">{{item.title}}</text>
+            </block>
+           </view>
+            <view class="elastic_botom">
+               <text bindtap="reset_press">重置</text>
+               <text bindtap="det_press">确定</text>
+            </view>
+         </view>
+      </view>
+      <view class='elastic' hidden="{{!select1}}">
+         <view class="elastic_box">
+           <view class="elastic_auto clearFlo">
+             <block wx:for="{{laber_author}}" wx:key="index1">
+              <text class="oneLin flL {{item.id==label_authorIds?'selectFont':''}}" id="{{item.id}}" bindtap="label_authorId">{{item.title}}</text>
+             </block>
+           </view>
+            <view class="elastic_botom">
+               <text bindtap="reset_press1">重置</text>
+               <text bindtap="det_author">确定</text>
+            </view>
+         </view>
+      </view>
+      <view class='elastic' hidden="{{!select2}}" style="width:100%;">
+         <view class="elastic_box">
+           <view class="elastic_auto clearFlo" style="padding-top: 34rpx;">
+             <input type="text" placeholder="最低价格" value="{{semallPrice}}" bindinput="semallPrice"></input>
+             <text style="margin-right:5rpx;width:auto;display:inline-block;vertical-align: middle;margin-top:0;margin-left:5rpx;">——</text>
+             <input type="text" placeholder="最高价格" value="{{bigPrice}}" bindinput=" bigPrice"></input>
+           </view>
+            <view class="elastic_botom">
+               <text bindtap="jsCz">重置</text>
+               <text bindtap="jsbtn">确定</text>
+            </view>
+         </view>
+      </view>
+      <view class='elastic' hidden="{{!select3}}" style="width:100%;">
+         <view class="elastic_box">
+           <view class="elastic_auto clearFlo" style="padding-top: 34rpx;">
+            <block wx:for="{{readersList}}" wx:key="index">
+             <text id="{{item.id}}" class="{{item.id==readerss?'selectFont':''}}" bindtap="readers">{{item.title}}</text>
+            </block>
+           </view>
+            <view class="elastic_botom">
+               <text bindtap="reset_press2">重置</text>
+               <text bindtap="det_readerss">确定</text>
+            </view>
+         </view>
+      </view>
+      <view class="recommend">
+      <block wx:for="{{booksList.data}}" wx:key="index">
+        <view class="recommend_list clearFlo"  bindtap="detail" data-cateid="{{item.id}}">
+           <view class="list_left flL">
+              <image src="{{item.book_img}}"></image>
+           </view>
+           <view class="list_right flR">
+              <view class="twoLin title">{{item.book_name}}</view>
+              <view class="oneLin semmo">{{item.press}}</view>
+              <view class="clearFlo box_bottom">
+                 <view class="list_bottoms flL">
+                     <text>￥{{item.discount_price}}</text>
+                     <text>￥{{item.price}}</text>
+                 </view>
+                 <view class="rig_bottom flR" catchtap="gw" data-cateids="{{item.id}}">
+                   <text class="icon iconfont icon-gouwuche"></text>
+                 </view>
+              </view>
+           </view>
+        </view>
+        </block>
+
+      </view>
+   </view>
+</view>
+ 

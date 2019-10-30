@@ -1,0 +1,20 @@
+<movable-area style="top:0;bottom:0;height: 100%; width:100%; overflow:hidden;">
+  <movable-view direction="all" class='bgColor' catchtap="onScrt">
+  <image src='../../images/indexImg/shitBtn.jpg'></image>
+ </movable-view>
+
+<view class='uploadBox'>
+   <!-- <view class='fL myTo'>
+      <image src='../../images/indexImg/photo.jpg' class='adds'></image>
+      <view class='tit'>拍摄</view>
+   </view> -->
+     <view class=' myTo' catchtap='choice'>
+      <image src='../../images/indexImg/add.jpg' class='adds'></image>
+      <!-- <view class='tit'>相册</view> -->
+   </view>
+   <view class='imgstyrt'><view class='icon iconfont icon-jiufuqianbaoicon08 text' wx-if="{{imgShow}}" bindtap='removeImage'></view><image src='{{imgs}}' ></image></view>
+   <view class='upder' catchtap='updersUp'>上传</view>
+</view>
+ </movable-area>
+
+

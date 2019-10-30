@@ -1,0 +1,76 @@
+/* pages/mine/gradeInto/index.wxss */
+.gradeIntro{
+	width: 100%;
+	height: auto;
+	padding-bottom: 40rpx;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+.eachIntro{
+	width: 100%;
+	padding: 27rpx 30rpx 40rpx;
+	box-sizing: border-box;
+	overflow: hidden;
+	margin-top: 15rpx;
+	background: #fff;
+}
+.eachIntro .title{
+	width: 100%;
+	height: 56rpx;
+	line-height: 56rpx;
+	font-size: 30rpx;
+	color: #222;
+}
+.eachIntro .intros{
+	overflow: hidden;
+	display: flex;
+}
+.iLeft{
+	width: 64rpx;
+	position: relative;
+	margin-top: 17rpx;
+}
+.iLeft image{
+	width: 64rpx;
+	height: 64rpx;
+}
+.iLeft text{
+	width: 64rpx;
+	height: 64rpx;
+	line-height: 64rpx;
+	text-align: center;
+	font-size: 24rpx;
+	color: #fff;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.iRight{
+	width: 609rpx;
+	padding: 40rpx 0 40rpx 8rpx;
+	border-bottom: 1px solid #e0e0e0; 
+	box-sizing: border-box;
+	overflow: hidden;
+}
+.iRight .intro{
+	width: 520rpx;
+	font-size: 24rpx;
+	color: #666;
+	line-height: 40rpx;
+	display: -webkit-box;
+	-webkit-box-orient:vertical;
+	text-overflow: ellipsis;
+	overflow:hidden;
+  word-wrap:break-word;
+
+}
+.iRight image{
+	width: 51rpx;
+	height: 51rpx;
+}
+.hidden{
+	-webkit-line-clamp:1;
+}
+.unhidden{
+	-webkit-line-clamp:0;
+}

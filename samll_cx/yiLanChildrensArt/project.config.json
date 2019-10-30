@@ -1,0 +1,98 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.2.4",
+	"appid": "wx321791f0b4c25892",
+	"projectname": "%E9%A1%B9%E7%9B%AE2",
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": 1,
+			"list": [
+				{
+					"id": -1,
+					"name": "大师",
+					"pathName": "pages/masterWorks/masterWorks",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "enen",
+					"pathName": "pages/techer/classCadets/classCadets"
+				}
+			]
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 6,
+			"list": [
+				{
+					"id": -1,
+					"name": "活动安排",
+					"pathName": "pages/activityArrangement/activityArrangement",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "活动安排表单",
+					"pathName": "pages/activityArrangement/activityAp/activityAp",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "上传图片",
+					"pathName": "pages/upload/upload",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "宝贝作品",
+					"pathName": "pages/baby/studentWorks/studentWorks",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "积分明细",
+					"pathName": "pages/exchangeEdit/exchangeEdit",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "大师作品",
+					"pathName": "pages/masterWorks/masterWorks",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "11",
+					"pathName": "pages/upload/upload",
+					"scene": null
+				}
+			]
+		}
+	}
+}

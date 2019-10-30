@@ -1,0 +1,63 @@
+<import src="/pages/tabbar/tabbar.wxml"/>
+<template is="tabbar" data="{{tabbar}}"/>
+<movable-area style="top:0;bottom:0;height: 100%; width:100%; overflow:hidden;">
+  <movable-view direction="all" class='bgColor' catchtap="onScrt">
+  <image src='../../images/indexImg/shitBtn.jpg'></image>
+ </movable-view>
+<view style='width:100%'>
+  <view class="container">
+    <view class="tabBox">
+         <swiper 
+         current="{{currentTab}}" 
+         class="swiper-box" 
+         duration="300"  
+         bindchange="bindChange"
+         previous-margin="130rpx"
+         next-margin="130rpx"
+         >
+       <swiper-item class='filmItem'>
+           <view class='overText'>美史</view>
+           <view catchtap='history' class="gotO {{currentTab==0 ? 'kuang' : ''}}">
+           <image src='../../images/indexImg/meishi.jpg' mode="widthFix"></image></view>
+        </swiper-item>
+       
+        <swiper-item>
+            <view class='overText'>美史</view>
+               <view catchtap='history' class="gotO {{currentTab==1 ? 'kuang' : ''}}">
+           <image src='../../images/indexImg/meishi.jpg' mode="widthFix"></image></view>
+        </swiper-item>
+        <swiper-item>
+             <view class='overText'>美史</view>
+                <view catchtap='macic' class="gotO {{currentTab==2 ? 'kuang' : ''}}">
+           <image src='../../images/indexImg/meishi.jpg' mode="widthFix"></image></view>
+        </swiper-item>
+        <swiper-item>
+              <view class='overText'>美史</view>
+                 <view catchtap='history' class="gotO {{currentTab==3 ? 'kuang' : ''}}">
+           <image src='../../images/indexImg/meishi.jpg' mode="widthFix"></image></view>
+        </swiper-item>
+      </swiper>
+      <view class="swiper-tab">
+        <view style='width:100%;margin:0rpx auto;' class='clearFlo'>
+          <view class="swiper-tab-list  backIndex " data-current="0" bindtap="swichNav">
+          <view class="reidlo mL  {{currentTab==0 ? 'reidloSelect' : 'selected'}}"></view>
+          <view class='title'>美史</view>
+          </view>
+          <view class="swiper-tab-list " data-current="1" bindtap="swichNav">
+          <view class="reidlo mL  {{currentTab==1 ? 'reidloSelect' : 'selected'}}"></view>
+           <view class='title'>艺术家</view>
+          </view>
+          <view class="swiper-tab-list  " data-current="2" bindtap="swichNav">
+          <view class="reidlo mL  {{currentTab==2 ? 'reidloSelect' : 'selected'}}"></view>
+           <view class='title'>大师作品</view>
+          </view>
+          <view class="swiper-tab-list " data-current="3" bindtap="swichNav">
+          <view class="reidlo1  {{currentTab==3 ? 'reidloSelect' : 'selected'}}"></view>
+           <view class='title'>艺术小作品</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+ </movable-area>

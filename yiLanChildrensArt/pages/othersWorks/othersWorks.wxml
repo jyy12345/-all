@@ -1,0 +1,17 @@
+<view class='othersParent'>
+   <image src='../../images/indexImg/lala.jpg' class='others'></image>
+</view>
+<view style='width:81%;margin:30rpx auto;'>
+ <view class='othersTitle'>
+   以视觉的惯性将空间一直推向无限的广阔境界，不画地平线，而一直把金黄稻田推向画外去，越远越虚，造成无边无际的宏大之感，使人们心旷神怡。
+</view>
+</view>
+
+<view class='exhibition'>
+<view class='imgBox'>
+   <image src='../../images/indexImg/imgcp1.jpg' class='cpImg' catchtap='imgGo'></image>
+    <image src='../../images/indexImg/imgcp2.jpg' class='cpImg'></image>
+     <image src='../../images/indexImg/imgcp3.jpg' class='cpImg'></image>
+      <image src='../../images/indexImg/imgcp4.jpg' class='cpImg'></image>
+   </view>
+</view>

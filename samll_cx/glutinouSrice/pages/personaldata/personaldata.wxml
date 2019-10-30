@@ -1,0 +1,57 @@
+<view>
+   <view class="register">
+      <view class="register_child auto">
+          <!-- <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" > -->
+            <view class="clearFlo pd_inp" bindtap="uploadAvator">
+                <view class="flL" style="line-height:125rpx;">头像</view>
+                 <view class="icon iconfont icon-arrowRight flR  jt_cs" style="font-size:40rpx;margin-top: 35rpx;"></view>
+               <view class="picker flR" style="width:auto;">
+                  <image src="{{avator}}"></image>
+                </view>
+            </view>
+          <!-- </picker> -->
+          <view class="clearFlo pd_inp">
+                <view class="flL">手机号</view>
+                <view class="picker flL">
+                  <input type="text"  placeholder="请输入手机号" value="{{inform.mobile}}"></input>
+                </view>
+               
+          </view>
+          <picker bindchange="bindPickerChange"  range="{{array}}"   range-key="{{'title'}}" value="{{array[pindex].id}}">
+          <view class="clearFlo pd_inp">
+                <view class="flL">所属图书馆</view>
+               <view class="picker flL" style="width:auto;">
+                  <input type="text" value="{{array[pindex].title}}"  placeholder="请选择"></input>
+                </view>
+               <view class="icon iconfont icon-arrowRight flR  jt_cs" style="font-size:40rpx;"></view>
+          </view>
+            </picker>
+          <view class="clearFlo pd_inp" bindtap="bdReaderscard">
+                <view class="flL">读书者卡号</view>
+                <view class="picker flL">
+                  <text>绑定读书者卡号</text>
+                </view>
+                  <view class="icon iconfont icon-arrowRight flR  jt_cs" style="font-size:40rpx;"></view>
+          </view>
+           <view class="clearFlo pd_inp" style="border:none;">
+                <view class="flL">书点</view>
+                <view class="picker flL">
+                  <input type="text" placeholder="请输入书点" value="{{inform.shudian}}点"></input>
+                </view>
+          </view>
+          
+      </view>
+   </view>
+   <view class="register">
+      <view class="register_child auto">
+   <view class="clearFlo pd_inp" style="margin-top:15rpx;" bindtap="goAddress">
+                <view class="flL">我的地址</view>
+                <view class="picker flL">
+                  <!-- <input type="text" placeholder="请输入书点" value="1200点"></input> -->
+                </view>
+                  <view class="icon iconfont icon-arrowRight flR  jt_cs" style="font-size:40rpx;"></view>
+          </view>
+          </view>
+          </view>
+   <view class="regi_btn" bindtap="successBtn">保存</view>
+</view>

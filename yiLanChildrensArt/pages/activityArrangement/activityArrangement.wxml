@@ -1,0 +1,16 @@
+<import src="/pages/tabbar/tabbar.wxml"/>
+<template is="tabbar" data="{{tabbar}}"/>
+<movable-area style="top:0;bottom:0;height: 100%; width:100%; overflow:hidden;">
+  <movable-view direction="all" class='bgColor' catchtap="onScrt">
+  <image src='../../images/indexImg/shitBtn.jpg'></image>
+ </movable-view>
+
+<view style='width:100%'>
+  <!-- <view class='xmBack'>
+  <view class='semmllMao'></view>
+  </view> -->
+  <view class='curriculum imgBox' catchtap='curriculum'style='margin-top:530rpx;'></view>
+  <view class='special imgBox' catchtap='special'></view>
+  <view class='examination imgBox' catchtap='examination'></view>
+</view>
+ </movable-area>

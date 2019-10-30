@@ -1,0 +1,17 @@
+<block wx:key="zhuantList" wx:for="{{zhuanList}}" wx:for-index="index">
+<view class='information' bindtap='goInfromDetail' data-Infrom="{{item.id}}" data-zhuanTid="{{item.sid}}">
+  <view class='infCen'>
+    <view class='infCenLeft' wx:if="{{item.img}}">
+      <image src="{{item.img?imgUrls+item.img:item.img}}"  mode="aspectFill" ></image>
+    </view>
+    <view class='infCenRight'>
+      <view class='infCenRightTop'>{{item.title}}</view>
+      <view class='infCenRightBot'>
+        <text>{{item.source}}</text>
+        <text>{{item.statrtime}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+</block>
+<view style='width:100%;height:20rpx;float:left'></view>

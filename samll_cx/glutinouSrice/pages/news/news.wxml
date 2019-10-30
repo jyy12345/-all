@@ -1,0 +1,53 @@
+<view class="news">
+   <view class="auto">
+    <view class="nav">
+       <text>系统通知</text>
+       <text class="select">物流通知</text> 
+    </view>
+    <view class="news_list">
+      <view class="new_child">
+          <view class="top clearFlo">
+              <view class="flL">商品已发货</view>
+              <view class="icon iconfont icon-arrowRight flR"></view>
+          </view>
+          <view class="news_content">
+              您服务单593311338上的图书商品《坏血：“女版乔布斯”如何利用欲望和贪婪打造出硅谷商业神话 》已成功发货，发货订单号：S
+          </view>
+      </view>
+    </view>
+    <view class="news_list">
+      <view class="new_child">
+          <view class="top clearFlo">
+              <view class="flL">商品已发货</view>
+              <view class="icon iconfont icon-arrowRight flR"></view>
+          </view>
+          <view class="news_content">
+              您服务单593311338上的图书商品《坏血：“女版乔布斯”如何利用欲望和贪婪打造出硅谷商业神话 》已成功发货，发货订单号：S
+          </view>
+      </view>
+    </view>
+    <view class="news_list">
+      <view class="new_child">
+          <view class="top clearFlo">
+              <view class="flL">商品已发货</view>
+              <view class="icon iconfont icon-arrowRight flR"></view>
+          </view>
+          <view class="news_content">
+              您服务单593311338上的图书商品《坏血：“女版乔布斯”如何利用欲望和贪婪打造出硅谷商业神话 》已成功发货，发货订单号：S
+          </view>
+      </view>
+    </view>
+    <view class="news_list">
+      <view class="new_child">
+          <view class="top clearFlo">
+              <view class="flL">商品已发货</view>
+              <view class="icon iconfont icon-arrowRight flR"></view>
+          </view>
+          <view class="news_content">
+              您服务单593311338上的图书商品《坏血：“女版乔布斯”如何利用欲望和贪婪打造出硅谷商业神话 》已成功发货，发货订单号：S
+          </view>
+      </view>
+    </view>
+</view> 
+</view>
+

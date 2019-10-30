@@ -1,0 +1,35 @@
+<import src="/pages/tabbar/tabbar.wxml"/>
+<template is="tabbar" data="{{tabbar}}"/>
+<movable-area style="top:0;bottom:0;height: 100%; width:100%; overflow:hidden;">
+  <movable-view direction="all" class='bgColor' catchtap="onScrt">
+  <image src='../../images/indexImg/shitBtn.jpg'></image>
+ </movable-view>
+
+<view class='masterBox'>
+  <view class='ouTo'>
+    <view class='works'>
+      <view class='imgWo' data-bindex='0' catchtap='imgGo' data-audioUrl="{{contentData.masterWorksDetailList[0].audioUrl}}"  id='{{contentData.masterWorksDetailList[0].desc}}'>
+        <image src='{{contentData.masterWorksDetailList[0].imgUrl}}' ></image>
+      </view>
+      <view class='titlebox'>
+        <view class='smallTitle'>{{contentData.masterWorksDetailList[0].desc}}</view>
+        <view class='bigTitle'>{{contentData.masterWorksDetailList[0].title}}</view>
+      </view>
+    </view>
+    <view style='margin-top:40rpx;'></view>
+    <!-- <scroll-view scroll-y="true" style="height: 550rpx "> -->
+    <block wx:for="{{contentData.masterWorksDetailList}}" wx:for-index="bindex" >
+        <view class='listWork clearFlo' data-audioUrl='{{item.audioUrl}}' data-bindex='{{bindex}}' id="{{item.id}}" bindtap='imgGo'>
+      <view class='imBj fL'>
+        <image src='{{item.imgUrl}}'></image>
+      </view>
+      <view class='fL'>
+        <view class='smallTitle' style='margin-top:20rpx;'>{{item.desc}}</view>
+        <view class='bigTitle'>{{item.title}}</view>
+      </view>
+    </view>
+    </block>
+    <!-- </scroll-view> -->
+  </view>
+</view>
+ </movable-area>

@@ -1,0 +1,33 @@
+<view class="banner-box wrap">
+  <swiper class="swiper" indicator-dots="true" autoplay="true" indicator-color="rgba(255,255,255,0.4)" indicator-active-color="rgba(255,255,255,1)" circular='true' interval="3000" duration="1000">
+    <block wx:key="unique" wx:for="{{slider}}" wx:for-index="index">
+      <swiper-item>
+        <block wx:if="{{item.pic}}">
+          <image src="{{imgUrls+item.pic}}"  mode="aspectFill" ></image>
+        </block>
+        <block wx:else>
+          <!-- <image src="../../images/index/wutu.jpg" mode="aspectFill"/> -->
+        </block>
+        <navigator class="nav-item" url="../detail/index" hover-class="other-navigator-hover"><image src="../../images/index/banerbot.png" mode="aspectFill" class='banerbot'></image></navigator>
+        <text>{{item.subject}}</text>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<block wx:key='specialIndex' wx:for='{{specialList}}' wx:for-index='index1'>
+<navigator url="subject/index?ids={{item.id}}" hover-class="none" id='{{item.id}}'>
+  <view class='infor'>
+    <view class='inforTop'>
+      <image src="{{imgUrls+item.pic}}"  mode="aspectFill" ></image>
+    </view>
+    <view class='inforBot'>
+      <text>{{item.title}}</text>
+    </view>
+    <view class='jingxuan'>精选</view>
+  </view>
+</navigator>
+</block>
+
+<view style='width:100%;height:20rpx;float:left'></view>
+
+  

@@ -1,0 +1,60 @@
+<!--pages/cart/goodsDetail/index.wxml-->
+<view class="courseDetail">
+	<view class="boxShadow topCont">
+		<swiper class="banner" indicator-dots="true" indicator-color="rgba(250, 250, 250, .8)" indicator-active-color="#20cfa0">
+      <swiper-item wx:for="{{goodsDetailData.images}}">
+        <image class="" src="{{imgUrl+item}}"></image>
+      </swiper-item>
+    </swiper>
+		<view class="courseCont">
+			<view class="fl cLeft">
+				<text class="title">{{goodsDetailData.name}}</text>
+				<text class="intro">{{goodsDetailData.abstract}}</text>
+			</view>
+			<view class="fr price">
+				<text class="fl rmb">¥</text>
+        {{goodsDetailData.price}}
+			</view>
+		</view>
+	</view>
+	<!-- 内容 -->
+	<view class="botCont">
+		<view class='topTabBar'>
+			<view class='fl tab {{menuTapCurrent == 0 ? "tabAfter" : ""}}'  data-current = "0" bindtap='menuTap'>
+				商品详情
+				<block wx:if="{{menuTapCurrent == 0}}">
+					<view class="lLine"></view>
+				</block>
+				<block wx:else>
+					<view class="wLine"></view>
+				</block>
+			</view>
+			<view class='fl tab {{menuTapCurrent == 1 ? "tabAfter" : ""}}'  data-current = "1" bindtap='menuTap'>
+				购买须知
+				<block wx:if="{{menuTapCurrent == 1}}">
+					<view class="lLine"></view>
+				</block>
+				<block wx:else>
+					<view class="wLine"></view>
+				</block>
+			</view>
+		</view>
+		<view class="intros">
+			<!-- 课程介绍 -->
+			<view  hidden="{{menuTapCurrent!='0'}}" class="eachCont">
+				<rich-text class="intros" nodes="{{goodsDetailData.introduce}}">
+					
+				</rich-text>
+			</view>
+			<!-- 购买须知 -->
+			<view hidden="{{menuTapCurrent!='1'}}" class="eachCont">
+				<rich-text class="buyNeed" nodes="{{goodsDetailData.buynotice}}">
+					
+				</rich-text>
+			</view>
+		</view>
+	</view>
+  <view style='width:100%;height:95rpx;'></view>
+  <view class="button buy" data-id="{{goodsDetailData.id}}" bindtap='buy'>立即购买</view>
+</view>
+

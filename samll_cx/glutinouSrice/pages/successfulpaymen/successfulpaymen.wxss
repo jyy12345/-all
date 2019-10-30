@@ -1,0 +1,28 @@
+.success_box{width: 100%;text-align: center;background: white;padding: 50rpx 0 40rpx 0;}
+.success_icon{font-size: 80rpx;color:#07c377;margin-bottom: 10rpx;}
+.price_text{font-size: 28rpx;color:#000000;}
+.price_text text{font-weight: 600;}
+.btns{width: 258rpx;height: 58rpx;border: 1px solid #b5b5b5;color:#000000;font-size: 28rpx;text-align: center;display: inline-block;line-height: 58rpx;margin-right: 30rpx;margin-top: 30rpx;}
+.remind{color:#eaa223;font-size: 24rpx;background: #fff6e6;padding: 20rpx;line-height: 38rpx;}
+/* 好书推荐 */
+.nice_book{width: 100%;margin-top: 41rpx;padding-bottom: 19rpx;}
+.nice_bookChil{padding-top: 41rpx;}
+.back_color{background: white;}
+.nice_title{font-size: 32rpx;color: #353535;position: relative;padding-left: 30rpx;}
+.nice_title::after{content:'';width: 12rpx;height: 33rpx;background: red;display: block;position: absolute;left: 0;top: 8rpx;border-radius: 40rpx;}
+.book_del{text-decoration:line-through;color: #999999;}
+.img_box {text-align: center;}
+.img_box image{width: 118rpx;height: 164rpx;}
+.book_list{width: 33%;background: white;margin-top: 24rpx;padding: 25rpx 0;border:1px solid #f7f7f7;}
+.book_list:nth-child(2n){border-right: none;}
+.nice_gd{font-size: 24rpx;color:#353535;}
+.list_parent{display: flex;justify-content: space-between;}
+.book_title{ margin: 0 auto;   margin-top: 43rpx;line-height: 15px;font-size: 24rpx;color: #555555; width: 90%;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2;overflow: hidden;}
+.nice_auto{width: 94%;margin: 0 auto;}
+.book_price{font-size: 26rpx;color:#e9222b;}
+.book_del{font-size: 20rpx;color:#999999;margin-left: 10rpx;}
+.settlement{width: 96%;padding: 20rpx 20rpx;background: white;margin-top:20rpx; position: fixed;bottom: 0;left: 0;}
+.settlement_btn{width: 200rpx;height: 76rpx;background: #e9222b;color: white;font-size: 28rpx;line-height: 76rpx;text-align: center;border-radius: 50rpx;}
+.tit{font-size: 30rpx;}
+.tits1{margin-left: 30rpx;}
+.radio1{margin-top: 20rpx;}

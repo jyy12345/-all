@@ -1,0 +1,23 @@
+
+<view class="container">
+    <view class="auto">
+         <view class=" back_color" style="margin-top:20rpx;">
+            <view class="">
+            <view class="list_parent clearFlo best_seller" style="display:block">
+              <block wx:for="{{browse}}" wx:key="*this">
+                <view class="book_list flL">
+                    <view class="img_box">
+                      <image src="{{item.book_img}}"></image>
+                    </view>
+                    <view class="book_title">{{item.book_name}}</view>
+                    <view class="socus">
+                      <text class="book_price">{{item.discount_price}}</text>
+                      <text class="book_del">{{item.price}}</text>
+                    </view>
+                </view>
+                </block>
+            </view>
+          </view>
+        </view>
+    </view>
+</view>

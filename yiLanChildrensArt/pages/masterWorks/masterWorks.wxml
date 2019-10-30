@@ -1,0 +1,69 @@
+<import src="/pages/tabbar/tabbar.wxml"/>
+<template is="tabbar" data="{{tabbar}}"/>
+<movable-area style="top:0;bottom:0;height: 100%; width:100%; overflow:hidden;">
+  <movable-view direction="all" class='bgColor' catchtap="onScrt">
+  <image src='../../images/indexImg/shitBtn.jpg'></image>
+ </movable-view>
+
+<view class='masterBox'>
+  <view class='ouTo'>
+    <view class='works'>
+      <view class='imgWo' catchtap='imgGo'>
+        <image src='../../images/indexImg/bigImg.jpg' mode="widthFix"></image>
+      </view>
+      <view class='titlebox'>
+        <view class='smallTitle'>米勒的经典油画</view>
+        <view class='bigTitle'>拾穗者</view>
+      </view>
+    </view>
+    <view style='margin-top:40rpx;'></view>
+    <!-- <scroll-view scroll-y="true" style="height: 550rpx "> -->
+        <view class='listWork clearFlo'>
+      <view class='imBj fL'>
+        <image src='../../images/indexImg/imert.jpg'></image>
+      </view>
+      <view class='fL'>
+        <view class='smallTitle' style='margin-top:20rpx;'>又名柏树和星空，梵高最为世人所熟知的作品</view>
+        <view class='bigTitle'>星夜</view>
+      </view>
+    </view>
+        <view class='listWork clearFlo'>
+      <view class='imBj fL'>
+        <image src='../../images/indexImg/imert.jpg'></image>
+      </view>
+      <view class='fL'>
+        <view class='smallTitle' style='margin-top:20rpx;'>又名柏树和星空，梵高最为世人所熟知的作品</view>
+        <view class='bigTitle'>星夜</view>
+      </view>
+    </view>
+        <view class='listWork clearFlo'>
+      <view class='imBj fL'>
+        <image src='../../images/indexImg/imert.jpg'></image>
+      </view>
+      <view class='fL'>
+        <view class='smallTitle' style='margin-top:20rpx;'>又名柏树和星空，梵高最为世人所熟知的作品</view>
+        <view class='bigTitle'>星夜</view>
+      </view>
+    </view>
+        <view class='listWork clearFlo'>
+      <view class='imBj fL'>
+        <image src='../../images/indexImg/imert.jpg'></image>
+      </view>
+      <view class='fL'>
+        <view class='smallTitle' style='margin-top:20rpx;'>又名柏树和星空，梵高最为世人所熟知的作品</view>
+        <view class='bigTitle'>星夜</view>
+      </view>
+    </view>
+        <view class='listWork clearFlo'>
+      <view class='imBj fL'>
+        <image src='../../images/indexImg/imert.jpg'></image>
+      </view>
+      <view class='fL'>
+        <view class='smallTitle' style='margin-top:20rpx;'>又名柏树和星空，梵高最为世人所熟知的作品</view>
+        <view class='bigTitle'>星夜</view>
+      </view>
+    </view>
+    <!-- </scroll-view> -->
+  </view>
+</view>
+ </movable-area>

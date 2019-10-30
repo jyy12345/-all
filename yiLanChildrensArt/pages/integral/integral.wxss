@@ -1,0 +1,56 @@
+@import "/pages/tabbar/tabbar.wxss";
+page{
+  background:#f1fdf1;
+}
+.table {
+  border: 0px;
+  height: 100%;
+}
+.tr {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+ height: 44rpx;
+  align-items: center;
+  padding-top: 100rpx;
+}
+.td {
+    width:40%;
+    justify-content: center;
+    text-align: center;
+     color: #81A77D ;
+      font-size: 31rpx;
+      height: 44rpx;
+}
+.th {
+  width: 40%;
+  justify-content: center;
+  color: #81A77D ;
+  display: flex;
+  height: 44rpx;
+  align-items: center;
+  font-size: 31rpx;
+}
+.right{
+  width: 100%;
+  padding: 300rpx 0 150rpx 450rpx;
+}
+.right text{
+  width: 185rpx;
+   height: 44rpx;
+  color: #81A77D ;
+  font-size: 31rpx; 
+}
+.btn{
+  width: 227rpx;
+  height: 81rpx;
+  color:  #81A77D;
+  font-size: 31rpx;
+  margin: 0 auto;
+  border-radius: 30rpx;
+  border: none;
+}
+.img{
+  width: 66rpx;
+  height: 46rpx;
+}

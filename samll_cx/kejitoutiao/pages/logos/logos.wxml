@@ -1,0 +1,13 @@
+  <view class='denglu'>
+  <text class="toutiao">科技头条</text>
+  <form>
+    <input placeholder="账号" type='text' value="{{account}}" name="no" bindinput='names'/>
+    <!-- <input placeholder='手机号' type='text' value='{{phoneCod}}' /> 
+    <button class='getphoneNum' open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">获取手机号</button> -->
+    <input placeholder="密码" password='{{isShowPassword}}' style='margin-top:10rpx;' name="pwd" bindinput='passwords'/>
+    <view class='eye' bindtap='eye'>
+      <image src="../../images/index/eye.png"  mode="aspectFill"></image>
+    </view>
+    <button type='primary' bindtap='formSubmit'>登录</button>
+  </form>
+</view>

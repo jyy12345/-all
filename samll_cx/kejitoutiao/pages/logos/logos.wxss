@@ -1,0 +1,45 @@
+page{
+  background: #f8f8f8;
+}
+.denglu{
+  width: 80%;
+  height: 350rpx;
+  margin:130rpx auto;
+  position: relative;
+}
+.toutiao{
+  display: block;
+  font-size: 50rpx;
+  width: 100%;
+  text-align: center;
+  color:#0081d2;
+  margin-bottom: 30rpx;
+}
+.denglu input{
+  width: 98%;
+  padding-left: 2%;
+  height: 100rpx;
+  border-bottom: 1rpx solid #e1e1e1;
+  color:#888888;
+  font-size:30rpx;
+}
+form button{
+  background: #0081d2 !important;
+  margin-top: 20px;
+}
+.getphoneNum{width: 32%;font-size: 25rpx;color: white;position: absolute;
+  right:0rpx;
+  top:176rpx;z-index: 99;}
+.eye{
+  width: 55rpx;
+  height: 45rpx;
+  position: absolute;
+  right:0rpx;
+  top:237rpx;
+  /* top:337rpx; */
+  z-index: 99;
+}
+.eye image{
+  width: 55rpx;
+  height: 45rpx;
+}

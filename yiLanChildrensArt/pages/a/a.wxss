@@ -1,0 +1,74 @@
+/*开关背景颜色 */
+ 
+.audiosBox{
+ 
+height: 100px;
+ 
+display: flex;
+ 
+justify-content: center;
+ 
+background: #FFA000;
+ 
+margin-top: 10px;
+ 
+}
+ 
+/*按钮大小 */
+ 
+.audioOpen{
+ 
+width: 50px;
+ 
+height: 50px;
+ 
+border: 2px solid #FFFFFF;
+ 
+border-radius: 50%;
+ 
+display: flex;
+ 
+align-items: center;
+ 
+justify-content: center;
+ 
+margin-right: 10px;
+ 
+}
+ 
+image{
+ 
+width: 50rpx;
+ 
+height: 50rpx;
+ 
+}
+ 
+.image2{
+ 
+margin-left: 10%;
+ 
+}
+ 
+/*进度条长度 */
+ 
+.slid{
+ 
+width: 200px;
+ 
+}
+ 
+/*横向布局 */
+ 
+.progress{
+ 
+display: flex;
+ 
+align-items: center;
+ 
+color: #FFFFFF;
+ 
+font-size: 26rpx;
+ 
+}
+ 

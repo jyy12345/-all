@@ -1,0 +1,32 @@
+<import src="/pages/tabbar/tabbar.wxml"/>
+<template is="tabbar" data="{{tabbar}}"/>
+<view class="table">
+  <view class="tr bg-w">
+    <view class="th"> 奖品</view>
+    <view class="th">内容</view>
+    <view class="th ">积分</view>
+    <view class="th ">兑换</view>
+  </view>
+  <view class="tr bg-g">
+    <view class="td">课外写生</view>
+    <view class="td">课外写生</view>
+    <view class="td">800</view>
+    <view class="td">
+      <image src='../../images/indexImg/btns.jpg' class='img'></image>
+    </view>
+  </view>
+  <view class="tr">
+    <view class="td">参加展览</view>
+    <view class="td"></view>
+    <view class="td"></view>
+    <view class="td">
+       <image src='../../images/indexImg/btn.jpg' class='img'></image>
+    </view>
+  </view>
+</view>
+<view class='right'>
+  <text>剩余积分100</text>
+</view>
+<view>
+  <button class='btn'>确认</button>
+</view>

@@ -1,0 +1,42 @@
+<import src="/pages/tabbar/tabbar.wxml"/>
+<template is="tabbar" data="{{tabbar}}"/>
+<view class='topContent'>
+
+<view class="swiper-container">
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{duration}}" current="{{swiperCurrent}}" bindchange="swiperChange" class="swiper">
+  <block>
+  
+      <swiper-item class="clearFlo" wx:for="{{babytData.workList}}">
+      <view  style='width:91%;margin:0 auto;'>
+          <view class=' clearFlo fL my-lefts' wx:for="{{item}}" style='display: inline-block'>
+              <view class='fL  contClind' catchtap='workStavi' id='{{item.id}}'>
+              <image src='{{item.imgUrl}}'  class='workImg'></image>
+              <view class='contTitle'>{{item.workName}}</view>
+              </view>
+          </view>
+          </view>
+      </swiper-item>
+      </block>
+  </swiper>
+
+</view>
+  <view class='leftBtn'  bindtap="swiperClickleft"><image src='{{babytData.backOffImg}}'></image></view>
+    <view class='rightBtn' bindtap="swiperClickright"><image src='{{babytData.forwardImg}}'></image></view>
+</view>
+<view class='bottomContent'>
+  <view class='make'>
+    <image src='../../../images/indexImg/works.jpg' class='makeImg'></image>
+  </view>
+   <view class='autos'>
+    <view class='clearFlo box'>
+    <block wx:for="{{babytData.bottomImgList}}">
+      <view class='fL piaoBox'>
+      <view class='clearFlo' catchtap='commingSong' id="{{item.id}}">
+          <image src='{{item.imgUrl}}' class='jinImg fL' ></image>   
+         <view  class='jinTitle fL'>{{item.title}}</view>
+      </view>
+      </view>
+      </block>
+   </view>
+</view>
+</view>

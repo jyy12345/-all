@@ -1,0 +1,16 @@
+<import src="/pages/tabbar/tabbar.wxml"/>
+<template is="tabbar" data="{{tabbar}}"/>
+<view class='headerTop'>
+ <image src='../../../images/indexImg/03-1stuendimg.jpg'></image>
+ <view class='names'>小猫猫</view>
+</view>
+<view class='content'>
+  <view class='dataTit'>生日：<text>2007年1月21日</text></view>
+  <view class='dataTit'>入学时间：<text>2007年1月21日</text></view>
+  <view class='dataTit'>授课老师：<text>张老师</text></view>
+   <view class='dataTit'>上课时间：<text>每周二4:30</text></view>
+    <view class='dataTit'>课时：<text>40 节</text></view>
+    <view class='dataTit'>课卡有效期：<text>2018年12月4日</text></view>
+    <view class='dataTit'>剩余课时：<text class='sumBox'>38</text> 节</view>
+    <view class='dataTit'>需补课时：<text class='sumBox'>02</text> 节</view>
+</view>

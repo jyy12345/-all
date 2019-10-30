@@ -1,0 +1,11 @@
+<view>
+  <input class="search" value="{{search_txt}}" placeholder="请输入关键字" bindinput='getSearch_txt' bindconfirm="searchSubmit"></input>
+  <view class="auto">
+    <view class="search_title">热门搜索</view>
+    <view class="re_search">
+      <block wx:for="{{laber}}" wx:key="index">
+       <text id="{{item.label_id}}" bindtap="label_id">{{item.label_name}}</text>
+      </block>
+    </view>
+  </view>
+</view>

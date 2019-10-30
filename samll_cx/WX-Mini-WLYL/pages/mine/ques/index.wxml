@@ -1,0 +1,11 @@
+<!--pages/mine/ques/index.wxml-->
+<view class="boxShadow eachQues" wx:for="{{quesListData}}">
+	
+	<view class="fl title">
+    <view class="fl num">{{index+1}}</view>
+    <view class='fl tit'>{{item.title}}</view>
+    
+  </view>
+	<view class="fl content">{{item.content}}</view>
+</view>
+  

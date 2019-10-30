@@ -1,0 +1,78 @@
+.headers{width: 100%;background-color:#E4A4A4; padding: 34rpx 0 30rpx 0;}
+.headerTime{text-align: center;font-size: 30rpx;color: #fff;}
+.codeTit{color: #fff;font-size: 30rpx;margin: 40rpx 0 0 53rpx;}
+.select_box{
+  color:black;
+  background: #fff;
+  width: 163rpx;
+  position: relative;
+  border-radius: 10rpx;
+  margin: 30rpx 0 0 30rpx;
+}
+.select{
+  box-sizing: border-box;
+  width: 100%;
+  height: 70rpx;
+  /* border:1px solid #efefef; */
+  border-radius: 8rpx;
+  display: flex;
+  align-items: center;
+  padding: 0 20rpx;
+}
+.select_text{
+  font-size: 30rpx;
+  line-height: 57rpx;
+  flex: 1;
+}
+.select_img{
+  width: 40rpx;
+  height: 40rpx;
+  display: block;
+  transition:transform 0.3s;
+}
+.select_img_rotate{
+  transform:rotate(180deg); 
+}
+.option_box{
+  position: absolute;
+  top: 75rpx;
+  width: 100%;
+  /* border:1px solid #efefef; */
+  box-sizing: border-box;
+  height: 0;
+  overflow-y: auto;
+  border-top: 0;
+  background: #fff;  
+  border-radius: 10rpx;
+  transition: height 0.3s;
+}
+.option{
+  display: block;
+  line-height:57rpx;
+  font-size: 30rpx;
+  /* border-bottom: 1px solid #efefef; */
+  padding: 10rpx;
+}
+/* 信息 */
+.list:nth-child(1){margin-top: 45rpx}
+.list{position: relative;margin: 75rpx 0 0 40rpx;}
+.listContent{width: 643rpx;height: 106rpx;box-shadow: rgb(236, 237, 238) 1px 1px 1px 2px;margin-left: 20rpx;background: #fff;}
+.name{width: 134rpx;height:62rpx;background: #AEB7D9;font-size: 28rpx;color: #fff;border-top-right-radius: 50rpx;border-bottom-right-radius: 50rpx;line-height: 62rpx;text-align: center;position: absolute;left: -10rpx; top:-40rpx;}
+.btn:nth-child(1){border: 1px solid #bcc3df;background: #dde1ef;color: #b0b9da;}
+.btn:nth-child(2){border: 1px solid #a8d5f1;background: #daedf9;color: #bbdef4;}
+.btn:nth-child(3){border: 1px solid #ef8b8b;background: #f4dbdb;color: #ec7171;}
+.btn{width: 167rpx;height: 63rpx;font-size: 28rpx;text-align: center;line-height: 63rpx;border-radius:10rpx;
+margin-top: 25rpx;}
+.active{background: red;}
+.btn:nth-child(2){margin-left: 27rpx;}
+.btn:nth-child(3){margin-left: 27rpx;}
+.triangle{
+    width: 0;
+    height: 0;
+    border-width: 7px;
+    border-style: solid;
+    border-color: #8A91AB #8A91AB transparent transparent;
+  }
+
+.fL{float: left;}
+.fR{float: right;}

@@ -1,0 +1,22 @@
+{
+  "pages": [
+    "pages/healthself/healthself",
+    "pages/playleading/playleading",
+    "pages/scienceCamp/scienceCamp",
+    "pages/index/index",
+    
+    "pages/logs/logs"
+    
+    
+    
+    
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#3577f1",
+    "navigationBarTitleText": "喜爱健康",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json"
+}

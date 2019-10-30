@@ -1,0 +1,125 @@
+<!--pages/mine/coach/index.wxml-->
+<view class="editCoachMes">
+	<view class="boxShadow mesCont perMes">
+		<view class="headImg">
+			<image class="" src="/image/index/head_03.png" />
+		</view>
+		<view class="mes name">
+			姓名
+			<input class='fr' value='张先森' placeholder="请填写昵称" auto-focus />
+		</view>
+		<view class="mes age">
+			教龄
+			<text class="">8年</text>
+		</view>
+		<view class="mes email">
+			邮箱
+			<input type="idcard" class='fr' value="12306.com" placeholder="请输入邮箱" />
+		</view>
+		<view class="mes tel">
+			绑定手机号
+			<text class="" selectable="false" space="false" decode="false">12345678966</text>
+		</view>
+	</view>
+	<view class="boxShadow mesCont coachGrade">
+		<view class="myGrade">
+			<view class="fl titLeft">
+				我的评级
+				<text class="doubt" bindtap='checkGrade'>?</text>
+			</view>
+			<view class="fr upgrade">
+				立即升级
+			</view>
+		</view>
+		<view class="gType ">
+			<text class="fl">专业水平</text>
+			<block wx:if="{{}}">
+				
+			</block>
+			<image class="fl" src="../../../image/mine/star1.png"></image>
+			<image class="fl" src="../../../image/mine/star1.png"></image>
+			<image class="fl" src="../../../image/mine/star1.png"></image>
+			<image class="fl" src="../../../image/mine/star1.png"></image>
+			<image class="fl" src="../../../image/mine/star.png"></image>
+		</view>
+		<view class="gType ">
+			<text class="fl">PT康复</text>
+			<block wx:if="{{}}">
+				
+			</block>
+			<image class="fl" src="../../../image/mine/star1.png"></image>
+			<image class="fl" src="../../../image/mine/star1.png"></image>
+			<image class="fl" src="../../../image/mine/star1.png"></image>
+			<image class="fl" src="../../../image/mine/star1.png"></image>
+			<image class="fl" src="../../../image/mine/star.png"></image>
+		</view>
+		<view class="gType ">
+			<text class="fl">TMT医学</text>
+			<block wx:if="{{}}">
+				
+			</block>
+			<image class="fl" src="../../../image/mine/star1.png"></image>
+			<image class="fl" src="../../../image/mine/star1.png"></image>
+			<image class="fl" src="../../../image/mine/star1.png"></image>
+			<image class="fl" src="../../../image/mine/star1.png"></image>
+			<image class="fl" src="../../../image/mine/star.png"></image>
+		</view>
+		<view class="gType ">
+			<text class="fl">爱心公益</text>
+			<block wx:if="{{}}">
+				
+			</block>
+			<image class="fl" src="../../../image/mine/heart1.png"></image>
+			<image class="fl" src="../../../image/mine/heart1.png"></image>
+			<image class="fl" src="../../../image/mine/heart1.png"></image>
+			<image class="fl" src="../../../image/mine/heart1.png"></image>
+			<image class="fl" src="../../../image/mine/heart.png"></image>
+		</view>
+	</view>
+	<view class="boxShadow mesCont good" bindtap='showFrame'>
+		<view class="titlt goodTit">
+			擅长
+		</view>
+		<view class="goodCont">
+			<text class="">美型塑体</text>
+			<text class="">减脂增肌</text>
+		</view>
+	</view>
+	<view class="boxShadow mesCont coachPic">
+		<view class="titlt picTit">
+			教练图片
+		</view>
+		<view class="pics">
+			<image class="" src="../../../image/index_36.jpg"></image>
+			<image class="" src="../../../image/index_36.jpg"></image>
+			<image class="" src="../../../image/index_36.jpg"></image>
+		</view>
+	</view>
+	<view class="boxShadow mesCont coachIntro">
+		<view class="titlt introTit">
+			个人说明
+		</view>
+		<textarea
+      placeholder="请简单介绍一下自己"
+      placeholder-style="color:#666;"
+    />
+	</view>
+	<button>保存</button>
+</view>
+
+<!-- 弹框 -->
+<view class="goodContsFrame" wx:if="{{frameShow==true}}" bindtap="goodContsFrame">
+	<view class="goodConts">
+  <view class='tips'>请选择且最多选择四个：</view>
+		<text class="">美型塑体</text>
+		<text class="">减脂增肌</text>
+    <text class="">美型塑体</text>
+		<text class="">减脂增肌</text>
+    <text class="">美型塑体</text>
+		<text class="">减脂增肌</text>
+    <text class="">美型塑体</text>
+		<text class="">减脂增肌</text>
+    <text class="">美型塑体</text>
+		<text class="">减脂增肌</text>
+	</view>
+</view>

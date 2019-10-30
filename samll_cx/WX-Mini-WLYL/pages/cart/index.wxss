@@ -1,0 +1,177 @@
+/* pages/cart/index.wxss */
+
+.cart{
+	width: 100%;
+	overflow: hidden;
+}
+.topTabBar{
+	width: 100%;
+	height:99rpx;
+	background: #fff;
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: nowrap;
+	padding: 0 30rpx 0 10rpx;
+	box-sizing: border-box;
+}
+.tab{
+	line-height:96rpx;
+	text-align: center;
+	font-size: 30rpx;
+	color: #222;
+	padding: 0 20rpx;
+}
+.tabAfter{
+	color: #20cfa0;
+}
+.lLine{
+	width: 28rpx;
+	height: 3px;
+	background: #20cfa0;
+	margin: auto;
+}
+.WLine{
+	width: 28rpx;
+	height: 3px;
+	background: #fff;
+	margin: auto;
+}
+.swiper{
+	width: 100%;
+	height: 400rpx;
+	overflow: hidden;
+}
+swiper-item{
+	width: 100%;
+	overflow: hidden;
+}
+/* 在线课程 */
+.eachCont{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	padding: 38rpx 30rpx;
+	background: #fff;
+	box-sizing: border-box;
+  margin-top: 15rpx;
+}
+.contLeft{
+	width: 310rpx;
+	margin-right: 22rpx;
+  padding-top: 8rpx;
+  box-sizing: border-box;
+}
+.contLeft .article{
+	width: 100%;
+	overflow: hidden;
+}
+.article .title{
+  line-height:48rpx;
+  font-size:30rpx;
+  color:#222;
+}
+.article .intros{
+  width:100%;
+  display:block;
+  font-size:24rpx;
+  color:#9b9b9b;
+  margin-top:14rpx;
+  margin-bottom:14rpx;
+}
+.contLeft .perMes{
+	height: 56rpx;
+	line-height: 56rpx;
+	font-size: 28rpx;
+	color: #20cfa0;
+}
+.perMes image{
+	width: 40rpx;
+	height: 40rpx;
+  border-radius: 50%;
+	margin-top: 8rpx;
+	margin-right: 10rpx;
+}
+.perMes .name{
+  height: 56rpx;
+  line-height: 56rpx;
+	font-size: 28rpx;
+	color: #20cfa0;
+  display: inline-block;
+}
+.contRight{
+	width: 346rpx;
+  height: 226rpx;
+  position: relative;
+}
+.contRight .coursepic{
+	width: 100%;
+	height: 100%;
+  border-radius: 10rpx;
+}
+.contRight .coursetype{
+	width: 50rpx;
+	height: 50rpx;
+  position: absolute;
+  bottom: 10rpx;
+  right: 10rpx;
+}
+
+/* 健康产品 */
+.proCont{
+	width: 100%;
+	padding-top: 15rpx;
+	box-sizing: border-box;
+	overflow: hidden;
+	display: flex;
+	justify-content: space-between;
+  flex-wrap: wrap;
+}
+.eachproCont{
+	width: 368rpx;
+	height: auto;
+	overflow: hidden;
+  background: #fff;
+  margin-bottom: 15rpx;
+}
+.eachproCont .topCont{
+	width: 368rpx;
+	height: 281rpx;
+	margin-bottom: 9rpx;
+}
+.topCont image{
+	width: 100%;
+	height: 100%;
+	display: inline;
+}
+.proName{
+	width: 100%;
+	height: 69rpx;
+	line-height: 69rpx;
+	font-size: 30rpx;
+	color: #222;
+	padding-left: 20rpx;
+}
+.botCont{
+	width: 100%;
+	height: 49rpx;
+	line-height: 49rpx;
+	font-size: 36rpx;
+	color: #20cfa0;
+	margin-bottom: 17rpx;
+  padding: 0 21rpx;
+  box-sizing: border-box;
+}
+.price .rmb{
+	font-size: 28rpx;
+}
+button.buy{
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+	height: 49rpx;
+	line-height: 49rpx;
+	font-size: 26rpx;
+	color: #fff;
+	text-align: center;
+  background: #20cfa0;
+}

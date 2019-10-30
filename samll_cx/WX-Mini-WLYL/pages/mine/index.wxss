@@ -1,0 +1,157 @@
+/* pages/mine/index.wxss */
+/* head */
+.head{
+    width: 100%;
+    /* height: 198rpx; */
+    /* position: relative; */
+    margin-bottom: 15rpx;
+    overflow: hidden;
+}
+.top{
+  width: 100%;
+  height: 198rpx;
+  position: relative;
+}
+.head .bg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.headBox{
+  width: 144rpx;
+  height: 144rpx;
+  border: 1px solid #94e6c3;
+  box-sizing: border-box;
+  border-radius: 50%;
+  position: absolute;
+  left: 68rpx;
+  top: 0;
+  overflow: hidden;
+}
+.headImg{
+  width: 100%;
+  height: 100%;
+}
+.headBox .edit{
+  width: 144rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  font-size: 18rpx;
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  bottom: 7rpx;
+  background: rgba(0, 0, 0, 0.3);
+}
+.nickname{
+  position: absolute;
+  left: 239rpx;
+  top: 30rpx;
+  font-size: 30rpx;
+  color: #fff;
+  line-height: 39rpx;
+}
+.nickname image{
+  width: 23rpx;
+  height: 23rpx;
+  margin-left: 8rpx;
+}
+.grade{
+  width: 131rpx;
+  height: 42rpx;
+  line-height: 42rpx;
+  display: block;
+  font-size: 24rpx;
+  color: #fff;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 8rpx;
+  position: absolute;
+  top: 71rpx;
+  left: 239rpx;
+}
+.nav{
+  width: 100%;
+  height: 155rpx;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  background: #fff;
+}
+.tabbar{
+  width: 25%;
+  padding-top: 37rpx;
+  box-sizing: border-box;
+  text-align: center;
+}
+.tabbar .text{
+  width: 100%;
+  float: left;
+  line-height: 24rpx;
+  font-size: 24rpx;
+  color: #222;
+}
+.icon{
+  height: 57rpx;
+  display: flex;
+  justify-content: center;
+}
+.icon image{
+  text-align: center;
+}
+.course image{
+  width: 35rpx;
+  height: 42rpx;
+}
+.yuyue image{
+  width: 47rpx;
+  height: 46rpx;
+}
+.order image{
+  width: 39rpx;
+  height: 43rpx;
+}
+.addr image{
+  width: 40rpx;
+  height: 43rpx;
+}
+/* 内容 */
+.contents{
+    width: 100%;
+    height: auto;
+    padding: 0 0 0 30rpx;
+    box-sizing: border-box;
+    overflow: hidden;
+    background: #fff;
+}
+.eachCont{
+    width: 100%;
+    height: 115rpx;
+    line-height: 115rpx;
+    overflow: hidden;
+}
+.eachCont image{
+    width: 30rpx;
+    height: 30rpx;
+}
+.right{
+  width: 672rpx;
+  height: 115rpx;
+  border-bottom: 1px solid #ebebeb;
+  text-align: left;
+  font-size: 30rpx;
+  color: #444;
+}
+.tel{
+  padding-right: 30rpx;
+  color: #888;
+  font-size: 26rpx;
+}
+.right_arrows{
+  border-top:5rpx solid #b2b2b2;
+  border-right:5rpx solid #b2b2b2;
+  margin-right: 30rpx;
+  margin-top: 45rpx;
+}

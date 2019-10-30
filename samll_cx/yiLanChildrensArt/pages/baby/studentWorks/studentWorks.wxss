@@ -1,0 +1,23 @@
+@import "/pages/tabbar/tabbar.wxss";
+.topContent{width: 100%;padding: 40rpx 0 ;background: #FBF0DF;position: relative;}
+.content{width: 91%;margin: 0 auto;}
+.workImg{width: 329rpx;height: 215rpx;}
+.fL{float: left;}
+.fR{float: right;}
+.contTitle{font-size: 28rpx;}
+.my-lefts:nth-child(2),.my-lefts:nth-child(4){float: right;}
+.my-lefts:nth-child(3),.my-lefts:nth-child(4){margin-top: 20rpx;}
+.leftBtn>image{width: 73rpx;height: 73rpx;position: absolute;left: 270rpx;bottom:-35rpx;}
+.rightBtn>image{width: 73rpx;height: 73rpx;position: absolute;right: 280rpx; bottom: -35rpx;}
+.autos{width: 75%;margin: 0 auto;background: #F5F5F5;padding: 40rpx 50rpx;margin-top: 120rpx; margin-bottom:120rpx;
+}
+.bottomContent{position: relative;}
+.jinImg{width: 96rpx;height: 122rpx;}
+.jinTitle{font-size: 28rpx;height: 122rpx;line-height: 112rpx; margin-left: 20rpx;}
+.box>.piaoBox:nth-child(2),.box>.piaoBox:nth-child(4){float: right;}
+.box>.piaoBox:nth-child(3),.box>.piaoBox:nth-child(4){margin-top: 35rpx}
+.box{margin-top: 35rpx;}
+.makeImg{width: 212rpx;height: 73rpx;}
+.make{position: absolute;top: -29rpx;left: 265rpx;}
+.swiper-container{height: 550rpx;}
+.swiper{height: 100%;}

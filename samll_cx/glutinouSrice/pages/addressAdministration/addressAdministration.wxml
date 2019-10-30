@@ -1,0 +1,26 @@
+<view class="content">
+  <block wx:for="{{addressList}}">
+      <view class="address_list">
+          <view class="listauto">
+              <view class="name">{{item.name}}，{{item.mobile}}</view>
+              <view class="address">{{item.city}} {{item.area}}  {{item.province}} {{item.addressdetail}}</view>
+              <view>
+              <view class="clearFlo edit_box">
+                  <view class="flL"> 
+                      <checkbox-group bindchange="checkClick" data-addressId="{{item.id}}">
+                        <checkbox value='{{item.name}}' checked="{{defaultaddress=='2'?true:false}}" disabled='false'>已设为默认地址</checkbox>
+                      </checkbox-group>
+                  </view>
+                  <view class="flR">
+                    <text class="detail" data-addressId="{{item.id}}" bindtap="edit">编辑</text>
+                    <text class="del" data-addressId="{{item.id}}" bindtap="del">删除</text>
+                  </view>
+              </view>
+                
+              </view>
+                  
+          </view>
+      </view>
+  </block>
+   <view class="footer" bindtap="addAddress">新增收货地址</view>
+</view>

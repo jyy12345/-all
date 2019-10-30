@@ -1,0 +1,26 @@
+<!-- 首页 -->
+<movable-area style="top:0;bottom:0;height: 100%; width:100%; overflow:hidden;">
+  <movable-view direction="all" class='bgColor' catchtap="onScrt">
+  <image src='../../images/indexImg/shitBtn.jpg'></image>
+ </movable-view>
+ <view style='margin-bottom:100rpx;'>
+    <view class=''>
+     <image src=''></image>
+    </view>
+    <view class='wesuch m-topB bj1' catchtap="onTap">
+       <view class='bigFont'>我们是这样的</view>
+       <view class='sammleFont tp'>中心介绍 / 学员作品</view>
+       <view class='sammleFont'>课程体系 / 教师团队</view>
+    </view>
+     <view class='wechWhit m-tops ' catchtap='onYshu'>
+       <view class='bigFont'>艺术鉴赏</view>
+       <view class='sammleFont tp'>艺术鉴赏 / 活动安排</view>
+    </view>
+     <view class='wesuch m-tops bj2' catchtap='photoEvaluation'>
+       <view class='bigFont'>拍照测评</view>
+       <view class='sammleFont tp'>上传作品获得评价</view>
+       <view class='sammleFont'>查看他人作品</view>
+    </view>
+</view>
+
+</movable-area>

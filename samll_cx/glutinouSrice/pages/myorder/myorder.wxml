@@ -1,0 +1,73 @@
+<view class="content">
+   <view>
+      <view class="seach_top">
+         <view class="seach_box">
+             <text class="icon iconfont icon-search"></text>
+             <input type="text" placeholder="商品名称/商品编号/订单号" placeholder-class="pl_size"></input>
+         </view>
+      </view>
+
+      <view class="nav_box">
+         <view class="nav_auto">
+         <block wx:for="{{orderNav}}" wx:key="*this">
+            <text class="{{seleId==item.id?'selected':''}}" id="{{item.id}}" data-val="{{item.val}}"  bindtap="seleBtn">{{item.name}}</text>
+            </block>
+            <!-- <text>待付款</text>
+            <text>待发货</text>
+            <text>待收货</text> -->
+            <!-- <text>已完成</text> -->
+         </view>
+      </view>
+      <view class="order">
+        <block wx:for="{{orderList}}" wx:key="*this" wx:for-item='item'>
+         <view class="order_list" id="{{item.order_id}}" data-ids="{{item.shipping_status}}"data-shippId="{{item.shipping_status}}">
+            <view class="order_top clearFlo">
+              <view class="flL">
+                <text class="icon iconfont icon-dingdan code_order"></text>
+                <text class="code">订单编号：{{item.order_sn}}</text>
+              </view>
+              <view class="flR">
+                <text class="state" wx:if="{{item.shipping_status==1}}">待发货</text>
+                <text class="state" wx:elif="{{item.shipping_status==2}}">待收货</text>
+                <text class="state" wx:elif="{{item.shipping_status==3}}">已完成</text>
+                  <text class="state state_red" wx:elif="{{item.spay_status==1}}">待支付</text> 
+                  <text class="state" wx:elif="{{item.spay_status==2}}">已支付</text> 
+                  <text class="shu_order">|</text>
+                  <text class="icon iconfont icon-shanchu del_order" id="{{item.order_id}}"></text>
+              </view>
+            </view>
+            <block wx:for="{{item.order_son}}" wx:key='index' wx:for-item="is">
+            <view class="order_content" id="{{item.order_id}}" data-ids="{{item.pay_status}}"data-shippId="{{item.shipping_status}}" bindtap="goTodetail">
+               <view class="contents clearFlo">
+                  <view class="content_left flL">
+                     <image src="{{is.book_img}}"></image>
+                  </view>
+                  <view class="content_right flR">
+                     <view class="right_title">{{is.book_name}}</view>
+                      <view class="clearFlo">
+                        <view class="flL">
+                           <text class="price">￥{{is.discount_price}}</text>
+                           <text class="old_price">￥{{is.price}}</text>
+                        </view>
+                        <view class="flR sum">X {{is.num}}</view>
+                      </view>
+                      
+                  </view>
+               </view>
+               <!-- shipping_status 1是待发货 2是待收货 3已完成 pay_status 1待支付 2：已支付 -->
+               <view class="bottom_order clearFlo">
+                 <view class="deial flL">共1件商品  实付金额：<text class="priveDect">￥{{is.discount_price}}</text></view>
+                 <view class="payment_btn flR" wx:if="{{item.pay_status==1}}">去支付</view>
+                 <view class="payment_btn flR" wx:elif="{{item.pay_status==2}}">已完成</view>
+                   <view class="payment_btn flR" wx:elif="{{item.shipping_status==1}}">待发货</view>
+                     <view class="payment_btn flR" wx:elif="{{item.shipping_status==2}}">待收货</view>
+                       <view class="payment_btn flR" wx:elif="{{item.shipping_status==3}}">已完成</view>
+               </view>
+            </view>
+            </block>
+         </view>
+         </block>
+      </view>
+   </view>
+</view>
+ 

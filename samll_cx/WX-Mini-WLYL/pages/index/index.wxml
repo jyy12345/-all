@@ -1,0 +1,246 @@
+<!--index.wxml-->
+<!-- banner -->
+<view class="banner">
+  <swiper indicator-dots="true" indicator-color="rgba(250, 250, 250, .8)" indicator-active-color="#20cfa0">
+    <swiper-item wx:for="{{banner}}">
+      <image class="" data-id="{{item.id}}" src="{{imgUrl+item.image}}"></image>
+    </swiper-item>
+  </swiper>
+</view>
+<!-- nav -->
+<view class="margin_bottom navCont">
+  <view class="nav_top">
+    <view class="fl search" bindtap='handelSearch'>
+      <image class="fl" src="../../image/icon_search.png"></image>
+      <view class="fl search_input">请输入关键字</view>
+    </view>
+    <view class="fr register" bindtap="handelRegister">
+      <image class="fl" src="../../image/index/icon_rg.png"></image>
+      <view class="fl rg">
+        注册
+      </view>
+    </view>
+  </view>
+  <view class="tabBar">
+    <view class="nav technology" data-current = "1" bindtap='technology'>
+      <image class="" src="../../image/tab_technology.jpg" bindtap="handelTechnology"></image>
+      <text class="word">
+        技术评定
+      </text>
+    </view>
+    <view class="nav physician" data-current = "0" bindtap='doctor'>
+      <image class="" src="../../image/tab_physician.jpg" bindtap="handelPhysician"></image>
+      <text class="word">
+        医师风采
+      </text>
+    </view>
+    <view class="nav message" data-current = "1" bindtap='articles'>
+      <image class="" src="../../image/tab_message.jpg" bindtap="handelMessage"></image>
+      <text class="word">
+        健康资讯
+      </text>
+    </view>
+    <view class="nav cart" bindtap="checkCart">
+      <image class="" src="../../image/tab_cart.jpg" bindtap="handelCart"></image>
+      <text class="word">
+        健康商城
+      </text>
+    </view>
+  </view>
+</view>
+<!-- 权威专家 -->
+<view class="margin_bottom expert">
+  <view class="contTop">
+    <view class="fl titleLeft">
+      <image class="fl" src="../../image/index/icon_expert.png"></image>
+      <text class="tit">权威专家</text>
+    </view>
+    <view class="fr more" bindtap='doctor'>
+      <view class="fl text">更多</view>
+      <view class="fl right_arrows"></view>
+    </view>
+  </view>
+  <view class="content expertCont">
+    <!-- scroll左右轮播 -->
+    <scroll-view class="scroll-view_H" scroll-x scroll-with-animation style="width: 100%;">
+      <block wx:for="{{specialistData}}"  wx:key="unique" wx:for-index="index" wx:for-item="item">
+        <view class="scroll_item_expert {{item.selected ? 'selected' : ''}}" data-id="{{item.id}}" data-index='{{index}}' bindtap='checkExpert'>
+          <image class="fl" mode=""  src="{{imgUrl+item.image}}"></image>
+          <view class="fl scroll_right">
+            <view class="name">{{item.name}}</view>
+            <view class="intro">{{item.jobdescription}}</view>
+          </view>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+</view>
+<!-- 升级必备 -->
+<view class="margin_bottom upgrade">
+  <view class="contTop">
+    <view class="fl titleLeft">
+      <image class="fl" src="../../image/index/icon_upgrade.png"></image>
+      <text class="tit">升级必备</text>
+    </view>
+    <view class="fr more" data-current="2" bindtap='upGrade'>
+      <view class="fl text">更多</view>
+      <view class="fl right_arrows"></view>
+    </view>
+  </view>
+  <view class="content upgradeCont">
+    <!-- 左右轮播 -->
+    <scroll-view class="scroll-view_H" scroll-x scroll-with-animation style="width: 100%;">
+      <block wx:for="{{upgradeData}}"  wx:key="unique" wx:for-index="index" wx:for-item="item">
+        <view class="scroll_item_upgrade {{item.selected ? 'selected' : ''}}" data-title="{{item.title}}" data-id="{{item.id}}" data-index='{{index}}' bindtap='checkArticle'>
+          <image class="" src="{{imgUrl+item.image}}"></image>
+          <view class="tit">{{item.name}}</view>
+        </view>
+      </block>
+    </scroll-view>
+    <button bindtap='checkSkill'>我要升级</button>
+  </view>
+</view>
+
+<!-- 爱心科普 -->
+<view class="margin_bottom loveMes">
+  <view class="contTop">
+    <view class="fl titleLeft">
+      <image class="fl" src="../../image/index/icon_mes.png"></image>
+      <text class="tit">爱心科普</text>
+    </view>
+    <view class="fr more" data-type="3" data-current="3" bindtap='loveMes'>
+      <view class="fl text">更多</view>
+      <view class="fl right_arrows"></view>
+    </view>
+  </view>
+  <view class="loveMesCont">
+    <swiper indicator-dots="true" indicator-color="rgba(250, 250, 250, .8)" indicator-active-color="#20cfa0">
+      <swiper-item wx:for="{{loveMesData}}" data-id="{{item.id}}" bindtap="onlineDetail">
+        <image class="" src="{{imgUrl+item.image}}"></image>
+        <view class="mesTit">{{item.name}}</view>
+        <view class="name">{{item.dname}}</view>  
+        <view class="time">{{item.createtime}}</view>
+      </swiper-item>
+    </swiper>
+  </view>
+</view>
+  
+
+<!-- 专业指导 -->
+<view class="margin_bottom guide">
+  <view class="contTop">
+    <view class="fl titleLeft">
+      <image class="fl" src="../../image/index/icon_guide.png"></image>
+      <text class="tit">专业指导</text>
+    </view>
+    <view class="fr more" data-current="0" bindtap='guide'>
+      <view class="fl text">更多</view>
+      <view class="fl right_arrows"></view>
+    </view>
+  </view>
+  <view class="content guideCont">
+    <!-- scroll左右轮播 -->
+    <scroll-view class="scroll-view_H" scroll-x scroll-with-animation style="width: 100%;">
+      <block wx:for="{{guideData}}"  wx:key="unique" wx:for-index="index" wx:for-item="item">
+        <view class="scroll_item_guide {{item.selected ? 'selected' : ''}}" data-id="{{item.id}}" data-index='{{index}}' bindtap='coachDetail'>
+          <image class="" src="{{item.image}}"></image>
+          <view class="teachName">{{item.name}}</view>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+</view>
+
+<!-- 必学课程 -->
+<view class="margin_bottom">
+  <view class="contTop">
+    <view class="fl titleLeft">
+      <image class="fl" src="../../image/index/icon_course.png"></image>
+      <text class="tit">必学课程</text>
+    </view>
+    <view class="fr more" bindtap='course'>
+      <view class="fl text">更多</view>
+      <view class="fl right_arrows"></view>
+    </view>
+  </view>
+  <view class="content courseCont">
+    <!-- scroll左右轮播 -->
+    <scroll-view class="scroll-view_H" scroll-x scroll-with-animation style="width: 100%;">
+      <block wx:for="{{courseData}}"  wx:key="unique" wx:for-index="index" wx:for-item="item">
+        <view class="scroll_item_course {{item.selected ? 'selected' : ''}}" data-id="{{item.id}}" data-type="{{item.coursetype}}" data-index='{{item.index}}' bindtap='courseDetail'>
+          <view class="fl teachName">
+            <image class="" src="../../image/index/icon_per.png" />
+            {{item.dname}}
+          </view>
+          <image class="fr headImg" src="{{imgUrl+item.dimage}}"></image>
+          <view class="fl courseName">
+            {{item.name}}
+            <view class="line"></view>
+          </view>
+          <view class="fl courseTime">
+            <image class="fl" src="../../image/index/icon_clock.png"></image>
+            <view class="fl time">{{item.createtime}}</view>
+          </view>
+          <image wx:if="{{item.coursetype==1}}" class="fr tipImg" src="../../image/index/icon_video.png"/>
+          <image wx:else class="fr tipImg" src="../../image/index/icon_read.png"/>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+</view>
+
+<!-- 健康头条 -->
+<view class="margin_bottom">
+  <view class="contTop">
+    <view class="fl titleLeft">
+      <image class="fl" src="../../image/index/icon_headLine.png"></image>
+      <text class="tit">健康头条</text>
+    </view>
+    <view class="fr more" bindtap='healthMes'>
+      <view class="fl text">更多</view>
+      <view class="fl right_arrows"></view>
+    </view>
+  </view>
+  <view class="content healthCont">
+    <view class="clearfix eachHealMes" wx:for="{{healthMesData}}" data-id="{{item.id}}" bindtap='articleDetail'>
+      <block wx:if="{{item.image}}">
+        <image class="fl" style="" src="{{imgUrl+item.image}}" />
+        
+        <view class='fr healthMesCont'>
+          <view class="fl healthMes1">{{item.name}}</view>
+          <text class="fl time1">{{item.createtime}}</text>
+        </view>
+      </block>
+      <block wx:else>
+        <text class="fl healthMes">{{item.name}}</text>
+        <text class="fl time">{{item.createtime}}</text>
+      </block>
+    </view>
+  </view>
+    
+</view>
+
+<!-- 美容养生 -->
+<view class="margin_bottom">
+  <view class="contTop">
+    <view class="fl titleLeft">
+      <image class="fl" src="../../image/index/icon_beauty.png"></image>
+      <text class="tit">美容养生</text>
+    </view>
+    <view class="fr more" bindtap='beauty'>
+      <view class="fl text">更多</view>
+      <view class="fl right_arrows"></view>
+    </view>
+  </view>
+  <view class="content beautyCont">
+    <view wx:for="{{beautyData}}" class="eachBeautyMes" data-id="{{item.id}}" bindtap='goodsDetail'>
+      <image class="" src="{{imgUrl+item.image}}" />
+      <view class="beautyMesBot">
+        <text class="fl tit">{{item.name}}</text>
+        <text class="fr price"><text class="fl rmb">￥</text> {{item.price}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+  

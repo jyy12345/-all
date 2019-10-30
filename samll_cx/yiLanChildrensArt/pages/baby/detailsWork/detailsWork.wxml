@@ -1,0 +1,11 @@
+<view>
+<view class='auTo'><image src='{{babytData.homeUrl}}' class='detailsImg'></image></view>
+<view class='detailsContent'>
+<block wx:for="{{babytData.contentList}}">
+ <view class='titCont'>
+  <view class='bigTitle'>{{item.key}}</view>
+  <view class='semllTitle'>{{item.content}}</view>
+ </view>
+</block>
+</view>
+</view>

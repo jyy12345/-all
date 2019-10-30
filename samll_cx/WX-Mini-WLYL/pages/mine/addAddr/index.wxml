@@ -1,0 +1,28 @@
+<!--pages/mine/addAddr/index.wxml-->
+<view class="borderTop addAddress">
+  <picker class="add choiceAddr" mode="region" bindchange="bindRegionChange">
+    <view class='fl city'>所在城市：</view>
+    <view class="fl address">
+      {{region}}
+    </view>
+    <view class="right_arrows"></view>
+  </picker>
+	<view class="add">
+		<text class="">详细地址：</text>
+		<input placeholder="请如实填写收货人详细地址" type="text" value="{{address}}" bindinput="handleAddress"/>
+	</view>
+	<view class="add receiver">
+		<text class="">收货人：</text>
+		<input placeholder="请如实填写收货人姓名" value="{{consignee}}" bindinput="handleConsignee"/>
+	</view>
+	<view class="add">
+		<text class="">联系电话：</text>
+		<input maxlength="11" type="number" placeholder="请如实填写联系电话"  value="{{mobile}}" bindinput="handleMobile"/>
+	</view>
+  <view class='add'>
+    <text class="fl">默认地址设置：</text>
+    <switch class='fr' checked="{{checked}}" bindchange="switchChange" />
+  </view>
+  <button bindtap='successe'>{{buttonWord}}</button>
+</view>
+  

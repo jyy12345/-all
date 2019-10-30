@@ -1,0 +1,13 @@
+<import src="/pages/tabbar/tabbar.wxml"/>
+<template is="tabbar" data="{{tabbar}}"/>
+<!-- 艺术鉴赏 -->
+<movable-area style="top:0;bottom:0;height: 100%; width:100%; overflow:hidden;">
+  <movable-view direction="all" class='bgColor' catchtap="onScrt">
+  <image src='../../images/indexImg/shitBtn.jpg'></image>
+ </movable-view>
+<view class='criles'>
+   <view class='xiongM'></view>
+   <view class='yellowBox box' catchtap='artIn'>艺术鉴赏</view>
+     <view class='whiteBox box' catchtap='activeArr'>活动安排</view>
+</view>
+ </movable-area>

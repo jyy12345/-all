@@ -1,0 +1,60 @@
+<!--pages/health/index.wxml-->
+<view class="borderTop smiling">
+  <scroll-view class='topTab' scroll-x="true">
+    <view class='tab  {{currentData == 0 ? "tabAfter" : ""}}'  data-current = "0" bindtap='checkCurrent'>
+			专业指导
+			<block wx:if="{{currentData == 0}}">
+				<view class="lLine"></view>
+			</block>
+			<block wx:else>
+				<view class="wLine"></view>
+			</block>
+		</view>
+    <view class='tab  {{currentData == index+1 ? "tabAfter" : ""}}' wx:key='labels'  wx:for='{{labelNav}}' wx:for-index='index' data-current = "{{index+1}}" bindtap='checkCurrent1' data-navId='{{item.id}}'>
+			{{item.title}}
+			<block wx:if="{{currentData == index+1}}">
+				<view class="lLine"></view>
+			</block>
+      
+			<block wx:else>
+				<view class="wLine"></view>
+			</block>
+		</view>
+   
+	</scroll-view>
+	<view class='botConts'>
+		<!-- 专业指导列表 -->
+		<view  wx:if="{{currentData=='0'}}" class='eachList'>
+			<view class="doctorList">
+				<view class="boxShadow eachCont eachDoctor" bindtap="checkDocDetail" wx:key='hekh' wx:for='{{healthLists}}' wx:for-index='{{index}}' data-ids='{{item.id}}'>
+					<image class="" src="{{item.image}}"></image>
+					<view class="name">
+						{{item.name}}
+					</view>
+				</view>
+			</view>
+		</view> 
+		<!-- 健康前沿 -->
+		<view  wx:else class='eachList'>
+			<view class="eachCont healthCont">
+				<view class="clearfix eachHealMes" wx:for="{{healthList}}"  data-id="{{item.id}}" bindtap='articleDetail'>
+          <block wx:if="{{item.image}}">
+          	<!-- <image class="fl" style="" src="{{imgUrl+item.image}}"/> -->
+            <image class="fl" src="{{imgUrl+item.image}}" />
+            <view class='fr healthMesCont'>
+              <view class="fl healthMes1">{{item.name}}</view>
+              <text class="fl time1">{{item.createtime}}</text>
+            </view>
+          </block>
+          <block wx:else>
+            <text class="fl healthMes">{{item.name}}</text>
+            <text class="fl time">{{item.createtime}}</text>
+          </block>
+				</view>
+			</view>
+		</view>
+	
+
+   
+	</view>
+</view>

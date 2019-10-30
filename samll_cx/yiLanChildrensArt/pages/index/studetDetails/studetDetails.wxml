@@ -1,0 +1,41 @@
+<import src="/pages/tabbar/tabbar.wxml" />
+<template is="tabbar" data="{{tabbar}}" />
+<view>
+  <view class='topImgs'>
+    <view class='banBox'>
+      <image src='{{contentData.homeUrl}}'></image>
+    </view>
+  </view>
+  <view class='titleAuto clearFlo'>
+    <view class='titleParent'>
+      <view class='titles'>{{contentData.title}}</view>
+      <view class='names'>{{contentData.author}}</view>
+    </view>
+    
+<block wx:if='{{contentData.starLevel > 0}}'>
+<view class='star-five' wx:for='{{contentData.starLevel-0}}' wx:key='un'>
+ <text class='icon iconfont icon-star_full' ></text>
+</view>
+</block>
+  </view>
+  <view class='comment'>
+    <view class='commentTitle'>评论</view>
+    <view class='commentContent'>{{contentData.comment}}</view>
+  </view>
+  <view class='recommend'>
+    <view class='recommendTitle'>{{contentData.workType}}</view>
+    <view  class='clearFlo reBottom'>
+    <block wx:for="{{contentData.workContent}}">
+      <view class='reommendBox'>
+        <image src='{{item.imgUrl}}'></image>
+        <view class='reParent'>
+          <view class='reAutos clearFlo'>
+            <text class='recomTitle'>{{item.imgName}}</text>
+            <text class='rexomName'>{{item.author}}</text>
+          </view>
+        </view>
+      </view> 
+    </block>
+    </view>
+  </view>
+</view>

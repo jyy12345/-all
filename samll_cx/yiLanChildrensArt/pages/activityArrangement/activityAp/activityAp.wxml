@@ -1,0 +1,36 @@
+<import src="/pages/tabbar/tabbar.wxml"/>
+<template is="tabbar" data="{{tabbar}}"/>
+<movable-area style="top:0;bottom:0;height: 100%; width:100%; overflow:hidden;">
+  <movable-view direction="all" class='bgColor' catchtap="onScrt">
+  <image src='../../../images/indexImg/shitBtn.jpg'></image>
+ </movable-view>
+<view style='width:100%;'>
+  <view class='title1'>假期特色课程——云南写生</view>
+  <textarea placeholder='这个暑假，我们到大理写生啦～' placeholder-class='textAre'></textarea>
+  <image class='buton' src='{{contentData.activityImg}}' bindtap="powerDrawer" data-statu="open"></image>
+  <!-- <view class='buton' style='background:url("");' ></view> -->
+
+  <!--mask-->  
+<view class="drawer_screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus}}"></view>    <view class='imgPostBox' catchtap='heigged'><image src='../../../images/indexImg/cha.png' class='imgPost' wx:if="{{showModalStatus}}" ></image>
+</view>
+<!--content-->  
+<!--使用animation属性指定需要执行的动画-->  
+<view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}">  
+
+  <!--drawer content-->  
+  <view class="drawer_title"></view>  
+  <view class="drawer_content">  
+    <view class="top grid">  
+      <input class="input_base input_h30" name="rName" placeholder='宝贝姓名' placeholder-class='redParty' bindinput="getName"></input>  
+    </view>  
+    <view class="top grid">  
+      <input class="input_base input_h30" name="mobile" placeholder='联系方式' placeholder-class='redParty' bindinput="getPhone"></input>  
+    </view>  
+    <view class="btn_ok" bindtap="powerDrawer1" data-statu="close" wx:if="{{signUp}}" >确定</view>  
+    <view class='sign' wx:if="{{signupSuccess}}">提交成功！</view>
+      <view class='borderBottom'></view>
+      <view class='contact'>我们会有老师联系您的哦～</view>
+  </view>  
+</view>
+</view>
+ </movable-area>

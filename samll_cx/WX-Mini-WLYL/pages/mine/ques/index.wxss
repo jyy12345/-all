@@ -1,0 +1,38 @@
+/* pages/mine/ques/index.wxss */
+.eachQues{
+	padding: 27rpx 30rpx 29rpx 30rpx;
+	box-sizing: border-box;
+	background: #fff;
+	overflow: hidden;
+  margin-top: 15rpx;
+}
+
+.title{
+  width: 100%;
+	
+	font-size: 30rpx;
+	color: #222;
+}
+.num{
+	width: 41rpx;
+	height: 41rpx;
+	line-height: 41rpx;
+	text-align: center;
+	font-size: 24rpx;
+	color: #fff;
+	background: #24cb85;
+	border-radius: 50%;
+	margin-right: 15rpx;
+}
+.tit{
+  width: 92%;
+  line-height: 41rpx;
+}
+.content{
+  width: 100%;
+	line-height: 45rpx;
+	font-size: 24rpx;
+	color: #666;
+	padding-left: 56rpx;
+  box-sizing: border-box;
+}
